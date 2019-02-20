@@ -26,12 +26,10 @@ def getRestaurants(location):
                 restaurantDict[business['name']] = business['url']
         except:
             break
-        offsetCount+=50
+        offsetCount += 50
             
     return restaurantDict
    
-   
-    
 fullDict = getRestaurants('Ithaca')
 for elem in fullDict:
     print(elem + ' - ' + fullDict[elem])
