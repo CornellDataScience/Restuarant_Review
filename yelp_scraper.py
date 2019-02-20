@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from lxml.html import fromstring
 import time
+import json
 from concurrent.futures import ThreadPoolExecutor
 
 
@@ -37,6 +38,7 @@ def scrapeYelp(url):
             dateText = dateText.strip()
             ReviewDict[ReviewID].append(dateText)
             reviewText = review.findChild('p',recursive=True).text
+            reviewText = reviewText.replace('\xa0','')
             ReviewDict[ReviewID].append(reviewText)
             ratingDiv = review.findChild('div',class_='biz-rating biz-rating-large clearfix')
             rating = ratingDiv.findChild('div',recursive=False).findChild('div',recursive=False)
@@ -56,7 +58,7 @@ def scrapeYelp(url):
             totalVotes = 0
             for vote in fullVote:
                 voteType = vote.findChild('span',class_='vote-type',recursive=True).text
-                if(voteType == 'Useful'):
+                if voteType == 'Useful':
                     voteCount = vote.findChild('span',class_='count',recursive=True).text
                     if(voteCount != ''):
                         totalVotes += int(voteCount)
@@ -69,7 +71,10 @@ def scrapeYelp(url):
                     if(voteCount != ''):
                         totalVotes += int(voteCount)
             ReviewDict[ReviewID].append(totalVotes)
+    return ReviewDict
 # start = time.time()
-scrapeYelp('https://www.yelp.com/biz/the-rook-ithaca')
+dict = scrapeYelp('https://www.yelp.com/biz/the-rook-ithaca')
+with open('YelpData.txt', 'w') as outfile:
+    json.dump(dict, outfile)
 # end = time.time()
 # print(end - start)
