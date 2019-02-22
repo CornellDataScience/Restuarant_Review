@@ -45,4 +45,7 @@ for restaurant in restaurants_list:
     user_reviews = json.loads(response_json.text)["user_reviews"]
     for review in user_reviews:
         review_list[review["review"]["id"]] = ["Zomato", restaurant["restaurant"]["name"], review["review"]["review_time_friendly"], review["review"]["review_text"], review["review"]["rating"], review["review"]["likes"], (review["review"]["user"]["foodie_level_num"] > 5)]
-print(review_list)
+
+# save review dictionary to json file
+with open('Zomato_review.json', 'w') as fp:
+    json.dump(review_list, fp)
