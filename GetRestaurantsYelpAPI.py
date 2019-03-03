@@ -23,7 +23,10 @@ def getRestaurants(location):
         data = r.json()
         try:
             for business in data['businesses']:
-                restaurantDict[business['name']] = business['url']
+                url = business['url']
+                url = url.split('?')[0]
+                url = url + '?sort_by=date_desc'
+                restaurantDict[business['name']] = url
         except:
             break
         offsetCount+=50
