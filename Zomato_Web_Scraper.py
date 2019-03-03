@@ -60,6 +60,27 @@ def scrapeZomato(url):
 
     return ReviewDict
 
-scrapeZomato('https://www.zomato.com/finger-lakes-region-ny/collegetown-bagels-3-ithaca')
+def getRestaurants():
+    baseURL = 'https://www.zomato.com/finger-lakes-region-ny/ithaca-restaurants?page='
+    allRestaurants = []
+
+    cwd = os.getcwd()
+    driverPath = cwd + '/chromedriver'
+    driver = webdriver.Chrome(executable_path=driverPath)
+
+    for i in range(1,16):
+
+        baseURL += str(i)
+        driver.get(baseURL)
+        time.sleep(3)
+        soup = BeautifulSoup(driver.page_source,'lxml')
+        for restaurant in soup.find_all('a',class_= 'result-title hover_feedback zred bold ln24 fontsize0'):
+            print(restaurant['href'])
+        baseURL = 'https://www.zomato.com/finger-lakes-region-ny/ithaca-restaurants?page='
+
+
+
+getRestaurants()
+#scrapeZomato('https://www.zomato.com/finger-lakes-region-ny/collegetown-bagels-3-ithaca')
 
 
