@@ -4,7 +4,7 @@ from yelp_scraper import scrapeYelp
 from multiprocessing import Process
 
 def scrape_for_url(url):
-    print('start scrapping for url' + url)
+    print('start scrapping for url ' + url)
     scrape_data = scrapeYelp(url)
     print(scrape_data)
     with open('YelpData.txt', 'a+') as outfile:
