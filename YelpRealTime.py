@@ -28,8 +28,8 @@ def getReviewCount():
 
         offsetCount+=50
     print(len(restaurantDict))
-    # with open('LiveData.txt', 'w') as outfile:
-    #     json.dump(restaurantDict,outfile)
+    with open('LiveData.txt', 'w') as outfile:
+        json.dump(restaurantDict,outfile)
 getReviewCount()
 
 # offsetCount = 0
