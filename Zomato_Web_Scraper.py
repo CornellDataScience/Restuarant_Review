@@ -35,6 +35,8 @@ def scrapeZomato(url):
             reviewText = reviewText.replace('POSITIVE', '')
             reviewText = reviewText.replace('Rated', '')
             reviewText = reviewText.strip()
+        else:
+            reviewText = ''
         dateDiv = fullReview.findChild('div',class_='fs12px pbot0 clearfix',recursive=True)
         timeTag = dateDiv.findChild('time',recursive=True)
         ReviewDict[ReviewID].append(timeTag['datetime'])
@@ -49,15 +51,18 @@ def scrapeZomato(url):
         else:
             ReviewDict[ReviewID].append(None)
         voteDiv = fullReview.findChild('div',class_='left mr5 ui tiny labeled button js-btn-thank',recursive=True)
-        voteCount = voteDiv['data-likes']
-        if(voteCount == ''):
-            voteCount = 0
-        else:
-            voteCount = int(voteCount)
+        voteCount  = 0
+        if voteDiv != None:
+            voteCount = voteDiv['data-likes']
+            if(voteCount == ''):
+                voteCount = 0
+            else:
+                voteCount = int(voteCount)
         ReviewDict[ReviewID].append(voteCount)
         #fullReview.findChild('span')
 
-
+    # close the browser window
+    driver.close()
     return ReviewDict
 
 def getRestaurants():
@@ -80,7 +85,7 @@ def getRestaurants():
 
 
 
-getRestaurants()
-#scrapeZomato('https://www.zomato.com/finger-lakes-region-ny/collegetown-bagels-3-ithaca')
+# getRestaurants()
+# scrapeZomato('https://www.zomato.com/finger-lakes-region-ny/collegetown-bagels-3-ithaca')
 
 
