@@ -25,7 +25,6 @@ new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 spark_df = spark.createDataFrame(new_df)
 # spark_df.write.saveAsTable("yelp")
-
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -42,3 +41,7 @@ def get_restaurant_counts(df):
 
 def get_vote_counts(df):
     return spark_df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
+
+def get_review_text(df, restaurant):
+    section = spark_df.where(spark_df.restaurant == "The Rook").select(["review"]).collect()
+    return [cell.review for cell in section]
