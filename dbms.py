@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-
-# coding: utf-8
-
-# In[279]:
-
-
-import pandas as pd
-from pyspark.sql import SparkSession
-from datetime import date
-
-
-# In[281]:
-
-
-=======
 import pandas as pd
 from pyspark.sql import SparkSession, functions
 from datetime import date
 
-### cleaning
->>>>>>> 6f036b0820b95d0b4bb2e78d91810ccc65a0eb6e
 def format_date(date):
     temp = date.split("/")
     temp.insert(0, temp[2])
@@ -35,59 +17,13 @@ for partial_data in data:
         temp = list(df[column])
         temp.insert(0,column)
         big_list.append(temp)
-<<<<<<< HEAD
-new_df = pd.DataFrame(big_list,columns=["key", "website", "restaurant","date", "review", "rating", "num_votes"])
-new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
-
-
-# In[282]:
-
-
-def rating_map(rest_rating, rating):
-    if rating == rest_rating:
-        return 1
-    return 0
-
-def get_ratings(df): # takes in pandas DataFrame
-    rating = df[["restaurant", "rating"]]
-    for i in range(1,6):
-        rating["rating_" + str(i)] = rating.rating.apply(lambda x: rating_map(i,x))
-    rating = rating.groupby("restaurant").sum()
-    return rating
-
-
-# In[283]:
-
-
-get_ratings(new_df).head()
-
-
-# In[235]:
-
-=======
 new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes"])
 new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
-####
->>>>>>> 6f036b0820b95d0b4bb2e78d91810ccc65a0eb6e
 
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 spark_df = spark.createDataFrame(new_df)
 # spark_df.write.saveAsTable("yelp")
-<<<<<<< HEAD
 
-
-# In[236]:
-
-
-a = spark_df.groupBy("restaurant").count()
-
-
-# In[237]:
-
-
-a.show()
-
-=======
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -103,9 +39,10 @@ def get_restaurant_counts(df):
     return df.groupBy("restaurant").count()
 
 def get_vote_counts(df):
-    return spark_df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
+    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
 
-def get_review_text(df, restaurant):
-    section = spark_df.where(spark_df.restaurant == "The Rook").select(["review"]).collect()
+def get_review_text(df, r):
+    section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
->>>>>>> 6f036b0820b95d0b4bb2e78d91810ccc65a0eb6e
+
+print(get_review_text(spark_df, "Sushi Osaka"))
