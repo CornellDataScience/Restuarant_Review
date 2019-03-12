@@ -1,6 +1,8 @@
 import pandas as pd
 from pyspark.sql import SparkSession, functions
 from datetime import date
+import os
+import shutil
 
 def format_date(date):
     temp = date.split("/")
@@ -9,6 +11,7 @@ def format_date(date):
     return temp
 
 big_list = []
+
 with open('YelpData.txt', 'rb') as f:
     data = f.readlines()
 for partial_data in data:
@@ -23,7 +26,7 @@ new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 spark_df = spark.createDataFrame(new_df)
 # spark_df.write.saveAsTable("yelp")
-
+print(type(spark_df))
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -42,7 +45,14 @@ def get_vote_counts(df):
     return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
 
 def get_review_text(df, r):
+
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
 
 print(get_review_text(spark_df, "Sushi Osaka"))
+spark_df.show()
+if(os.path.exists('dbms.parquet')):
+    shutil.rmtree('dbms.parquet')
+    spark_df.write.save("dbms.parquet", format="parquet")
+df = spark.read.parquet("dbms.parquet")
+print(type(df))
