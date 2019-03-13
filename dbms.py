@@ -4,29 +4,41 @@ from datetime import date
 import os
 import shutil
 
+spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
+
 def format_date(date):
     temp = date.split("/")
     temp.insert(0, temp[2])
     temp = list(map(int,temp[:3]))
     return temp
 
-big_list = []
+def initialize_dbms():
+    if os.path.exists('dbms.parquet'):
+        spark_df = spark.read.parquet("dbms.parquet")
+        return spark_df
+    else:
+        big_list = []
+        with open('YelpData.txt', 'rb') as f:
+            data = f.readlines()
+        for partial_data in data:
+            df = pd.read_json(partial_data)
+            for column in df.columns:
+                temp = list(df[column])
+                temp.insert(0, column)
+                big_list.append(temp)
+        new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes"])
+        new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
 
-with open('YelpData.txt', 'rb') as f:
-    data = f.readlines()
-for partial_data in data:
-    df = pd.read_json(partial_data)
-    for column in df.columns:
-        temp = list(df[column])
-        temp.insert(0,column)
-        big_list.append(temp)
-new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes"])
-new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
+        spark_df = spark.createDataFrame(new_df)
+        return spark_df
 
-spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
-spark_df = spark.createDataFrame(new_df)
+def save_dbms(spark_df):
+    if(os.path.exists('dbms.parquet')):
+        shutil.rmtree('dbms.parquet')
+    spark_df.write.parquet("dbms.parquet")
+
+
 # spark_df.write.saveAsTable("yelp")
-print(type(spark_df))
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -49,10 +61,8 @@ def get_review_text(df, r):
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
 
-print(get_review_text(spark_df, "Sushi Osaka"))
+spark_df = initialize_dbms()
 spark_df.show()
-if(os.path.exists('dbms.parquet')):
-    shutil.rmtree('dbms.parquet')
-    spark_df.write.save("dbms.parquet", format="parquet")
-df = spark.read.parquet("dbms.parquet")
-print(type(df))
+save_dbms(spark_df)
+save_dbms(spark_df)
+
