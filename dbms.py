@@ -62,20 +62,20 @@ def get_review_text(df, r):
 
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
-
+initialize_dbms().show()
 # spark_df = initialize_dbms()
 # spark_df.show()
 # save_dbms(spark_df)
 # save_dbms(spark_df)
-consumer = KafkaConsumer(
-    'numtest',
-     bootstrap_servers=['localhost:9092'],
-     auto_offset_reset='earliest',
-     enable_auto_commit=True,
-     group_id='my-group',
-     value_deserializer=lambda x: loads(x.decode('utf-8')))
-
-for message in consumer:
-    message = message.value
-    print(message)
+# consumer = KafkaConsumer(
+#     'numtest',
+#      bootstrap_servers=['localhost:9092'],
+#      auto_offset_reset='earliest',
+#      enable_auto_commit=True,
+#      group_id='my-group',
+#      value_deserializer=lambda x: loads(x.decode('utf-8')))
+#
+# for message in consumer:
+#     message = message.value
+#     print(message)
 
