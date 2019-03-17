@@ -8,11 +8,17 @@ from json import loads
 
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 
-def format_date(date):
+def format_yelp_date(date):
     temp = date.split("/")
     temp.insert(0, temp[2])
     temp = list(map(int,temp[:3]))
     return temp
+
+def format_zomato_date(date):
+    date = date.split()[0]
+    temp = date.split("-")
+    return list(map(int,temp))
+
 
 def initialize_dbms():
     if os.path.exists('dbms.parquet'):
@@ -29,7 +35,7 @@ def initialize_dbms():
                 temp.insert(0, column)
                 big_list.append(temp)
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes"])
-        new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
+        new_df.date = new_df.date.map(lambda x: date(*format__yelp_date(x)))
 
         spark_df = spark.createDataFrame(new_df)
         return spark_df
@@ -45,7 +51,7 @@ def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
         df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-    return df.groupBy("restaurant").sum()
+    return df.groupBy("restaurant").sum().toPandas()
 
 def get_review_text_date_api(df_yelp, df_zomato, rest_name):
     yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
@@ -53,13 +59,12 @@ def get_review_text_date_api(df_yelp, df_zomato, rest_name):
     return yelp.union(zomato)
 
 def get_restaurant_counts(df):
-    return df.groupBy("restaurant").count()
+    return df.groupBy("restaurant").count().toPandas()
 
 def get_vote_counts(df):
-    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
+    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes").toPandas()
 
 def get_review_text(df, r):
-
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
 print(type(initialize_dbms()))
