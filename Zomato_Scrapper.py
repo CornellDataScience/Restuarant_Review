@@ -49,3 +49,7 @@ for restaurant in restaurants_list:
 # save review dictionary to json file
 with open('Zomato_review.json', 'w') as fp:
     json.dump(review_list, fp)
+
+# def scrape_restaurant(numReviews,restaurantID):
+#     for restaurantID
+#         scrape numReview and return data in format: {ReviewID: [ReviewSiteName, RestaurantName, ReviewDate, ReviewText, ReviewRating, ReviewVotes, isElite]}
