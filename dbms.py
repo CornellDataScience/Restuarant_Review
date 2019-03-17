@@ -45,7 +45,7 @@ def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
         df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-    return df.groupBy("restaurant").sum()
+    tem df.groupBy("restaurant").sum()
 
 def get_review_text_date_api(df_yelp, df_zomato, rest_name):
     yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
