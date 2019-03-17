@@ -60,7 +60,9 @@ def get_review_text_date_api(df_yelp, df_zomato, rest_name):
     return yelp.union(zomato)
 
 def get_restaurant_counts(df):
-    return df.groupBy("restaurant").count().toPandas()
+    df = df.groupBy("restaurant").count().toPandas()
+    df = df.set_index("restaurant")
+    return df.to_dict()["count"]
 
 def get_vote_counts(df):
     return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes").toPandas()
@@ -68,6 +70,17 @@ def get_vote_counts(df):
 def get_review_text(df, r):
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
+
+def get_top_5_review_ids(df):
+    key_dict = {}
+    window = Window.partitionBy(df['restaurant']).orderBy(df['date'].desc())
+    top5 = df.select('*', rank().over(window).alias('rank')).filter(col('rank') <= 5)
+    keys = top5.groupby("restaurant").agg(functions.collect_list("key").alias("keys"))
+    rows = keys.rdd.collect()
+    for row in rows:
+        key_dict[row.restaurant] = row.keys
+    return key_dict
+
 print(type(initialize_dbms()))
 # spark_df = initialize_dbms()
 # spark_df.show()
