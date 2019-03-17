@@ -45,7 +45,7 @@ def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
         df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-    tem df.groupBy("restaurant").sum()
+    df.groupBy("restaurant").sum()
 
 def get_review_text_date_api(df_yelp, df_zomato, rest_name):
     yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
@@ -56,12 +56,16 @@ def get_restaurant_counts(df):
     return df.groupBy("restaurant").count()
 
 def get_vote_counts(df):
-    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
+    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes").groupBy("date")
 
 def get_review_text(df, r):
-
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
+
+def get_review_by_time(df):
+    time = df.select(["date"])
+    return time
+
 initialize_dbms().show()
 # spark_df = initialize_dbms()
 # spark_df.show()
@@ -78,4 +82,4 @@ initialize_dbms().show()
 # for message in consumer:
 #     message = message.value
 #     print(message)
-
+final_df = get_vote_counts(initialize_dbms())
