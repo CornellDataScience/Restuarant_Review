@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 ## Initial benchmark execution time: approximately 17 seconds
 ## Current execution time: approximately 8 seconds with ThreadPoolExecutor
 
-def scrapeYelp(url):
+def scrapeYelp(url,id):
     r = requests.get(url)
     soup = BeautifulSoup(r.content,'lxml')
     page_Divs = soup.find_all('div',class_='arrange_unit page-option')
@@ -17,9 +17,13 @@ def scrapeYelp(url):
     page_links.append(url)
     for div in page_Divs:
         page_links.append(div.findChild('a')['href'])
+
     name_div = soup.find('div',class_='biz-page-header clearfix')
-    end_div = name_div.findChild('div',class_='u-inline-block')
-    currentRestaurant = name_div.findChild('h1',recursive = True).text + ' ' +end_div.findChild('h1').text
+    try:
+        end_div = name_div.findChild('div',class_='u-inline-block')
+        currentRestaurant = name_div.findChild('h1',recursive = True).text + ' ' +end_div.findChild('h1').text
+    except:
+        currentRestaurant = name_div.findChild('h1',recursive = True).text
     ReviewDict = {}
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(requests.get, link) for link in page_links]  
@@ -71,10 +75,8 @@ def scrapeYelp(url):
                     if(voteCount != ''):
                         totalVotes += int(voteCount)
             ReviewDict[ReviewID].append(totalVotes)
+            ReviewDict[ReviewID].append(id)
     return ReviewDict
 # start = time.time()
-dict = scrapeYelp('https://www.yelp.com/biz/the-rook-ithaca')
-with open('YelpData.txt', 'w') as outfile:
-    json.dump(dict, outfile)
 # end = time.time()
 # print(end s- start)

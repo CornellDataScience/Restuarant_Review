@@ -26,7 +26,7 @@ def getRestaurants(location):
                 url = business['url']
                 url = url.split('?')[0]
                 url = url + '?sort_by=date_desc'
-                restaurantDict[business['name']] = url
+                restaurantDict[business['name']] = [url,business['id']]
         except:
             break
         offsetCount+=50
@@ -36,8 +36,9 @@ def getRestaurants(location):
    
     
 fullDict = getRestaurants('Ithaca')
+
 for elem in fullDict:
-    print(elem + ' - ' + fullDict[elem])
+    print(fullDict[elem])
 
     
 

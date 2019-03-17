@@ -34,7 +34,7 @@ def initialize_dbms():
                 temp = list(df[column])
                 temp.insert(0, column)
                 big_list.append(temp)
-        new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes"])
+        new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
         # new_df.date = new_df.date.map(lambda x: date(*format_zomato_date(x)))
         new_df.key= new_df.key.apply(lambda x: str(x))
@@ -68,6 +68,9 @@ def get_vote_counts(df):
 def get_review_text(df, r):
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
+df = initialize_dbms()
+df.show()
+save_dbms(df)
 # spark_df = initialize_dbms()
 # spark_df.show()
 # save_dbms(spark_df)

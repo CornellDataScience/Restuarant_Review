@@ -9,7 +9,7 @@ import json
 ## Initial benchmark execution time: approximately 17 seconds
 ## Current execution time: approximately 8 seconds with ThreadPoolExecutor
 
-def scrapeYelp(restaurants):
+def scrapeYelp(restaurants,id):
     ReviewDict = {}
     with ThreadPoolExecutor(max_workers=10) as executor:
         pages = []
@@ -68,6 +68,8 @@ def scrapeYelp(restaurants):
                     if(voteCount != ''):
                         totalVotes += int(voteCount)
             ReviewDict[ReviewID].append(totalVotes)
+            ReviewDict[ReviewID].append(id)
+
     return ReviewDict
 # start = time.time()
 
