@@ -8,6 +8,7 @@ head = {'Authorization': 'bearer %s' % key}
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          value_serializer=lambda x:
                       dumps(x).encode('utf-8'))
+{restuarangId: [[reviewIDs],url]}
 def getReviewCount():
     offsetCount = 0
     restaurantDict = {}

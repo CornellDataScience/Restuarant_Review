@@ -1,9 +1,13 @@
 import json
 import requests
 from bs4 import BeautifulSoup
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 import os
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 import time
 
 def scrapeZomato(url):
@@ -12,7 +16,13 @@ def scrapeZomato(url):
     driver = webdriver.Chrome(executable_path=driverPath)
     driver.get(url)
     time.sleep(3)
-    elem = driver.find_element_by_xpath("//div[@class ='ui segment clearfix zs-load-more res-page-load-more']")
+    try:
+        elem = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.XPATH, "//div[@class ='ui segment clearfix zs-load-more res-page-load-more']"))
+        )
+        elem = driver.find_element_by_xpath("//div[@class ='ui segment clearfix zs-load-more res-page-load-more']")
+    except TimeoutException:
+        elem = None
     while(elem != None):
 
         try:
@@ -28,7 +38,7 @@ def scrapeZomato(url):
     currentRestaurant = currentRestaurant.replace('\n','').strip()
     for fullReview in soup.find_all('div', class_='ui segments res-review-body res-review clearfix js-activity-root mbti item-to-hide-parent stupendousact'):
         ReviewID = int(fullReview['data-review_id'])
-        ReviewDict[ReviewID] = ['Yelp', currentRestaurant]
+        ReviewDict[ReviewID] = ['Zomato', currentRestaurant]
         review = fullReview.findChild('div',class_='rev-text mbot0')
         if(review != None):
             reviewText = review.text
