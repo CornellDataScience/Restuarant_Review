@@ -52,6 +52,30 @@ def main():
 
 # main()
 
+# scrape the 5 reviews for restaurantID
+# the review format is in {ReviewID: [ReviewSiteName, RestaurantName, ReviewDate, ReviewText, ReviewRating, ReviewVotes, isElite]}
+def scrape_reviews_from_restaurant_id(restaurantID):
+    Review_Results = {}
+
+    url = "https://developers.zomato.com/api/v2.1/"
+
+    # get the restaurant name
+    restaurant_url = url + "restaurant?res_id=" + str(restaurantID)
+    response_json = requests.get(restaurant_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    restaurant_name = json.loads(response_json.text)["name"]
+
+    reviews_url = url + "reviews?res_id=" + str(restaurantID)
+    response_json = requests.get(reviews_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+    for review in user_reviews:
+        Review_Results[review["review"]["id"]] = ["Zomato", restaurant_name,
+                                                  review["review"]["review_time_friendly"],
+                                                  review["review"]["review_text"],
+                                                  review["review"]["rating"],
+                                                  review["review"]["likes"],
+                                                  (review["review"]["user"]["foodie_level_num"] > 5)]
+    return Review_Results
+
 
 # scrape the latest reviews for restaurantID
 # the review format is in {ReviewID: [ReviewSiteName, RestaurantName, ReviewDate, ReviewText, ReviewRating, ReviewVotes, isElite]}
@@ -63,13 +87,14 @@ def scrape_latest_reviews(numReviews, restaurantID):
     # get the restaurant name
     restaurant_url = url + "restaurant?res_id=" + str(restaurantID)
     response_json = requests.get(restaurant_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
-    print(response_json)
     restaurant_name = json.loads(response_json.text)["name"]
 
     reviews_url = url + "reviews?res_id=" + str(restaurantID)
     response_json = requests.get(reviews_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
     user_reviews = json.loads(response_json.text)["user_reviews"]
     for i in range(numReviews):
+        if i == len(user_reviews):
+            print("CANNOT GET THE LATEST REVIEWS. NOT ENOUGH LATEST REVIEWS.")
         review = user_reviews[i]
         Review_Results[review["review"]["id"]] = ["Zomato", restaurant_name,
                                                   review["review"]["review_time_friendly"],
