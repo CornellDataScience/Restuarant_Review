@@ -1,9 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
 from lxml.html import fromstring
-import time
-import json
 from concurrent.futures import ThreadPoolExecutor
+import json
+
 
 
 ## Initial benchmark execution time: approximately 17 seconds
@@ -70,9 +70,11 @@ def scrapeYelp(restaurants):
             ReviewDict[ReviewID].append(totalVotes)
     return ReviewDict
 # start = time.time()
+
 dict = scrapeYelp({'P1aQqll76KRvZHdZ8jaQvQ': [2, 'https://www.yelp.com/biz/the-rook-ithaca?sort_by=date_desc'], 'FJsh0TOIQJWj3aQP4Yg0_A': [2, 'https://www.yelp.com/biz/saigon-kitchen-ithaca?sort_by=date_desc']})
 print(dict)
 with open('YelpData.txt', 'w') as outfile:
     json.dump(dict, outfile)
+
 # end = time.time()
 # print(end s- start)
