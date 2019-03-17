@@ -67,7 +67,6 @@ def get_vote_counts(df):
 def get_review_text(df, r):
     section = df.where(df.restaurant == r).select(["review"]).collect()
     return [cell.review for cell in section]
-print(type(initialize_dbms()))
 # spark_df = initialize_dbms()
 # spark_df.show()
 # save_dbms(spark_df)

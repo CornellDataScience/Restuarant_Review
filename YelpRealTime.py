@@ -8,10 +8,8 @@ head = {'Authorization': 'bearer %s' % key}
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          value_serializer=lambda x:
                       dumps(x).encode('utf-8'))
-{restuarangId: [[reviewIDs],url]}
 def getReviewCount():
     offsetCount = 0
-    restaurantDict = {}
     while (True):
         parameters = { 'term': 'restaurants',
                    'limit': 50,
@@ -22,6 +20,7 @@ def getReviewCount():
         r = requests.get(url = endpoint, params = parameters, headers = head)
         data = r.json()
         try:
+            restaurantDict = {}
             for business in data['businesses']:
                 id = business['id']
                 reviewCount = business['review_count']
@@ -29,18 +28,18 @@ def getReviewCount():
                 url = url.split('?')[0] + '?'
                 url = url + 'sort_by=date_desc'
                 restaurantDict[id] = [reviewCount, url]
+            if(restaurantDict != {}):
+                producer.send('YelpTopic1', value=restaurantDict)
+
 
         except:
             break
             print('didnt work')
 
         offsetCount+=50
-    print(restaurantDict)
-    producer.send('restaurant_review', value=restaurantDict)
 
 
 getReviewCount()
-print('done')
 # offsetCount = 0
 # restaurantDict = []
 # while(True):
