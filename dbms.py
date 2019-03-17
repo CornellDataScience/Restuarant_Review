@@ -35,7 +35,7 @@ def initialize_dbms():
                 temp.insert(0, column)
                 big_list.append(temp)
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes"])
-        new_df.date = new_df.date.map(lambda x: date(*format__yelp_date(x)))
+        new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
 
         spark_df = spark.createDataFrame(new_df)
         return spark_df
