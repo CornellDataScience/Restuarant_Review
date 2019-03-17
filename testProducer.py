@@ -7,7 +7,7 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
                          dumps(x).encode('utf-8'))
 
 for e in range(1000):
-    data = {'number' : e}
+    data = {'number' : [e,'hello']}
     print(data)
-    producer.send('test', value=data)
+    producer.send('restaurant_review', value=data)
     sleep(5)
