@@ -15,3 +15,5 @@ def consume_message():
     for message in consumer:
         RestaurantDict = {**RestaurantDict, **message.value}
     return RestaurantDict
+
+print(consume_message())

@@ -1,5 +1,4 @@
 import requests
-from time import sleep
 from json import dumps
 from kafka import KafkaProducer
 key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
@@ -30,6 +29,7 @@ def getReviewCount():
                 restaurantDict[id] = [reviewCount, url]
             if(restaurantDict != {}):
                 producer.send('YelpTopic1', value=restaurantDict)
+                print('sent')
 
 
         except:
