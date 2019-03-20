@@ -87,6 +87,7 @@ def get_top_5_review_ids(df):
         key_dict[row.restaurant] = row.keys
     return key_dict
 
+#def join_reviews_to_yelp(original_df, new_reviews):
 
 # spark_df = initialize_dbms()
 # spark_df.show()
@@ -102,4 +103,3 @@ def get_top_5_review_ids(df):
 #
 # for message in consumer:
 #     message = message.value
-#     print(message)

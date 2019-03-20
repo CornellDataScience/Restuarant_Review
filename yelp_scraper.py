@@ -23,7 +23,7 @@ def scrapeYelp(url,id):
         end_div = name_div.findChild('div',class_='u-inline-block')
         currentRestaurant = name_div.findChild('h1',recursive = True).text + ' ' +end_div.findChild('h1').text
     except:
-        currentRestaurant = name_div.findChild('h1',recursive = True).text
+        currentRestaurant = 'couldnt find'
     ReviewDict = {}
     with ThreadPoolExecutor(max_workers=10) as executor:
         futures = [executor.submit(requests.get, link) for link in page_links]  

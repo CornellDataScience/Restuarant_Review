@@ -15,10 +15,10 @@ print(currentReviewCount)
 for review in newReviewCount:
     try:
         currentReviewCount[review]
-        print('match found')
-        print('review difference is current - new')
-        print(currentReviewCount[review])
-        print(newReviewCount[review][0])
+        diff = newReviewCount[review][0] - currentReviewCount[review]
+        if(diff > 0):
+            print(review + ':      ' + str(diff))
+        else:
+            print('dbms up to date ')
     except:
-        print('match not found for: ')
-        print(review)
+        print('match not found for: ' + str(review))
