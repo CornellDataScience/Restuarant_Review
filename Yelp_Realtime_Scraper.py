@@ -34,17 +34,22 @@ def scrapeYelp(restaurants):
 # start = time.time()
 
 # with open('YelpData.txt', 'w') as outfile:
-#     json.dump(dict, outfile)
-
+#     json.dump(dict, outfile
 # end = time.time()
 # print(end s- start)
 
 def scrape_yelp_page(pages):
     ReviewDict = {}
-    for page in pages:
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = []
+        for link in pages:
+            futures.append([executor.submit(requests.get,link),pages[link][0],pages[link][1]])
+
+        #figure out how to also hold information for rerestaurantid and number of reviews to be scraped
+    print(futures)
+    for future in futures:
         numrestScraped = 0
-        print(page)
-        r = requests.get(page)
+        r = future[0].result()
         soup = BeautifulSoup(r.content, 'lxml')
         name_div = soup.find('div', class_='biz-page-header clearfix')
 
@@ -99,11 +104,10 @@ def scrape_yelp_page(pages):
                     if (voteCount != ''):
                         totalVotes += int(voteCount)
             ReviewDict[ReviewID].append(totalVotes)
-            ReviewDict[ReviewID].append(pages[page][1])
+            ReviewDict[ReviewID].append(future[2])
             numrestScraped += 1
-            if (numrestScraped == pages[page][0]):
+            if (numrestScraped == future[1]):
                 break
-        print(numrestScraped)
     return ReviewDict
 
 dict = scrapeYelp({'P1aQqll76KRvZHdZ8jaQvQ': [42, 'https://www.yelp.com/biz/the-rook-ithaca?sort_by=date_desc'], 'FJsh0TOIQJWj3aQP4Yg0_A': [2, 'https://www.yelp.com/biz/saigon-kitchen-ithaca?sort_by=date_desc']})
