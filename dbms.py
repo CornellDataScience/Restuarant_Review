@@ -1,5 +1,9 @@
 import pandas as pd
 from pyspark.sql import SparkSession, functions
+from pyspark.sql.window import Window
+from pyspark.sql.functions import rank, col
+from pyspark.sql import Row
+from pyspark.sql.types import *
 from datetime import date
 import os
 import shutil
@@ -87,10 +91,21 @@ def get_top_5_review_ids(df):
         key_dict[row.restaurant] = row.keys
     return key_dict
 
-#def join_reviews_to_yelp(original_df, new_reviews):
+def add_row(spark_df, new_row, spark_session):
+    row_df = pd.DataFrame([new_row],columns=spark_df.columns)
+    row_df.fillna(value=pd.np.nan, inplace=True)
+    if new_row[1].lower().strip() == "zomato":
+        row_df.date = row_df.date.map(lambda x: date(*format_zomato_date(x)))
+    else:
+        row_df.date = row_df.date.map(lambda x: date(*format_yelp_date(x)))
+    row_df.key = row_df.key.apply(lambda x: str(x))
+    row_spark = spark_session.createDataFrame(row_df)
+    row_spark.show()
+    return spark_df.union(row_spark)     
+
 
 # spark_df = initialize_dbms()
-# spark_df.show()
+
 # save_dbms(spark_df)
 # save_dbms(spark_df)
 # consumer = KafkaConsumer(
