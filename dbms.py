@@ -166,8 +166,21 @@ def add_rows(spark_df, data_dict):
         spark_df = spark_df.union(row_spark)
     return spark_df   
 
-zomato_df = initialize_yelp()
-# zomato_df.show()
+# def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_name):
+def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
+    zomato_pandas = zomato_spark.toPandas()
+    zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
+#     zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant == zomato_name)]
+    zomato_info = zomato_slice[["date", "rating"]].values.tolist()
+    
+    yelp_pandas = yelp_spark.toPandas()
+    yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
+    yelp_info = yelp_slice[["date","rating"]].values.tolist()
+    return zomato_info + yelp_info
+
+zomato_df = initialize_zomato()
+print(rating_counts(zomato_df))
+
 save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 
