@@ -26,37 +26,97 @@ def format_zomato_date(date):
     return list(map(int,temp))
 
 
-def initialize_dbms():
-    if os.path.exists('dbms.parquet'):
-        print('using parquet dbms')
-        spark_df = spark.read.parquet("dbms.parquet")
-        spark_df.show()
-        return spark_df
+# def initialize_dbms():
+#     if os.path.exists('dbms.parquet'):
+#         print('using parquet dbms')
+#         spark_df = spark.read.parquet("dbms.parquet")
+#         spark_df.show()
+#         return spark_df
+#     else:
+#         big_list = []
+#         with open('YelpData.txt', 'rb') as f:
+#             data = f.readlines()
+#         for partial_data in data:
+#             df = pd.read_json(partial_data)
+#             for column in df.columns:
+#                 temp = list(df[column])
+#                 temp.insert(0, column)
+#                 big_list.append(temp)
+#         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
+#         new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
+
+#         spark_df = spark.createDataFrame(new_df)
+#         return spark_df
+
+def read_data(path):
+    big_list = []
+    with open(path,'rb') as f:
+        data = f.readlines()
+    for partial_data in data:
+        df = pd.read_json(partial_data)
+        for column in df.columns:
+            temp = list(df[column])
+            temp.insert(0, column)
+            big_list.append(temp)
+    return big_list
+
+def initialize_yelp():
+    if os.path.exists('yelp.parquet'):
+        print('yelp parquet')
+        return spark.read.parquet('yelp.parquet')
     else:
-        big_list = []
-        with open('YelpData.txt', 'rb') as f:
-            data = f.readlines()
-        for partial_data in data:
-            df = pd.read_json(partial_data)
-            for column in df.columns:
-                temp = list(df[column])
-                temp.insert(0, column)
-                big_list.append(temp)
+        big_list = read_data('YelpData.txt')
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
+        return spark.createDataFrame(new_df)
 
-        spark_df = spark.createDataFrame(new_df)
-        return spark_df
+def initialize_zomato():
+    if os.path.exists('zomato.parquet'):
+        print('zomato parquet')
+        return spark.read.parquet('zomato.parquet')
+    else:
+        big_list = read_data('ZomatoData.txt')
+        # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
+        new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes"])
 
-def save_dbms(spark_df):
-    if(os.path.exists('dbms.parquet')):
-        spark_df.write.parquet("dbmstemp.parquet", mode="Overwrite")
-        shutil.rmtree('dbms.parquet')
-        temp_df = spark.read.parquet("dbmstemp.parquet")
-        temp_df.write.parquet("dbms.parquet")
-        shutil.rmtree('dbmstemp.parquet')
-    else :
-        spark_df.write.parquet("dbms.parquet")
+        new_df.date = new_df.date.map(lambda x: date(*format_zomato_date(x)))
+        new_df.key = new_df.key.apply(lambda x: str(x))
+        schema = StructType([
+            StructField("key", StringType(), True),
+            StructField("api", StringType(), True),
+            StructField("restaurant", StringType(), True),
+            StructField("date", DateType(), True),
+            StructField("review", StringType(), True),
+            StructField("rating", FloatType(), True),
+            StructField("num_votes", IntegerType(), True),
+        ])
+        return spark.createDataFrame(new_df, schema=schema)
+
+def save_dbms(spark_df, isYelp):
+    path = 'zomato.parquet'
+    temp = 'zomatotemp.parquet'
+    if isYelp:
+        path = 'yelp.parquet'
+        temp = 'yelptemp.parquet'
+    if(os.path.exists(path)):
+        spark_df.write.parquet(temp, mode="Overwrite")
+        shutil.rmtree(path)
+        temp_df = spark.read.parquet(temp)
+        temp_df.write.parquet(path)
+        shutil.rmtree(temp)
+    else:
+        spark_df.write.parquet(path)
+
+
+# def save_dbms(spark_df):
+#     if(os.path.exists('dbms.parquet')):
+#         spark_df.write.parquet("dbmstemp.parquet", mode="Overwrite")
+#         shutil.rmtree('dbms.parquet')
+#         temp_df = spark.read.parquet("dbmstemp.parquet")
+#         temp_df.write.parquet("dbms.parquet")
+#         shutil.rmtree('dbmstemp.parquet')
+#     else :
+#         spark_df.write.parquet("dbms.parquet")
 
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
@@ -103,7 +163,9 @@ def add_row(spark_df, new_row, spark_session):
     row_spark.show()
     return spark_df.union(row_spark)     
 
-
+zomato_df = initialize_yelp()
+# zomato_df.show()
+save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 
 # save_dbms(spark_df)
