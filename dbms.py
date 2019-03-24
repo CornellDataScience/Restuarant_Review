@@ -151,17 +151,20 @@ def get_top_5_review_ids(df):
         key_dict[row.restaurant] = row.keys
     return key_dict
 
-def add_row(spark_df, new_row, spark_session):
-    row_df = pd.DataFrame([new_row],columns=spark_df.columns)
-    row_df.fillna(value=pd.np.nan, inplace=True)
-    if new_row[1].lower().strip() == "zomato":
-        row_df.date = row_df.date.map(lambda x: date(*format_zomato_date(x)))
-    else:
-        row_df.date = row_df.date.map(lambda x: date(*format_yelp_date(x)))
-    row_df.key = row_df.key.apply(lambda x: str(x))
-    row_spark = spark_session.createDataFrame(row_df)
-    row_spark.show()
-    return spark_df.union(row_spark)     
+def add_rows(spark_df, data_dict):
+    for key in data_dict:
+        new_row = data_dict[key]
+        new_row.insert(0,key)
+        row_df = pd.DataFrame([new_row],columns=spark_df.columns)
+        row_df.fillna(value=pd.np.nan, inplace=True)
+        if new_row[1].lower().strip() == "zomato":
+            row_df.date = row_df.date.map(lambda x: date(*format_zomato_date(x)))
+        else:
+            row_df.date = row_df.date.map(lambda x: date(*format_yelp_date(x)))
+            row_df.key = row_df.key.apply(lambda x: str(x))
+        row_spark = spark.createDataFrame(row_df)
+        spark_df = spark_df.union(row_spark)
+    return spark_df   
 
 zomato_df = initialize_yelp()
 # zomato_df.show()
