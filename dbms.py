@@ -7,6 +7,7 @@ from pyspark.sql.types import *
 from datetime import date
 import os
 import shutil
+import json
 from kafka import KafkaConsumer
 from json import loads
 import time

@@ -100,5 +100,12 @@ def scrape_latest_reviews(numReviews, restaurantID):
                                                   (review["review"]["user"]["foodie_level_num"] > 5)]
     return Review_Results
 
+def scrape_IDs():
+    with open('ZomatoData.txt', 'rb') as f:
+        data = f.readlines()
+        for partial_data in data:
+            print(partial_data)
+           
+scrape_IDs()
 # x = scrape_latest_reviews(3, 16774318)
 # print(x)
