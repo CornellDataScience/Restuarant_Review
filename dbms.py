@@ -3,6 +3,7 @@ from pyspark.sql import SparkSession, functions
 from datetime import date
 import os
 import shutil
+import json
 from kafka import KafkaConsumer
 from json import loads
 import time
