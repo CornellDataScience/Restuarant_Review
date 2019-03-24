@@ -26,7 +26,6 @@ def format_zomato_date(date):
     temp = date.split("-")
     return list(map(int,temp))
 
-
 # def initialize_dbms():
 #     if os.path.exists('dbms.parquet'):
 #         print('using parquet dbms')
@@ -179,10 +178,17 @@ def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
     yelp_info = yelp_slice[["date","rating"]].values.tolist()
     return zomato_info + yelp_info
 
-zomato_df = initialize_zomato()
-print(rating_counts(zomato_df))
+def yelp_id_restaurant_dict(yelp_spark):
+    yelp_pandas = yelp_spark.toPandas()
+    print(yelp_pandas)
+    yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
-save_dbms(zomato_df, True)
+
+yelp_df = initialize_yelp()
+print(yelp_id_restaurant_dict(yelp_df))
+
+# save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 
 # save_dbms(spark_df)
