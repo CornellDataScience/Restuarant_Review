@@ -180,7 +180,7 @@ def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
 
 def yelp_id_restaurant_dict(yelp_spark):
     yelp_pandas = yelp_spark.toPandas()
-    print(yelp_pandas)
+    # print(yelp_pandas)
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
