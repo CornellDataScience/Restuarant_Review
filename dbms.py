@@ -185,7 +185,8 @@ https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffs
 Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
     avg rating for that time interval.
 '''
-def time_binned(df, rest_id, interval):
+def avg_rating_binned(spark_df, rest_id, interval):
+    df = spark_df.toPandas()
     df = df[df.restaurant_id == rest_id]
     df.date = df.date.dt.to_period(interval)
     return df.groupby(df.date).mean()[["rating"]]
