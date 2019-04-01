@@ -178,6 +178,18 @@ def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
     yelp_info = yelp_slice[["date","rating"]].values.tolist()
     return zomato_info + yelp_info
 
+
+'''
+Choose an interval argument from link:
+https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects
+Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
+    avg rating for that time interval.
+'''
+def time_binned(df, rest_id, interval):
+    df = df[df.restaurant_id == rest_id]
+    df.date = df.date.dt.to_period(interval)
+    return df.groupby(df.date).mean()[["rating"]]
+
 def yelp_id_restaurant_dict(yelp_spark):
     yelp_pandas = yelp_spark.toPandas()
     print(yelp_pandas)
