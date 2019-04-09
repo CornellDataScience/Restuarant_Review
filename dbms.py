@@ -49,6 +49,9 @@ def format_zomato_date(date):
 #         spark_df = spark.createDataFrame(new_df)
 #         return spark_df
 
+def initialize_dbms():
+    initialize_yelp()
+    initialize_zomato()
 def read_data(path):
     big_list = []
     with open(path,'rb') as f:
@@ -78,7 +81,7 @@ def initialize_zomato():
     else:
         big_list = read_data('ZomatoData.txt')
         # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
-        new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes"])
+        new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
         new_df.date = new_df.date.map(lambda x: date(*format_zomato_date(x)))
         new_df.key = new_df.key.apply(lambda x: str(x))
@@ -90,6 +93,7 @@ def initialize_zomato():
             StructField("review", StringType(), True),
             StructField("rating", FloatType(), True),
             StructField("num_votes", IntegerType(), True),
+            StructField("restaurant__id", StringType(),True)
         ])
         return spark.createDataFrame(new_df, schema=schema)
 
@@ -167,9 +171,9 @@ def add_rows(spark_df, data_dict):
         spark_df = spark_df.union(row_spark)
     return spark_df   
 
-zomato_df = initialize_yelp()
+# zomato_df = initialize_zomato()
 # zomato_df.show()
-save_dbms(zomato_df, True)
+# save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 
 # save_dbms(spark_df)
