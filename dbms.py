@@ -26,7 +26,6 @@ def format_zomato_date(date):
     temp = date.split("-")
     return list(map(int,temp))
 
-
 # def initialize_dbms():
 #     if os.path.exists('dbms.parquet'):
 #         print('using parquet dbms')
@@ -171,8 +170,46 @@ def add_rows(spark_df, data_dict):
         spark_df = spark_df.union(row_spark)
     return spark_df   
 
+<<<<<<< HEAD
 # zomato_df = initialize_zomato()
 # zomato_df.show()
+=======
+# def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_name):
+def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
+    zomato_pandas = zomato_spark.toPandas()
+    zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
+#     zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant == zomato_name)]
+    zomato_info = zomato_slice[["date", "rating"]].values.tolist()
+    
+    yelp_pandas = yelp_spark.toPandas()
+    yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
+    yelp_info = yelp_slice[["date","rating"]].values.tolist()
+    return zomato_info + yelp_info
+
+
+'''
+Choose an interval argument from link:
+https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects
+Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
+    avg rating for that time interval.
+'''
+def avg_rating_binned(spark_df, rest_id, interval):
+    df = spark_df.toPandas()
+    df = df[df.restaurant_id == rest_id]
+    df.date = df.date.dt.to_period(interval)
+    return df.groupby(df.date).mean()[["rating"]]
+
+def yelp_id_restaurant_dict(yelp_spark):
+    yelp_pandas = yelp_spark.toPandas()
+    # print(yelp_pandas)
+    yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
+
+
+yelp_df = initialize_yelp()
+print(yelp_id_restaurant_dict(yelp_df))
+
+>>>>>>> 4bbc89082148e3a96442b99f66ae68b8489321c2
 # save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 
