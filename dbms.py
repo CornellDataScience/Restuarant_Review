@@ -14,6 +14,10 @@ import time
 
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 
+
+def initialize_dbms():
+    return initialize_yelp(), initialize_zomato()
+
 def read_data(path):
     big_list = []
     with open(path,'rb') as f:
@@ -35,7 +39,6 @@ def initialize_yelp():
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
         return new_df
-        # return spark.createDataFrame(new_df)
 
 def initialize_zomato():
     if os.path.exists('zomato.parquet'):
@@ -43,10 +46,8 @@ def initialize_zomato():
         return spark.read.parquet('zomato.parquet').toPandas()
     else:
         big_list = read_data('ZomatoData.txt')
-        # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
-        new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes"])
+        new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
-        # new_df.date = new_df.date.map(lambda x: date(*format_zomato_date(x)))
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
         new_df.key = new_df.key.apply(lambda x: str(x))
         return new_df
@@ -89,10 +90,8 @@ def rating_counts(pd_df):
 '''
 Returns pandas DataFrame with columns as review text, date, api retrieved from, corresponding to restaurant_ids provided
 '''
-# def get_review_text_date_api(df_yelp, df_zomato,yelp_id,zomato_name):
 def get_review_text_date_api(df_yelp, df_zomato,yelp_id,zomato_id):
     yelp = df_yelp[df_yelp.restaurant_id == yelp_id][["review", "date", "api"]]
-    # zomato = df_zomato[df_zomato.restaurant == zomato_name][["review", "date", "api"]]
     zomato = df_zomato[df_zomato.restaurant_id == zomato_id][["review", "date", "api"]]
     return yelp.append(zomato).reset_index()
 
@@ -124,7 +123,7 @@ def get_top_5_review_ids(pd_df):
     return a.groupby("restaurant_id")["key"].apply(list).to_dict()
 
 '''
-Returns a DataFrame with new row added -- dictionary key is review id, to a list of info pertaining to review
+Returns DataFrame with new row added -- dictionary key is review id, to a list of info pertaining to review
 '''
 def add_rows(pd_df, data_dict):
     for key in data_dict:
@@ -132,22 +131,33 @@ def add_rows(pd_df, data_dict):
         new_row.insert(0,key)
         row_df = pd.DataFrame([new_row],columns=pd_df.columns)
         row_df.fillna(value=pd.np.nan, inplace=True)
-        row_df.date = pd.to_datetime(row_df.date)
-        pd_df = pd_df.append(row_df).reset_index()
+        row_df.date = pd.to_datetime(row_df.date.map(lambda x: x.split()[0]))
+        pd_df = pd_df.append(row_df, ignore_index=True)
     return pd_df
 
 '''
 Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the 
 0th element is the date of the review and the 1st element is the review rating
 '''
-# def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_name):
 def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
-    zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
-    # zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant == zomato_name)]
-    zomato_info = zomato_slice[["date", "rating"]].values.tolist()
-    yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
-    yelp_info = yelp_slice[["date","rating"]].values.tolist()
-    total = zomato_info + yelp_info
+    if zomato_id != None:
+        zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
+        zomato_info = zomato_slice[["date", "rating"]].values.tolist()
+
+    if yelp_id != None:
+        yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
+        yelp_info = yelp_slice[["date","rating"]].values.tolist()
+
+    print(zomato_info)
+    print(yelp_info)
+    if zomato_id != None and yelp_id != None:
+        total = zomato_info + yelp_info
+
+    elif zomato_id != None:
+        total = yelp_info
+
+    else:
+        total = zomato_info
     return [[entry[0].to_pydatetime().date(), entry[1]] for entry in total]
 
 '''
@@ -174,10 +184,13 @@ Returns a dictionary of restaurant id to its average rating
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
+yelp_df = initialize_yelp()
+zomato_df = initialize_zomato()
 
+# print(avg_rating_binned(zomato_df, "17419914", 'M'))
+# print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
 
 # yelp_df = initialize_yelp() # pandas DataFrame
-
 
 # consumer = KafkaConsumer(
 #     'numtest',

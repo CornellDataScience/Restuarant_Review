@@ -46,7 +46,6 @@ def scrape_yelp_page(pages):
             futures.append([executor.submit(requests.get,link),pages[link][0],pages[link][1]])
 
         #figure out how to also hold information for rerestaurantid and number of reviews to be scraped
-    print(futures)
     for future in futures:
         numrestScraped = 0
         r = future[0].result()

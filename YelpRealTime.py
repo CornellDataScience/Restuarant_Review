@@ -29,7 +29,6 @@ def getReviewCount():
                 restaurantDict[id] = [reviewCount, url]
             if(restaurantDict != {}):
                 producer.send('YelpTopic1', value=restaurantDict)
-                print('sent')
 
 
         except:

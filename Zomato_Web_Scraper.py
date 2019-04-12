@@ -34,6 +34,7 @@ def scrapeZomato(url):
             break
     soup = BeautifulSoup(driver.page_source, 'lxml')
     ReviewDict = {}
+    restID = soup.find('div',class_='review-form-container pos-relative')['data-res_id']
     currentRestaurant = soup.find('a',class_='ui large header left').text
     currentRestaurant = currentRestaurant.replace('\n','').strip()
     for fullReview in soup.find_all('div', class_='ui segments res-review-body res-review clearfix js-activity-root mbti item-to-hide-parent stupendousact'):
@@ -69,6 +70,7 @@ def scrapeZomato(url):
             else:
                 voteCount = int(voteCount)
         ReviewDict[ReviewID].append(voteCount)
+        ReviewDict[ReviewID].append(restID)
         #fullReview.findChild('span')
 
     # close the browser window
@@ -96,6 +98,5 @@ def getRestaurants():
 
 
 # getRestaurants()
-# scrapeZomato('https://www.zomato.com/finger-lakes-region-ny/collegetown-bagels-3-ithaca')
 
 
