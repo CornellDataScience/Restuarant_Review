@@ -1,15 +1,9 @@
-from dbms import initialize_yelp, yelp_id_restaurant_dict, avg_rating_binned
+from dbms import initialize_yelp, yelp_id_restaurant_dict, avg_rating_binned, get_res_avg_rating
 import pandas as pd
 import random
+import numpy as np
+import math
 import matplotlib.pyplot as plt
-import seaborn as sns
-
-
-# get avg rating for each restaurant in dataframe df
-def get_res_avg_rating(df):
-    df = df.groupBy("restaurant_id").avg("rating").toPandas()
-    df = df.set_index("restaurant_id")
-    return df.to_dict()["avg(rating)"]
 
 # get rating trends for all restaurants in id_restaurant_dict
 def get_all_res_review_trends(df, id_restaurant_dict, interval_length):
@@ -17,7 +11,6 @@ def get_all_res_review_trends(df, id_restaurant_dict, interval_length):
     for res_id, res_name in id_restaurant_dict.items():
         trend = avg_rating_binned(df, res_id, interval_length)
         trends.append(trend)
-        print(trend)
     return trends
 
 # shows bar graph for average review
@@ -34,14 +27,24 @@ def visualize_avg_review_bar_graph(dict, id_restaurant):
 
 # shows graph for review trends for restaurants
 def visualize_res_review_trends_graph(res_review_trends):
-    time = range(res_review_trends[0])
-    for i in range(res_review_trends):
-        plt.plot(time, res_review_trends[i], color='g')
+    # find the max length for time
+    max_time_length = 0
+    max_time_indices = []
+    for i in range(len(res_review_trends)):
+        if max_time_length < len(res_review_trends[i].index.values):
+            max_time_indices = res_review_trends[i].index.values.astype(str)
+            max_time_length = len(res_review_trends[i].index.values)
+
+    for i in range(len(res_review_trends)):
+        trend = res_review_trends[i]['rating'].values
+        buffer = np.zeros(max_time_length - len(trend))
+        trend = np.append(buffer, trend)
+        plt.plot(max_time_indices, trend, color=list(np.random.choice(range(256), size=3) / 255))
+
     plt.xlabel('Time')
     plt.ylabel('Average Rating')
     plt.title('Review Trends for Restaurants')
     plt.show()
-
 
 def visualize():
     yelp_df = initialize_yelp()
@@ -54,13 +57,11 @@ def visualize():
 
     res_review_trends = get_all_res_review_trends(yelp_df, yelp_id_restaurant, 'M')
 
-    print(res_review_trends)
-
     # visualize the average review bar graph
     # visualize_avg_review_bar_graph(avg_rating_dict, yelp_id_restaurant)
 
     # visualize the restaurant review trends graph
-    # visualize_res_review_trends_graph(res_review_trends)
+    visualize_res_review_trends_graph(res_review_trends)
 
 
 visualize()
