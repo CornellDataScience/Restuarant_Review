@@ -186,13 +186,13 @@ Returns a dictionary of restaurant id to its average rating
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-yelp_df = initialize_yelp()
-zomato_df = initialize_zomato()
-zomato_df.show()
-save_zomato(zomato_df)
-yelp_df = initialize_yelp()
-yelp_df.show()
-save_yelp(yelp_df)
+# yelp_df = initialize_yelp()
+# zomato_df = initialize_zomato()
+# zomato_df.show()
+# save_zomato(zomato_df)
+# yelp_df = initialize_yelp()
+# yelp_df.show()
+# save_yelp(yelp_df)
 
 # print(yelp_id_restaurant_dict(yelp_df))
 
