@@ -78,7 +78,7 @@ def initialize_zomato():
 
         return spark.read.parquet('zomato.parquet')
     else:
-        big_list = read_data('ZomatoData.txt')
+        big_list = read_data('ZomatoData2.txt')
         # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
@@ -205,6 +205,11 @@ def yelp_id_restaurant_dict(yelp_spark):
 
 zomato_df = initialize_zomato()
 zomato_df.show()
+save_dbms(zomato_df,False)
+yelp_df = initialize_yelp()
+yelp_df.show()
+save_dbms(yelp_df,True)
+
 # print(yelp_id_restaurant_dict(yelp_df))
 
 
