@@ -22,12 +22,24 @@ def update_yelp(df):
     review_dict = scrapeYelp(scraping_list)
     print(review_dict)
     df = dbms.add_rows(df,review_dict)
-    dbms.save_dbms(df,True)
+    dbms.save_yelp(df)
 
 def update_zomato(df):
     Zomato_Scrapper.scrape_all_review_ID()
     ReviewIDs = KafkaConsumers.consume_topic2_message()
     print(ReviewIDs)
-
-df = dbms.initialize_yelp()
+    recent_review_dict = dbms.get_top_5_review_ids(df)
+    ReviewDict = {}
+    for rest in ReviewIDs:
+        countToScrape = 0
+        lastID = ReviewIDs[rest][len(ReviewIDs[rest])-1]
+        currentReviewList = recent_review_dict.get(rest)
+        for id in currentReviewList:
+            countToScrape += 1
+            if(id == lastID):
+                break
+        ReviewDict.update(Zomato_Scrapper.scrape_latest_reviews(2,rest))
+    df = dbms.add_rows(df,ReviewDict)
+    dbms.save_zomato(df,ReviewDict)
+df = dbms.initialize_zomato()
 update_zomato(df)
