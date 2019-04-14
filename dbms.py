@@ -1,23 +1,56 @@
 import pandas as pd
-import numpy as np
-from pyspark.sql import SparkSession #, functions
-# from pyspark.sql.window import Window
-# from pyspark.sql.functions import rank, col
-# from pyspark.sql import Row
-# from pyspark.sql.types import *
+from pyspark.sql import SparkSession, functions
+from pyspark.sql.window import Window
+from pyspark.sql.functions import rank, col
+from pyspark.sql import Row
+from pyspark.sql.types import *
 from datetime import date
 import os
 import shutil
 import json
 from kafka import KafkaConsumer
+from json import loads
 import time
 
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 
 
-def initialize_dbms():
-    return initialize_yelp(), initialize_zomato()
+def format_yelp_date(date):
+    temp = date.split("/")
+    temp.insert(0, temp[2])
+    temp = list(map(int,temp[:3]))
+    return temp
 
+def format_zomato_date(date):
+    date = date.split()[0]
+    temp = date.split("-")
+    return list(map(int,temp))
+
+# def initialize_dbms():
+#     if os.path.exists('dbms.parquet'):
+#         print('using parquet dbms')
+#         spark_df = spark.read.parquet("dbms.parquet")
+#         spark_df.show()
+#         return spark_df
+#     else:
+#         big_list = []
+#         with open('YelpData.txt', 'rb') as f:
+#             data = f.readlines()
+#         for partial_data in data:
+#             df = pd.read_json(partial_data)
+#             for column in df.columns:
+#                 temp = list(df[column])
+#                 temp.insert(0, column)
+#                 big_list.append(temp)
+#         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
+#         new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
+
+#         spark_df = spark.createDataFrame(new_df)
+#         return spark_df
+
+def initialize_dbms():
+    initialize_yelp()
+    initialize_zomato()
 def read_data(path):
     big_list = []
     with open(path,'rb') as f:
@@ -32,43 +65,43 @@ def read_data(path):
 
 def initialize_yelp():
     if os.path.exists('yelp.parquet'):
-        print('yelp parquet')
-        return spark.read.parquet('yelp.parquet').toPandas()
+
+        return spark.read.parquet('yelp.parquet')
     else:
         big_list = read_data('YelpData.txt')
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
-        new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
-        return new_df
+        new_df.date = new_df.date.map(lambda x: date(*format_yelp_date(x)))
+        return spark.createDataFrame(new_df)
 
 def initialize_zomato():
     if os.path.exists('zomato.parquet'):
-        print('zomato parquet')
-        return spark.read.parquet('zomato.parquet').toPandas()
+
+        return spark.read.parquet('zomato.parquet')
     else:
-        big_list = read_data('ZomatoData.txt')
+        big_list = read_data('ZomatoData2.txt')
+        # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
-        new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
+        new_df.date = new_df.date.map(lambda x: date(*format_zomato_date(x)))
         new_df.key = new_df.key.apply(lambda x: str(x))
-        return new_df
+        schema = StructType([
+            StructField("key", StringType(), True),
+            StructField("api", StringType(), True),
+            StructField("restaurant", StringType(), True),
+            StructField("date", DateType(), True),
+            StructField("review", StringType(), True),
+            StructField("rating", FloatType(), True),
+            StructField("num_votes", IntegerType(), True),
+            StructField("restaurant__id", StringType(),True)
+        ])
+        return spark.createDataFrame(new_df, schema=schema)
 
-def save_yelp(pd_yelp):
-    path = 'yelp.parquet'
-    temp = 'yelptemp.parquet'
-    spark_df = spark.createDataFrame(pd_yelp)
-    if(os.path.exists(path)):
-        spark_df.write.parquet(temp, mode="Overwrite")
-        shutil.rmtree(path)
-        temp_df = spark.read.parquet(temp)
-        temp_df.write.parquet(path)
-        shutil.rmtree(temp)
-    else:
-        spark_df.write.parquet(path)
-
-def save_zomato(pd_zomato):
+def save_dbms(spark_df, isYelp):
     path = 'zomato.parquet'
     temp = 'zomatotemp.parquet'
-    spark_df = spark.createDataFrame(pd_zomato)
+    if isYelp:
+        path = 'yelp.parquet'
+        temp = 'yelptemp.parquet'
     if(os.path.exists(path)):
         spark_df.write.parquet(temp, mode="Overwrite")
         shutil.rmtree(path)
@@ -78,87 +111,78 @@ def save_zomato(pd_zomato):
     else:
         spark_df.write.parquet(path)
 
-'''
-Returns pandas DataFrame with columns corresponding to counts of number of 1-star, 2-star...5-start reviews
-'''
-def rating_counts(pd_df):
-    pd_df = pd_df[["restaurant", "restaurant_id", "rating"]]
+
+# def save_dbms(spark_df):
+#     if(os.path.exists('dbms.parquet')):
+#         spark_df.write.parquet("dbmstemp.parquet", mode="Overwrite")
+#         shutil.rmtree('dbms.parquet')
+#         temp_df = spark.read.parquet("dbmstemp.parquet")
+#         temp_df.write.parquet("dbms.parquet")
+#         shutil.rmtree('dbmstemp.parquet')
+#     else :
+#         spark_df.write.parquet("dbms.parquet")
+
+def rating_counts(df):
+    df = df.select(["restaurant", "rating"])
     for i in range(1,6):
-        pd_df["rating_" + str(i)] = np.where(pd_df.rating == i, 1, 0)
-    return pd_df.groupby("restaurant").sum()
+        df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
+    return df.groupBy("restaurant").sum().toPandas()
 
-'''
-Returns pandas DataFrame with columns as review text, date, api retrieved from, corresponding to restaurant_ids provided
-'''
-def get_review_text_date_api(df_yelp, df_zomato,yelp_id,zomato_id):
-    yelp = df_yelp[df_yelp.restaurant_id == yelp_id][["review", "date", "api"]]
-    zomato = df_zomato[df_zomato.restaurant_id == zomato_id][["review", "date", "api"]]
-    return yelp.append(zomato).reset_index()
+def get_review_text_date_api(df_yelp, df_zomato, rest_name):
+    yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
+    zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
+    return yelp.union(zomato)
 
-'''
-Returns dictionary of restaurant id to number of reviews for that restaurant
-'''
-def get_restaurant_counts(pd_df):
-    pd_df = pd_df.groupby("restaurant_id").count()[["key"]]
-    pd_df.columns = ["count"]
-    return pd_df.to_dict()["count"]
+def get_restaurant_counts(df):
+    df = df.groupBy("restaurant_id").count().toPandas()
+    df = df.set_index("restaurant_id")
+    return df.to_dict()["count"]
 
-'''
-Returns dataframe of total number of votes per restaurant
-'''
-def get_vote_counts(pd_df):
-    return pd_df[["restaurant","num_votes"]].groupby("restaurant").count().rename({"num_votes":"count"})
+def get_vote_counts(df):
+    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes").toPandas()
 
-'''
-Returns list of all review texts corresponding to restaurant
-'''
-def get_review_text(pd_df,rest_id):
-    return list(pd_df[pd_df.restaurant_id == rest_id]["review"])
+def get_review_text(df, r):
+    section = df.where(df.restaurant == r).select(["review"]).collect()
+    return [cell.review for cell in section]
 
-'''
-Returns dictionary from restaurant id to a list of the most recent 5 review's ids
-'''
-def get_top_5_review_ids(pd_df):
-    a = pd_df.sort_values(["restaurant", "date"], ascending=[True,False]).groupby("restaurant").head(5)[["key", "restaurant_id"]]
-    return a.groupby("restaurant_id")["key"].apply(list).to_dict()
+def get_top_5_review_ids(df):
+    key_dict = {}
+    window = Window.partitionBy(df['restaurant']).orderBy(df['date'].desc())
+    top5 = df.select('*', rank().over(window).alias('rank')).filter(col('rank') <= 5)
+    keys = top5.groupby("restaurant").agg(functions.collect_list("key").alias("keys"))
+    rows = keys.rdd.collect()
+    for row in rows:
+        key_dict[row.restaurant] = row.keys
+    return key_dict
 
-'''
-Returns DataFrame with new row added -- dictionary key is review id, to a list of info pertaining to review
-'''
-def add_rows(pd_df, data_dict):
+def add_rows(spark_df, data_dict):
     for key in data_dict:
         new_row = data_dict[key]
         new_row.insert(0,key)
-        row_df = pd.DataFrame([new_row],columns=pd_df.columns)
+        row_df = pd.DataFrame([new_row],columns=spark_df.columns)
         row_df.fillna(value=pd.np.nan, inplace=True)
-        row_df.date = pd.to_datetime(row_df.date.map(lambda x: x.split()[0]))
-        pd_df = pd_df.append(row_df, ignore_index=True)
-    return pd_df
+        if new_row[1].lower().strip() == "zomato":
+            row_df.date = row_df.date.map(lambda x: date(*format_zomato_date(x)))
+        else:
+            row_df.date = row_df.date.map(lambda x: date(*format_yelp_date(x)))
+            row_df.key = row_df.key.apply(lambda x: str(x))
+        row_spark = spark.createDataFrame(row_df)
+        spark_df = spark_df.union(row_spark)
+    return spark_df   
 
-'''
-Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the 
-0th element is the date of the review and the 1st element is the review rating
-'''
-def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
-    if zomato_id != None:
-        zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
-        zomato_info = zomato_slice[["date", "rating"]].values.tolist()
 
-    if yelp_id != None:
-        yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
-        yelp_info = yelp_slice[["date","rating"]].values.tolist()
+# def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_name):
+def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
+    zomato_pandas = zomato_spark.toPandas()
+    zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant_id == zomato_id)]
+#     zomato_slice = zomato_pandas[(zomato_pandas.rating.notnull()) & (zomato_pandas.restaurant == zomato_name)]
+    zomato_info = zomato_slice[["date", "rating"]].values.tolist()
+    
+    yelp_pandas = yelp_spark.toPandas()
+    yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
+    yelp_info = yelp_slice[["date","rating"]].values.tolist()
+    return zomato_info + yelp_info
 
-    print(zomato_info)
-    print(yelp_info)
-    if zomato_id != None and yelp_id != None:
-        total = zomato_info + yelp_info
-
-    elif zomato_id != None:
-        total = yelp_info
-
-    else:
-        total = zomato_info
-    return [[entry[0].to_pydatetime().date(), entry[1]] for entry in total]
 
 '''
 Choose an interval argument from link:
@@ -166,32 +190,34 @@ https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffs
 Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
     avg rating for that time interval.
 '''
-def avg_rating_binned(pd_df, rest_id, interval):
-    pd_df = pd_df[pd_df.restaurant_id == rest_id]
-    pd_df.date = pd_df.date.dt.to_period(interval)
-    return pd_df.groupby(pd_df.date).mean()[["rating"]]
+def avg_rating_binned(spark_df, rest_id, interval):
+    df = spark_df.toPandas()
+    df = df[df.restaurant_id == rest_id]
+    df.date = df.date.dt.to_period(interval)
+    return df.groupby(df.date).mean()[["rating"]]
 
-'''
-Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
-'''
-def yelp_id_restaurant_dict(yelp_pandas):
+def yelp_id_restaurant_dict(yelp_spark):
+    yelp_pandas = yelp_spark.toPandas()
+    # print(yelp_pandas)
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
-    
-'''
-Returns a dictionary of restaurant id to its average rating
-'''
-def get_res_avg_rating(pd_df):
-    return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-yelp_df = initialize_yelp()
+
 zomato_df = initialize_zomato()
+zomato_df.show()
+save_dbms(zomato_df,False)
+yelp_df = initialize_yelp()
+yelp_df.show()
+save_dbms(yelp_df,True)
 
-# print(avg_rating_binned(zomato_df, "17419914", 'M'))
-# print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
+# print(yelp_id_restaurant_dict(yelp_df))
 
-# yelp_df = initialize_yelp() # pandas DataFrame
 
+# save_dbms(zomato_df, True)
+# spark_df = initialize_dbms()
+
+# save_dbms(spark_df)
+# save_dbms(spark_df)
 # consumer = KafkaConsumer(
 #     'numtest',
 #      bootstrap_servers=['localhost:9092'],
