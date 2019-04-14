@@ -45,8 +45,6 @@ def initialize_zomato():
         print('zomato parquet')
         return spark.read.parquet('zomato.parquet').toPandas()
     else:
-        big_list = read_data('ZomatoData2.txt')
-        # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
         big_list = read_data('ZomatoData.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
@@ -170,8 +168,9 @@ Returns a dataframe corresponding to restaurant_id; index contains the time-inve
 '''
 def avg_rating_binned(pd_df, rest_id, interval):
     pd_df = pd_df[pd_df.restaurant_id == rest_id]
+    pd_df.date = pd.to_datetime(pd_df.date)
     pd_df.date = pd_df.date.dt.to_period(interval)
-    return (pd_df.groupby(pd_df.date).mean()[["rating"]],pd_df.date.min())
+    return (pd_df.groupby(pd_df.date).mean()[["rating"]], pd_df.date.min())
 
 '''
 Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
@@ -188,14 +187,6 @@ def get_res_avg_rating(pd_df):
 
 yelp_df = initialize_yelp()
 zomato_df = initialize_zomato()
-zomato_df.show()
-save_zomato(zomato_df)
-yelp_df = initialize_yelp()
-yelp_df.show()
-save_yelp(yelp_df)
-
-# print(yelp_id_restaurant_dict(yelp_df))
-
 
 # print(avg_rating_binned(zomato_df, "17419914", 'M'))
 # print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
