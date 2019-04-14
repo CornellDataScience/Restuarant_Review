@@ -5,10 +5,13 @@ from Zomato_Web_Scraper import scrapeZomato
 def scrape_for_url(url):
 
     print('start scrapping for url ' + url)
-    scrape_data = scrapeZomato(url)
-    with open('ZomatoData.txt', 'a+') as outfile:
-        json.dump(scrape_data, outfile)
-        outfile.write("\n")
+    try:
+        scrape_data = scrapeZomato(url)
+        with open('ZomatoData2.txt', 'a+') as outfile:
+            json.dump(scrape_data, outfile)
+            outfile.write("\n")
+    except:
+        print(url + ' didnt work')
 
 
 # use yelp api to scrape Zomato data simultaneously
@@ -37,6 +40,7 @@ def main():
         scrape_for_url(url)
 
 
-main()
+#main()
+
 
 # restaurant id and 5 review ids
