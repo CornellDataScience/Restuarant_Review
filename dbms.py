@@ -65,7 +65,7 @@ def read_data(path):
 
 def initialize_yelp():
     if os.path.exists('yelp.parquet'):
-        print('yelp parquet')
+
         return spark.read.parquet('yelp.parquet')
     else:
         big_list = read_data('YelpData.txt')
@@ -75,7 +75,7 @@ def initialize_yelp():
 
 def initialize_zomato():
     if os.path.exists('zomato.parquet'):
-        print('zomato parquet')
+
         return spark.read.parquet('zomato.parquet')
     else:
         big_list = read_data('ZomatoData.txt')
@@ -170,10 +170,7 @@ def add_rows(spark_df, data_dict):
         spark_df = spark_df.union(row_spark)
     return spark_df   
 
-<<<<<<< HEAD
-# zomato_df = initialize_zomato()
-# zomato_df.show()
-=======
+
 # def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_name):
 def get_review_rating_date(yelp_spark, zomato_spark, yelp_id, zomato_id):
     zomato_pandas = zomato_spark.toPandas()
@@ -206,10 +203,11 @@ def yelp_id_restaurant_dict(yelp_spark):
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
 
-yelp_df = initialize_yelp()
-print(yelp_id_restaurant_dict(yelp_df))
+zomato_df = initialize_zomato()
+zomato_df.show()
+# print(yelp_id_restaurant_dict(yelp_df))
 
->>>>>>> 4bbc89082148e3a96442b99f66ae68b8489321c2
+
 # save_dbms(zomato_df, True)
 # spark_df = initialize_dbms()
 

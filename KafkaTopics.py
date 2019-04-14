@@ -4,7 +4,7 @@ from Yelp_Realtime_Scraper import scrapeYelp
 import dbms
 import Zomato_Scrapper
 
-def update_yelp():
+def update_yelp(df):
     print('running update yelp')
     getReviewCount()
     newReviewCount = KafkaConsumers.consume_topic1_message()
@@ -24,10 +24,10 @@ def update_yelp():
     df = dbms.add_rows(df,review_dict)
     dbms.save_dbms(df,True)
 
-def update_zomato():
-    #Zomato_Scrapper.scrape_all_review_ID()
-    #ReviewIDs = KafkaConsumers.consume_topic2_message()
-    #print(ReviewIDs)
-    print('done')
+def update_zomato(df):
+    Zomato_Scrapper.scrape_all_review_ID()
+    ReviewIDs = KafkaConsumers.consume_topic2_message()
+    print(ReviewIDs)
 
-#update_zomato()
+df = dbms.initialize_yelp()
+update_zomato(df)

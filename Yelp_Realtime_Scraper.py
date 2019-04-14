@@ -109,5 +109,3 @@ def scrape_yelp_page(pages):
                 break
     return ReviewDict
 
-dict = scrapeYelp({'P1aQqll76KRvZHdZ8jaQvQ': [42, 'https://www.yelp.com/biz/the-rook-ithaca?sort_by=date_desc'], 'FJsh0TOIQJWj3aQP4Yg0_A': [2, 'https://www.yelp.com/biz/saigon-kitchen-ithaca?sort_by=date_desc']})
-print(dict)
