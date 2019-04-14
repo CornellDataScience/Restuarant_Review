@@ -5,6 +5,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import collections
+from scipy.interpolate import spline
 
 # get rating trends for all restaurants in id_restaurant_dict
 def get_all_res_review_trends(df, id_restaurant_dict, interval_length):
@@ -51,11 +52,15 @@ def visualize_res_review_trends_graph(res_review_trends):
             max_time_indices = res_review_trends[i].index.values.astype(str)
             max_time_length = len(res_review_trends[i].index.values)
 
+    # plot the graph
+    temp = np.arange(len(max_time_indices))
+    max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
     for i in range(len(res_review_trends)):
         trend = res_review_trends[i]['rating'].values
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
-        plt.plot(max_time_indices, trend, color=list(np.random.choice(range(256), size=3) / 255))
+        trend_smoothed = spline(temp, trend, max_time_indices_new)
+        plt.plot(max_time_indices_new, trend_smoothed, color=list(np.random.choice(range(256), size=3) / 255))
 
     plt.xlabel('Time')
     plt.ylabel('Average Rating')
@@ -89,7 +94,7 @@ def visualize_selected():
     avg_rating_dict = get_res_avg_rating(yelp_df)
     
     # selecting first 10 restaurants in yelp_df (can choose others)
-    l_dict = collections.Counter(yelp_id_restaurant).most_common(10)
+    l_dict = collections.Counter(yelp_id_restaurant).most_common(3)
     list_res = []
     for i in range(len(l_dict)):
         list_res.append(l_dict[i][0])
@@ -99,11 +104,11 @@ def visualize_selected():
 
     # creates the trends for the selected restaurant ids
     res_review_trends = []
-        for i in range(len(list_rest_ids)):
-            res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], yelp_id_restaurant, 'M'))
+    for i in range(len(list_rest_ids)):
+        res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], yelp_id_restaurant, 'M'))
 
     # visualizes the trends
     visualize_res_review_trends_graph(res_review_trends)
 
-visualize()
+# visualize()
 visualize_selected()

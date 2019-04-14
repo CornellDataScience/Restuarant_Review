@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
+import pandas as pd
 
 def scrapeZomato(url):
     cwd = os.getcwd()
@@ -177,10 +178,20 @@ def addRestaurantIDs():
               'De Tasty Hot Pot': '17420723', "Arby's": '17419879', 'Lot 10 Kitchen': '17420587',
               "Rogan's Corner": '17757735', 'Tim Hortons': '17420491', 'Gorgers Taco Shack': '17420716',
               'Mitsuba Hibachi Sushi Restaurant': '17795561', 'Due Amici': '18433192'}
-
-    with open('ZomatoData.txt','rb') as f:
+    fullDataDict = {}
+    with open('ZomatoData.txt', 'rb') as f:
         data = f.readlines()
-        
+    for partial_data in data:
+        newData = json.loads(partial_data)
+        fullDataDict.update(newData)
+    for elem in fullDataDict:
+        key = fullDataDict[elem][1]
+        id = idDict.get(key)
+        fullDataDict[elem].append(id)
+    print(fullDataDict)
+    with open('ZomatoData2.txt', 'a+') as outfile:
+        json.dump(fullDataDict, outfile)
+
 
 addRestaurantIDs()
 
