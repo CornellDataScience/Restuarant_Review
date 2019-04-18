@@ -26,10 +26,13 @@ def update_yelp(df):
 
 def update_zomato(df):
     Zomato_Scrapper.scrape_all_review_ID()
+    print('reviews scraped and sent')
     ReviewIDs = KafkaConsumers.consume_topic2_message()
+    print('Messages from Topic')
     print(ReviewIDs)
     recent_review_dict = dbms.get_top_5_review_ids(df)
     ReviewDict = {}
+    print('Comparing Reviews')
     for rest in ReviewIDs:
         countToScrape = 0
         lastID = ReviewIDs[rest][len(ReviewIDs[rest])-1]

@@ -42,8 +42,9 @@ def initialize_yelp():
 
 def initialize_zomato():
     if os.path.exists('zomato.parquet'):
-        print('zomato parquet')
-        return spark.read.parquet('zomato.parquet').toPandas()
+        df = spark.read.parquet('zomato.parquet').toPandas()
+        df.rename(columns={'restaurant__id': 'restaurant_id'},inplace=True)
+        return df;
     else:
         big_list = read_data('ZomatoData2.txt')
         # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
@@ -186,8 +187,13 @@ Returns a dictionary of restaurant id to its average rating
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-# yelp_df = initialize_yelp()
+df = initialize_zomato()
+print(df.head(2))
+save_zomato(df)
 # zomato_df = initialize_zomato()
+# print(zomato_df)
+# print(get_top_5_review_ids(zomato_df))
+# yelp_df = initialize_yelp()
 # zomato_df.show()
 # save_zomato(zomato_df)
 # yelp_df = initialize_yelp()

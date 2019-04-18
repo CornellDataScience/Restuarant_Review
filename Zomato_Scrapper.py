@@ -63,7 +63,6 @@ def scrape_reviews_from_restaurant_id(restaurantID):
 
     reviews_url = url + "reviews?res_id=" + str(restaurantID)
     response_json = requests.get(reviews_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
-    print(response_json.text)
     user_reviews = json.loads(response_json.text)["user_reviews"]
     restaurant_ID_list = []
     for review in user_reviews:
@@ -103,7 +102,6 @@ def scrape_IDs():
     list = []
     with open('ZomatoData2.txt', 'rb') as f:
         data = f.read()
-        print(data)
         dict = json.loads(data)
         for key in dict:
             id = dict[key][6]
@@ -116,4 +114,3 @@ def scrape_all_review_ID():
         recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
     producer.send('ZomatoTopic2',value=recent_reviews)
 
-scrape_all_review_ID()
