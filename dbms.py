@@ -47,8 +47,6 @@ def initialize_zomato():
         return df;
     else:
         big_list = read_data('ZomatoData2.txt')
-        # new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
-        big_list = read_data('ZomatoData.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
