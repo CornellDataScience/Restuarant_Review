@@ -1,3 +1,6 @@
+"""
+Returns positivity to negativity ratio given restaurant name "restaurantString"
+"""
 def scorer(restaurantString):
     sum = 0
     neg = 0
@@ -24,12 +27,13 @@ def scorer(restaurantString):
             else:
                 compound = compound + sqrt((100*y)/votes)*z
                 counter = 0
-    print("The aggregate negativity rating for " +  restaurantString + " is " + str(round(neg, 3)))
-    print("The aggregate positivity rating is " + str(round(pos, 3)))
-    print("The aggregate compound rating is " + str(round(compound, 3)))
-    print("The positivity to negativity ratio is " + str(round(pos/neg, 3)))
-    print("The average rating for " +  restaurantString + " is " + str(round(rating/sum, 3)))
+    return round(pos/neg, 3)
+    #print("The average rating for " +  restaurantString + " is " + str(round(rating/sum, 3)))
 
+"""
+Returns positivity to negativity ratio given restaurant name "restaurantString" and
+aspect to analyze "aspect"
+"""
 def specificScorer(restaurantString, aspect):
     synonym = synonyms(aspect)
     reviews = get_review_text(spark_df, restaurantString)
@@ -67,4 +71,4 @@ def specificScorer(restaurantString, aspect):
                 else:
                     counter = 0
         if neg!=0:
-            return round(pos/neg, 3))
+            return round(pos/neg, 3)
