@@ -48,15 +48,15 @@ def visualize_res_review_trends_graph(res_review_trends):
     max_time_length = 0
     max_time_indices = []
     for i in range(len(res_review_trends)):
-        if max_time_length < len(res_review_trends[i].index.values):
-            max_time_indices = res_review_trends[i].index.values.astype(str)
-            max_time_length = len(res_review_trends[i].index.values)
+        if max_time_length < len(res_review_trends[i][0].index.values):
+            max_time_indices = res_review_trends[i][0].index.values.astype(str)
+            max_time_length = len(res_review_trends[i][0].index.values)
 
     # plot the graph
     temp = np.arange(len(max_time_indices))
     max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
     for i in range(len(res_review_trends)):
-        trend = res_review_trends[i]['rating'].values
+        trend = res_review_trends[i][0]['rating'].values
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
