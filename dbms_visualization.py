@@ -90,10 +90,10 @@ def visualize():
 
 def visualize_selected():
     yelp_df = initialize_yelp()
-    
+
     # generate a id to restaurant list
     yelp_id_restaurant = yelp_id_restaurant_dict(yelp_df)
-    
+
     # yelp_df is a dataFrame containing all data in yelp
     avg_rating_dict = get_res_avg_rating(yelp_df)
 
@@ -167,7 +167,6 @@ def visualize_yelp_competitor_score(res_id):
     plt.title("bar graph for average review for restaurants")
     plt.bar(range(len(competitors_rating_dict)), values, color=colors)
     plt.savefig('competitor bar graph.png')
-<<<<<<< HEAD
 
     # add legends
     custom_lines = [Line2D([0], [0], color='blue', lw=4)]
@@ -181,9 +180,6 @@ def visualize_yelp_competitor_score(res_id):
 
     plt.legend(custom_lines, competitor_names, fontsize='small', loc='upper center', bbox_to_anchor=(0.5, -0.03), ncol=3)
     plt.show()
-=======
-    # plt.show()
->>>>>>> 86136e1775741933f8f5a4116aa705afd73bd000
 
 
 # visualize()
