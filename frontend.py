@@ -13,6 +13,7 @@ import collections
 import base64
 from scipy.interpolate import spline
 import numpy as np
+import requests
 
 app = Flask(__name__)
 yelp_df = None
@@ -59,9 +60,17 @@ def index():
 	plt.savefig(img1,format='png')
 	img1.seek(0)
 	plot_url1 = base64.b64encode(img1.getvalue()).decode()
-	# return '<img src="data:image/png;base64,{}">'.format(plot_url)
 
-	return '<img src="data:image/png;base64,{}"> <img src="data:image/png;base64,{}">'.format(plot_url, plot_url1)
+	plt.close()
+	visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg', yelp_df)
+	img1 = io.BytesIO()
+	plt.savefig(img1,format='png')
+	img1.seek(0)
+	plot_url2= base64.b64encode(img1.getvalue()).decode()
+
+
+	return '<img src="data:image/png;base64,{}"> <img src="data:image/png;base64,{}"> <img src="data:image/png;base64,{}">'.format(plot_url, 
+		plot_url1, plot_url2)
 
 @app.route("/data", methods=['POST'])
 def data():
@@ -110,4 +119,55 @@ def visualize_res_review_trends_graph(res_review_trends):
 	plt.xlabel('Time')
 	plt.ylabel('Average Rating')
 	plt.title('Review Trends for Restaurants')
+
+
+def visualize_yelp_competitor_score(res_id, yelp_df):
+	# get the category of the res_id
+	key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
+	endpoint = 'https://api.yelp.com/v3/businesses/' + res_id
+	head = {'Authorization': 'bearer %s' % key}
+
+	r = requests.get(url=endpoint, headers=head)
+	data = r.json()
+	categories_json = data['categories']
+	categories = ''
+	for c in categories_json:
+	    categories += c['alias'] + ', '
+	location = data['location']['address1'] \
+	           + ', ' + data['location']['city'] \
+	           + ', ' + data['location']['state'] + ' ' \
+	           + data['location']['zip_code']
+	# fetch competitors
+	endpoint = 'https://api.yelp.com/v3/businesses/search'
+	parameters = {'term': 'restaurants',
+	              'limit': 10,
+	              'radius': 40000,
+	              'location': location,
+	              'categories': categories
+	              }
+	competitors = {}
+	competitors[res_id] = data['name']
+	r = requests.get(url=endpoint, params=parameters, headers=head)
+	data = r.json()
+	# get the competitors
+	for business in data['businesses']:
+	    if business['id'] != res_id:
+	        competitors[business['id']] = business['name']
+
+	# visualize the data
+	avg_rating_dict = get_res_avg_rating(yelp_df)
+	competitors_rating_dict = {}
+	# get the competitor rating
+	for business_id in competitors:
+	    if business_id in avg_rating_dict:
+	        competitors_rating_dict[business_id] = avg_rating_dict[business_id]
+	# draw the graph with rest_id high lighted in bar graph
+	names = []
+	for key in competitors_rating_dict.keys():
+	    names.append(competitors[key])
+	values = list(competitors_rating_dict.values())
+	colors = ['cyan'] * len(competitors_rating_dict.keys())
+	colors[0] = 'blue'
+	plt.title("bar graph for average review for restaurants")
+	plt.bar(range(len(competitors_rating_dict)), values, color=colors, tick_label=names)
 
