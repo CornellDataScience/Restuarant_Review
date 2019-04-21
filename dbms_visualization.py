@@ -166,8 +166,8 @@ def visualize_yelp_competitor_score(res_id):
     plt.title("bar graph for average review for restaurants")
     plt.bar(range(len(competitors_rating_dict)), values, color=colors, tick_label=names)
     plt.savefig('competitor bar graph.png')
-    plt.show()
+    # plt.show()
 
 # visualize()
 # visualize_selected()
-visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
+# visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
