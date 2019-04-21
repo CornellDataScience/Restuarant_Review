@@ -42,10 +42,11 @@ def initialize_yelp():
 
 def initialize_zomato():
     if os.path.exists('zomato.parquet'):
-        print('zomato parquet')
-        return spark.read.parquet('zomato.parquet').toPandas()
+        df = spark.read.parquet('zomato.parquet').toPandas()
+        df.rename(columns={'restaurant__id': 'restaurant_id'},inplace=True)
+        return df;
     else:
-        big_list = read_data('ZomatoData.txt')
+        big_list = read_data('ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
@@ -136,7 +137,7 @@ def add_rows(pd_df, data_dict):
     return pd_df
 
 '''
-Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the 
+Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the
 0th element is the date of the review and the 1st element is the review rating
 '''
 def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
@@ -163,13 +164,13 @@ def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
 '''
 Choose an interval argument from link:
 https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects
-Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
+Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is
     avg rating for that time interval.
 '''
 def avg_rating_binned(pd_df, rest_id, interval):
     pd_df = pd_df[pd_df.restaurant_id == rest_id]
-    pd_df.date = pd_df.date.to_period(interval)
-    return (pd_df.groupby(pd_df.date).mean()[["rating"]], pd_df.date.min())
+    pd_df.date = pd_df.date.dt.to_period(interval)
+    return pd_df.groupby(pd_df.date).mean()[["rating"]]
 
 '''
 Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
@@ -177,7 +178,7 @@ Returns dictionary where the keys are the yelp restaurant ids and the correspond
 def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
-    
+
 '''
 Returns a dictionary of restaurant id to its average rating
 '''
