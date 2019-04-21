@@ -185,9 +185,7 @@ Returns a dictionary of restaurant id to its average rating
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-df = initialize_zomato()
-print(df.head(2))
-save_zomato(df)
+
 # zomato_df = initialize_zomato()
 # print(zomato_df)
 # print(get_top_5_review_ids(zomato_df))
