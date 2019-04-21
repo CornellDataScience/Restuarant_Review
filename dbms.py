@@ -137,7 +137,7 @@ def add_rows(pd_df, data_dict):
     return pd_df
 
 '''
-Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the 
+Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the
 0th element is the date of the review and the 1st element is the review rating
 '''
 def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
@@ -164,13 +164,13 @@ def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
 '''
 Choose an interval argument from link:
 https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects
-Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is 
+Returns a dataframe corresponding to restaurant_id; index contains the time-invervals, and 'rating' column is
     avg rating for that time interval.
 '''
 def avg_rating_binned(pd_df, rest_id, interval):
     pd_df = pd_df[pd_df.restaurant_id == rest_id]
-    pd_df.date = pd_df.date.dt.to_period(interval)
-    return pd_df.groupby(pd_df.date).mean()[["rating"]]
+    pd_df.date = pd.to_datetime(pd_df.date).dt.to_period(interval)
+    return (pd_df.groupby(pd_df.date).mean()[["rating"]], pd_df.date.min())
 
 '''
 Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
@@ -178,30 +178,17 @@ Returns dictionary where the keys are the yelp restaurant ids and the correspond
 def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
-    
+
 '''
 Returns a dictionary of restaurant id to its average rating
 '''
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-df = initialize_zomato()
-print(df.head(2))
-save_zomato(df)
-# zomato_df = initialize_zomato()
-# print(zomato_df)
-# print(get_top_5_review_ids(zomato_df))
-# yelp_df = initialize_yelp()
-# zomato_df.show()
-# save_zomato(zomato_df)
-# yelp_df = initialize_yelp()
-# yelp_df.show()
-# save_yelp(yelp_df)
+yelp_df = initialize_yelp()
+#zomato_df = initialize_zomato()
 
-# print(yelp_id_restaurant_dict(yelp_df))
-
-
-# print(avg_rating_binned(zomato_df, "17419914", 'M'))
+print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
 # print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
 
 # yelp_df = initialize_yelp() # pandas DataFrame
