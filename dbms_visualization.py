@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import collections
 from scipy.interpolate import spline
 import requests
+from matplotlib.lines import Line2D
 
 
 # get rating trends for all restaurants in id_restaurant_dict
@@ -164,9 +165,22 @@ def visualize_yelp_competitor_score(res_id):
     colors = ['cyan'] * len(competitors_rating_dict.keys())
     colors[0] = 'blue'
     plt.title("bar graph for average review for restaurants")
-    plt.bar(range(len(competitors_rating_dict)), values, color=colors, tick_label=names)
+    plt.bar(range(len(competitors_rating_dict)), values, color=colors)
     plt.savefig('competitor bar graph.png')
+
+    # add legends
+    custom_lines = [Line2D([0], [0], color='blue', lw=4)]
+    for i in range(len(competitors_rating_dict.keys()) - 1):
+        custom_lines.append(Line2D([0], [0], color='cyan', lw=4))
+    competitor_names = []
+    i = 0
+    for res_id in competitors_rating_dict.keys():
+        competitor_names.append(str(i) + ': ' + competitors[res_id])
+        i += 1
+
+    plt.legend(custom_lines, competitor_names, fontsize='small', loc='upper center', bbox_to_anchor=(0.5, -0.03), ncol=3)
     plt.show()
+
 
 # visualize()
 # visualize_selected()
