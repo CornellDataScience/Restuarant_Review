@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from pyspark.sql import SparkSession #, functions
 # from pyspark.sql.window import Window
 # from pyspark.sql.functions import rank, col
 # from pyspark.sql import Row
@@ -12,7 +11,6 @@ import json
 from kafka import KafkaConsumer
 import time
 
-spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 
 
 def initialize_dbms():
@@ -31,21 +29,18 @@ def read_data(path):
     return big_list
 
 def initialize_yelp():
-    if os.path.exists('yelp.parquet'):
-        print('yelp parquet')
-        return spark.read.parquet('yelp.parquet').toPandas()
-    else:
+    try:
+        return pd.read_hdf('yelp.hdf','yelp_df')
+    except:
         big_list = read_data('YelpData.txt')
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
         return new_df
 
 def initialize_zomato():
-    if os.path.exists('zomato.parquet'):
-        df = spark.read.parquet('zomato.parquet').toPandas()
-        df.rename(columns={'restaurant__id': 'restaurant_id'},inplace=True)
-        return df;
-    else:
+    try:
+        pd.read_hdf('zomato.hdf','zomato_df')
+    except:
         big_list = read_data('ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
@@ -54,30 +49,10 @@ def initialize_zomato():
         return new_df
 
 def save_yelp(pd_yelp):
-    path = 'yelp.parquet'
-    temp = 'yelptemp.parquet'
-    spark_df = spark.createDataFrame(pd_yelp)
-    if(os.path.exists(path)):
-        spark_df.write.parquet(temp, mode="Overwrite")
-        shutil.rmtree(path)
-        temp_df = spark.read.parquet(temp)
-        temp_df.write.parquet(path)
-        shutil.rmtree(temp)
-    else:
-        spark_df.write.parquet(path)
+    pd_yelp.to_hdf('yelp.hdf','yelp_df',mode= 'w')
 
 def save_zomato(pd_zomato):
-    path = 'zomato.parquet'
-    temp = 'zomatotemp.parquet'
-    spark_df = spark.createDataFrame(pd_zomato)
-    if(os.path.exists(path)):
-        spark_df.write.parquet(temp, mode="Overwrite")
-        shutil.rmtree(path)
-        temp_df = spark.read.parquet(temp)
-        temp_df.write.parquet(path)
-        shutil.rmtree(temp)
-    else:
-        spark_df.write.parquet(path)
+    pd_zomato.to_hdf('zomato.hdf','zomato_df', mode='w')
 
 '''
 Returns pandas DataFrame with columns corresponding to counts of number of 1-star, 2-star...5-start reviews
@@ -185,10 +160,13 @@ Returns a dictionary of restaurant id to its average rating
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
 
-yelp_df = initialize_yelp()
+# zomato_df = initialize_zomato()
+# print('dbms has been initialized')
+# save_zomato(zomato_df)
 #zomato_df = initialize_zomato()
 
-print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
+#print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
+
 # print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
 
 # yelp_df = initialize_yelp() # pandas DataFrame
