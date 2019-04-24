@@ -167,6 +167,10 @@ def get_res_avg_rating(pd_df):
 
 #print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
 
+# yelp_df = initialize_yelp()
+#zomato_df = initialize_zomato()
+
+# print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
 # print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
 
 # yelp_df = initialize_yelp() # pandas DataFrame
