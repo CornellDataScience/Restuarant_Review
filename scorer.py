@@ -1,3 +1,107 @@
+resArray = ['Sushi Osaka',
+' Pokelava',
+'Ling Ling Restaurant',
+'DiBella’s Subs',
+'Plantation Bar and Grill',
+'Taco Bell',
+'Temple of Zeus',
+'Italian Carry Out',
+'Domino’s Pizza',
+'Sicilian Delight',
+'Texas Roadhouse - Ithaca',
+'Monks On The Commons',
+'Kelly’s Dockside Cafe',
+'Scale House Brew Pub',
+'Northeast Pizza & Beer',
+'Buffalo Wild Wings',
+'Spring Buffet & Grill',
+'Panera Bread',
+' Denny’s',
+'Firehouse Subs',
+'Crossroads Bar & Grille',
+'Sal’s Pizzeria',
+'Louie’s Lunch',
+'Coal Yard Cafe',
+'Napoli Pizzeria',
+'Inn at Taughannock Restaurant',
+'Ithaca Bakery',
+'Souvlaki House',
+'Oishii Bowl',
+'Asian Noodle House',
+'Cafe Pacific',
+'CoreLife Eatery',
+'Chipotle Mexican Grill',
+'Covered Bridge Mkt',
+'Sahara Mediterranean Restaurant',
+' Arby’s',
+'Joe’s Restaurant',
+'Mia Restaurant',
+'Kilpatrick’s Publick House',
+'Aladdin’s Natural Eatery',
+'Lincoln Street Diner',
+' McDonald’s',
+' Mitsuba',
+'Uncle Joe’s',
+'The Rhine House',
+'Ling Ling Garden',
+'Ten Forward Cafe',
+'Casablanca Pizzeria',
+'Applebee’s Grill + Bar',
+'Press Cafe',
+'Moe’s Southwest Grill',
+' Subway',
+'Rogan’s Corner',
+'Little Thai House',
+'Miyake Japanese Restaurant',
+'Friends & Pho',
+'Salsa Fiesta',
+'Mattin’s Café',
+'Taverna Banfi',
+'Ctb Appetizers',
+'Circus Truck',
+'Luna Inspired Street Food',
+' Goldie’s',
+'Dolce Delight',
+'Sunset Grill',
+'Plum Tree Restaurant',
+'The Sub Shop',
+'Danby Gathery',
+' Okenshields',
+'Amit Bhatia Libe Café',
+'Universal Deli Grocery',
+'Apollo Restaurant',
+'D P Dough',
+'Bibim Bap Korean Restaurant',
+'Big Al’s Hilltop Quikstop',
+'Taste of Thai',
+'Easy Wok',
+'Atrium Cafe',
+'Little Caesars Pizza',
+'Franny’s Food Truck',
+'Tibetan Momo Bar',
+'Waffle Frolic',
+'Razorback BBQ',
+'Purity Ice Cream',
+'Royal Court Restaurant',
+'The Ivy Room',
+'Old Mexico',
+'2nd Landing Cafe',
+'Jason’s Grocery & Deli',
+'Cup O’ Jo Café',
+'Sinfully Delicious Baking Co.',
+'Red & White Cafe',
+' Trillium',
+'Café Jennie',
+'Pudgie’s Pizza & Sub Shops',
+'Mama Teresa Pizzeria',
+'Taste of Thai Express']
+
+def synonyms(term):
+    response = requests.get('http://www.thesaurus.com/browse/{}'.format(term))
+    soup = BeautifulSoup(response.text, features = 'lxml')
+    section = soup.find('section', {'class': 'synonyms-container'})
+    return [span.text for span in section.findAll('span')]
+
 """
 Returns positivity to negativity ratio given restaurant name "restaurantString"
 """
@@ -11,6 +115,8 @@ def scorer(restaurantString):
     rating = 0
     for y in get_num_votes(spark_df, restaurantString):
         votes = votes + y
+        if votes == 0:
+            votes = 1
     for x, y, a in zip(get_review_text(spark_df, restaurantString), get_num_votes(spark_df, restaurantString), get_rating(spark_df, restaurantString)):
         sum = sum + 1
         rating = rating + a
@@ -27,7 +133,10 @@ def scorer(restaurantString):
             else:
                 compound = compound + sqrt((100*y)/votes)*z
                 counter = 0
-    return round(pos/neg, 3)
+    if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
+        return round(pos/neg, 3)
+    else:
+        return pos
     #print("The average rating for " +  restaurantString + " is " + str(round(rating/sum, 3)))
 
 """
@@ -70,5 +179,19 @@ def specificScorer(restaurantString, aspect):
                     counter = 3
                 else:
                     counter = 0
-        if neg!=0:
+        if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
             return round(pos/neg, 3)
+        else:
+            return pos
+
+def totalScores():
+    scoreDict = {}
+    for rest in resArray:
+        scoreDict[rest] = scorer(rest)
+    return scoreDict
+
+def totalSpecificScore(aspect):
+    scoreDict = {}
+    for rest in resArray:
+        scoreDict[rest] = specificScorer(rest, aspect)
+    return scoreDict

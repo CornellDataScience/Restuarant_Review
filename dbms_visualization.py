@@ -1,11 +1,11 @@
 from dbms import initialize_yelp, yelp_id_restaurant_dict, avg_rating_binned, get_res_avg_rating
-import pandas as pd
-import random
 import numpy as np
-import math
 import matplotlib.pyplot as plt
 import collections
 from scipy.interpolate import spline
+import requests
+from matplotlib.lines import Line2D
+
 
 # get rating trends for all restaurants in id_restaurant_dict
 def get_all_res_review_trends(df, id_restaurant_dict, interval_length):
@@ -15,11 +15,13 @@ def get_all_res_review_trends(df, id_restaurant_dict, interval_length):
         trends.append(trend)
     return trends
 
+
 # get rating trend for one restaurant
 def get_one_res_review_trend(df, res_id, id_restaurant_dict, interval_length):
     if res_id in id_restaurant_dict.keys():
         trend = avg_rating_binned(df, res_id, interval_length)
     return trend
+
 
 # given a list of restaurant ids, checks if they are present in database and returns the list
 # of restaurant ids in database
@@ -29,6 +31,7 @@ def choose_res_ids(rest_ids, id_restaurant_dict):
         if rest_ids[i] in id_restaurant_dict.keys():
             list_rest_ids.append(rest_ids[i])
     return list_rest_ids
+
 
 # shows bar graph for average review
 def visualize_avg_review_bar_graph(dict, id_restaurant):
@@ -67,6 +70,7 @@ def visualize_res_review_trends_graph(res_review_trends):
     plt.title('Review Trends for Restaurants')
     plt.show()
 
+
 def visualize():
     yelp_df = initialize_yelp()
 
@@ -82,17 +86,17 @@ def visualize():
     # visualize_avg_review_bar_graph(avg_rating_dict, yelp_id_restaurant)
 
     # visualize the restaurant review trends graph
-    visualize_res_review_trends_graph(res_review_trends)
+    # visualize_res_review_trends_graph(res_review_trends)
 
 def visualize_selected():
     yelp_df = initialize_yelp()
-    
+
     # generate a id to restaurant list
     yelp_id_restaurant = yelp_id_restaurant_dict(yelp_df)
-    
+
     # yelp_df is a dataFrame containing all data in yelp
     avg_rating_dict = get_res_avg_rating(yelp_df)
-    
+
     # selecting first 10 restaurants in yelp_df (can choose others)
     l_dict = collections.Counter(yelp_id_restaurant).most_common(3)
     list_res = []
@@ -110,5 +114,74 @@ def visualize_selected():
     # visualizes the trends
     visualize_res_review_trends_graph(res_review_trends)
 
+
+# visualize the competitor's score and score of the restaurant with res_id in a bar graph
+def visualize_yelp_competitor_score(res_id):
+    # get the category of the res_id
+    key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
+    endpoint = 'https://api.yelp.com/v3/businesses/' + res_id
+    head = {'Authorization': 'bearer %s' % key}
+
+    r = requests.get(url=endpoint, headers=head)
+    data = r.json()
+    categories_json = data['categories']
+    categories = ''
+    for c in categories_json:
+        categories += c['alias'] + ', '
+    location = data['location']['address1'] \
+               + ', ' + data['location']['city'] \
+               + ', ' + data['location']['state'] + ' ' \
+               + data['location']['zip_code']
+    # fetch competitors
+    endpoint = 'https://api.yelp.com/v3/businesses/search'
+    parameters = {'term': 'restaurants',
+                  'limit': 10,
+                  'radius': 40000,
+                  'location': location,
+                  'categories': categories
+                  }
+    competitors = {}
+    competitors[res_id] = data['name']
+    r = requests.get(url=endpoint, params=parameters, headers=head)
+    data = r.json()
+    # get the competitors
+    for business in data['businesses']:
+        if business['id'] != res_id:
+            competitors[business['id']] = business['name']
+
+    # visualize the data
+    yelp_df = initialize_yelp()
+    avg_rating_dict = get_res_avg_rating(yelp_df)
+    competitors_rating_dict = {}
+    # get the competitor rating
+    for business_id in competitors:
+        if business_id in avg_rating_dict:
+            competitors_rating_dict[business_id] = avg_rating_dict[business_id]
+    # draw the graph with rest_id high lighted in bar graph
+    names = []
+    for key in competitors_rating_dict.keys():
+        names.append(competitors[key])
+    values = list(competitors_rating_dict.values())
+    colors = ['cyan'] * len(competitors_rating_dict.keys())
+    colors[0] = 'blue'
+    plt.title("bar graph for average review for restaurants")
+    plt.bar(range(len(competitors_rating_dict)), values, color=colors)
+    plt.savefig('competitor bar graph.png')
+
+    # add legends
+    custom_lines = [Line2D([0], [0], color='blue', lw=4)]
+    for i in range(len(competitors_rating_dict.keys()) - 1):
+        custom_lines.append(Line2D([0], [0], color='cyan', lw=4))
+    competitor_names = []
+    i = 0
+    for res_id in competitors_rating_dict.keys():
+        competitor_names.append(str(i) + ': ' + competitors[res_id])
+        i += 1
+
+    plt.legend(custom_lines, competitor_names, fontsize='small', loc='upper center', bbox_to_anchor=(0.5, -0.03), ncol=3)
+    plt.show()
+
+
 # visualize()
-visualize_selected()
+# visualize_selected()
+# visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
