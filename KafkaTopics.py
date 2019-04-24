@@ -35,7 +35,12 @@ def update_zomato(df):
     print('Comparing Reviews')
     for rest in ReviewIDs:
         countToScrape = 0
-        lastID = ReviewIDs.get(rest)[len(ReviewIDs.get(rest))-1]
+        print(ReviewIDs.get(rest))
+        print('len')
+        print(len(ReviewIDs.get(rest)))
+        IDList = ReviewIDs.get(rest)
+        lenList = len(IDList)
+        lastID = IDList[lenList-1]
         currentReviewList = recent_review_dict.get(rest)
         for id in currentReviewList:
             if(id == lastID):
@@ -44,8 +49,6 @@ def update_zomato(df):
         ReviewDict.update(Zomato_Scrapper.scrape_latest_reviews(2,rest))
     df = dbms.add_rows(df,ReviewDict)
     dbms.save_zomato(df,ReviewDict)
-# df = dbms.initialize_zomato()
-# update_zomato(df)
-df = dbms.initialize_yelp()
-update_yelp(df)
+df = dbms.initialize_zomato()
+update_zomato(df)
 print('updated')
