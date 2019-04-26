@@ -154,6 +154,10 @@ def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
+def yelp_rest_name_to_id_dict(yelp_pandas):
+    yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    return json.loads(yelp_slice.set_index("restaurant").to_json())["restaurant_id"]
+
 '''
 Returns a dictionary of restaurant id to its average rating
 '''
