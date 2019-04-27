@@ -6,6 +6,7 @@ from math import sqrt
 import requests
 from bs4 import BeautifulSoup
 analyser = SentimentIntensityAnalyzer()
+##List of all Restaurants
 resArray = ['Sushi Osaka',
 ' Pokelava',
 'Ling Ling Restaurant',
@@ -154,6 +155,7 @@ def get_rating(df, r):
     section = df.where(df.restaurant == r).select(["rating"]).collect()
     return [cell.rating for cell in section]
 
+"""Returns synonyms of 'term' in list order"""
 def synonyms(term):
     response = requests.get('http://www.thesaurus.com/browse/{}'.format(term))
     soup = BeautifulSoup(response.text, features = 'lxml')
@@ -242,12 +244,14 @@ def specificScorer(restaurantString, aspect):
         else:
             return pos
 
+"""Returns sentiment analysis scores of all restaurants in Ithaca in dictionary form"""
 def totalScores():
     scoreDict = {}
     for rest in resArray:
         scoreDict[rest] = scorer(rest)
     return scoreDict
 
+"""Returns sentiment analysis scores of a specific aspect of all restaurants in Ithaca in dictionary form"""
 def totalSpecificScore(aspect):
     scoreDict = {}
     for rest in resArray:
