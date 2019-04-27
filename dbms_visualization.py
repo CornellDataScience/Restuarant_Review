@@ -5,6 +5,7 @@ import collections
 from scipy.interpolate import spline
 import requests
 from matplotlib.lines import Line2D
+from scorer import totalScores
 
 
 # get rating trends for all restaurants in id_restaurant_dict
@@ -179,6 +180,17 @@ def visualize_yelp_competitor_score(res_id):
         i += 1
 
     plt.legend(custom_lines, competitor_names, fontsize='small', loc='upper center', bbox_to_anchor=(0.5, -0.03), ncol=3)
+    plt.show()
+
+
+# visualize the NLP review scores of restaurants
+def visualize_review_score():
+    scoreDict = totalScores()
+    names = scoreDict.keys()
+    values = list(scoreDict.values())
+    plt.title("bar graph for NLP review scores of restaurants")
+    plt.bar(range(len(scoreDict)), values, tick_label=names)
+    plt.savefig('avg_NLP_review_score_bar_graph.png')
     plt.show()
 
 
