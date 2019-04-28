@@ -257,3 +257,7 @@ def totalSpecificScore(aspect):
     for rest in resArray:
         scoreDict[rest] = specificScorer(rest, aspect)
     return scoreDict
+
+def scoreOverTime():
+    section = spark_df.where(df.restaurant == r).select(['date']).collect()
+    return [cell.review for cell in section]
