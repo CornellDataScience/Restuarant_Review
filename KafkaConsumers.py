@@ -13,7 +13,7 @@ def consume_topic1_message():
     )
     RestaurantDict = {}
     for message in consumer:
-        RestaurantDict = {**RestaurantDict, **message.value}
+         RestaurantDict.update(message.value)
     return RestaurantDict
 
 def consume_topic2_message():
@@ -28,5 +28,5 @@ def consume_topic2_message():
     )
     RestaurantDict = {}
     for message in consumer:
-        RestaurantDict = {**RestaurantDict, **message.value}
+         RestaurantDict.update(message.value)
     return RestaurantDict
