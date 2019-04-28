@@ -193,8 +193,38 @@ def visualize_review_score():
     plt.savefig('avg_NLP_review_score_bar_graph.png')
     plt.show()
 
+# mock up function of all_score_over_time
+def all_score_over_time(a):
+    return [[]]
+
+
+# visualize the NLP review trends of restaurants
+def visualize_NLP_review_trends():
+
+    res_review_trends = all_score_over_time('M')
+
+    max_time_length = 0
+
+    for trend in res_review_trends:
+        if max_time_length < len(trend):
+            max_time_length = len(trend)
+
+    # plot the graph
+    temp = np.arange(max_time_length)
+    max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
+    for trend in res_review_trends:
+        buffer = np.zeros(max_time_length - len(trend))
+        trend = np.append(buffer, trend)
+        trend_smoothed = spline(temp, trend, max_time_indices_new)
+        plt.plot(max_time_indices_new, trend_smoothed, color=list(np.random.choice(range(256), size=3) / 255))
+
+    plt.xlabel('Time')
+    plt.ylabel('Average NLP Review Rating')
+    plt.title('NLP Review Trends for Restaurants')
+    plt.show()
+
 
 # visualize()
 # visualize_selected()
 # visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
-visualize_review_score()
+# visualize_review_score()
