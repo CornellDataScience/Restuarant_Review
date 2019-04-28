@@ -1,10 +1,14 @@
 import pandas as pd
-from pyspark.sql import SparkSession, functions
 from datetime import date
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from math import sqrt
 import requests
+import dbms
 from bs4 import BeautifulSoup
+today = date.today()
+m = today.month
+y = today.year
+d = today.day
 analyser = SentimentIntensityAnalyzer()
 ##List of all Restaurants
 resArray = ['Sushi Osaka',
@@ -111,21 +115,9 @@ def format_date(date):
     temp = list(map(int,temp[:3]))
     return temp
 
-big_list = []
-with open('YelpData.txt', 'rb') as f:
-    data = f.readlines()
-for partial_data in data:
-    df = pd.read_json(partial_data)
-    for column in df.columns:
-        temp = list(df[column])
-        temp.insert(0,column)
-        big_list.append(temp)
-new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
-new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
-spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
-spark_df = spark.createDataFrame(new_df)
-# spark_df.write.saveAsTable("yelp")
 
+# spark_df.write.saveAsTable("yelp")
+spark_df = dbms.initialize_yelp()
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -258,6 +250,28 @@ def totalSpecificScore(aspect):
         scoreDict[rest] = specificScorer(rest, aspect)
     return scoreDict
 
-def scoreOverTime():
-    section = spark_df.where(df.restaurant == r).select(['date']).collect()
-    return [cell.review for cell in section]
+def all_score_over_time(m):
+    section = spark_df.where(spark_df.restaurant == 'Sushi Osaka').select(['date']).collect()
+    dates = [cell.date for cell in section]
+    reviews = get_review_text(spark_df, 'Sushi Osaka')
+    today = date.today()
+    m = today.month
+    y = today.year
+    a = True
+    datesList = [today]
+    for x in range(0,10):
+        if a:
+            datesList.append(date(y-1, m + 6, 1))
+            y = y - 1
+            a = False
+        else:
+            datesList.append(date(y, m, 1))
+            a = True
+
+    separated = []
+    for index in range(len(dates)):
+        start = today
+        for dat in datesList[1:]:
+            arr = []
+            if (dates[index] <= start and dates[index] > dat):
+                arr.append(review[index])
