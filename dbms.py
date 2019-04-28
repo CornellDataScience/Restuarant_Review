@@ -30,18 +30,18 @@ def read_data(path):
 
 def initialize_yelp():
     try:
-        return pd.read_hdf('/home/hduser1/Restuarant_Review/yelp.hdf','yelp_df')
+        return pd.read_hdf('yelp.hdf','yelp_df')
     except:
-        big_list = read_data('/home/hduser1/Restuarant_Review/YelpData.txt')
+        big_list = read_data('YelpData.txt')
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
         return new_df
 
 def initialize_zomato():
     try:
-        pd.read_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df')
+        pd.read_hdf('zomato.hdf','zomato_df')
     except:
-        big_list = read_data('/home/hduser1/Restuarant_Review/ZomatoData2.txt')
+        big_list = read_data('ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
@@ -49,10 +49,10 @@ def initialize_zomato():
         return new_df
 
 def save_yelp(pd_yelp):
-    pd_yelp.to_hdf('/home/hduser1/Restuarant_Review/yelp.hdf','yelp_df',mode= 'w')
+    pd_yelp.to_hdf('yelp.hdf','yelp_df',mode= 'w')
 
 def save_zomato(pd_zomato):
-    pd_zomato.to_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df', mode='w')
+    pd_zomato.to_hdf('zomato.hdf','zomato_df', mode='w')
 
 '''
 Returns pandas DataFrame with columns corresponding to counts of number of 1-star, 2-star...5-start reviews
@@ -112,6 +112,17 @@ def add_rows(pd_df, data_dict):
     return pd_df
 
 '''
+Returns a list of the number of votes corresponding to each review for a given restaurant
+'''
+def get_num_votes(pd_df, r):
+    return list(pd_df[pd_df.restaurant == r].num_votes)
+
+'''
+Returns a list of the rating for each reveiew for a given restaurant
+'''
+def get_rating(pd_df, r):
+    return list(pd_df[pd_df.restaurant == r].rating)
+'''
 Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the
 0th element is the date of the review and the 1st element is the review rating
 '''
@@ -152,10 +163,12 @@ Returns dictionary where the keys are the yelp restaurant ids and the correspond
 '''
 def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
 def yelp_rest_name_to_id_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant").to_json())["restaurant_id"]
 
 '''
