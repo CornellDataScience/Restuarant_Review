@@ -197,4 +197,4 @@ def visualize_review_score():
 # visualize()
 # visualize_selected()
 # visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
-visualize_review_score()
+# visualize_review_score()

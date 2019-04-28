@@ -1,0 +1,12 @@
+body {
+	text-align: center;
+}
+
+img {
+	display: inline-block;
+}
+
+select {
+	display: block;
+	margin: 0 auto;
+}
