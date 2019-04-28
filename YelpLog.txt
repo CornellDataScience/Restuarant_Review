@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 1, in <module>
+    from KafkaTopics import update_yelp
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 4, in <module>
+    import dbms
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 1, in <module>
+    import pandas as pd
+  File "/usr/local/lib/python2.7/dist-packages/pandas/__init__.py", line 18, in <module>
+    raise ImportError("Missing required dependencies {0}".format(missing_dependencies))
+ImportError: Missing required dependencies ['numpy']
