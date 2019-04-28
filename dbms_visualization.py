@@ -195,7 +195,7 @@ def visualize_review_score():
 
 # mock up function of all_score_over_time
 def all_score_over_time(a):
-    return [[]]
+    return {'a' : [0, 1], 'b' : [0, 1, 2, 3]}
 
 
 # visualize the NLP review trends of restaurants
@@ -205,14 +205,14 @@ def visualize_NLP_review_trends():
 
     max_time_length = 0
 
-    for trend in res_review_trends:
+    for trend in res_review_trends.values():
         if max_time_length < len(trend):
             max_time_length = len(trend)
 
     # plot the graph
     temp = np.arange(max_time_length)
     max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
-    for trend in res_review_trends:
+    for trend in res_review_trends.values():
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
@@ -227,4 +227,4 @@ def visualize_NLP_review_trends():
 # visualize()
 # visualize_selected()
 # visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
-# visualize_review_score()
+# visualize_NLP_review_trends()
