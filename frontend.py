@@ -55,7 +55,7 @@ def get_img_data():
 
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)
-    WSGIServer(('', 5000), app, log=app.logger).serve_forever()
+    WSGIServer(('0.0.0.0', 5000), app, log=app.logger).serve_forever()
 
 
 def img_data(rest_id):
