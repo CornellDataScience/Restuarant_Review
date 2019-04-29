@@ -1,230 +1,1911 @@
-running update yelp
-match not found for: P1aQqll76KRvZHdZ8jaQvQ
-match not found for: ntH3yiPIjLyMxYDCfY-UUQ
-match not found for: h0nPGPVrqZHCrrauTrywrA
-match not found for: FJsh0TOIQJWj3aQP4Yg0_A
-match not found for: BdpaiSFcwCJKQHV7nhez7g
-match not found for: 7LQgO9CBIOzzkWs4ydJ9JQ
-match not found for: 3XDW8Ot7jSVH_rsm5WBwQA
-match not found for: bf-6Bh9gM6gEJHr4tdd7iA
-match not found for: o7vyvdS7CytNq8kGZ5sU7g
-match not found for: ufYKds6AjKs_NwOb1mDhwA
-match not found for: uOxHLnePU2wyTqPJ_p7ryw
-match not found for: 4o6C5dFjyjBvF1g9st78NA
-match not found for: kH_1temJhPpwIKs8tjapVA
-match not found for: BdMKj3rHVnHxZvxe_NCDHA
-match not found for: v1zbzBEnZ7odA9oeu25e4A
-match not found for: _qGDRfTvIwUqFtI1mGI8Rg
-match not found for: 09QMJJNUCcadmk0brs4LSg
-match not found for: rFNQJo_dV4UC5VCvLMyUbw
-match not found for: U51HmRCmyf62KTj_rVtdcg
-match not found for: oEP8EQRxILT8svJmALwh6w
-match not found for: dOSIUeoARyeKvD3qZfFN9g
-match not found for: 0ouRW6X9JIzOdE-c5NEpsg
-match not found for: fSFb98pIz-FQochhvsKioA
-match not found for: GFMUL8Z44l1wD7KXop18sA
-match not found for: XuMZd7Css7GFPySbs-3DWw
-match not found for: o7Dq7X8vQs7KiJhSBbKMVQ
-match not found for: KVPsaD2vY64UIvnNfKDHbA
-match not found for: hn8KBBBUMSulh1A89MpCiw
-match not found for: EXVAqpfbxv85Lso3iAn_Xw
-match not found for: AeWKgDveIWXCDP5O9HzO3Q
-match not found for: AfZM9TvgkhKe3uadqy-nYA
-match not found for: T-n8QFMx2zceV5M_ZKtgIA
-match not found for: k9UObyytIt6xmo-vzdpPdg
-match not found for: sPJjKbM7YtrIeL_rtr0V2Q
-match not found for: ABWOm4DjyOntv0Ekwq4M9g
-match not found for: QSGSWUCRzhoQa-v5dGoD6g
-match not found for: DnQwknnYIw7yCTrw_BeLaw
-match not found for: kgFgNQiDLX85tQO2hyxQUg
-match not found for: ptAp0HWJar6Bk18HX--UuQ
-match not found for: VipfYExJjVsD31KnUZqHJg
-match not found for: 5HZ4FHPawNxmpH8g-mk5qw
-match not found for: XJfCTnV3W9SUkTh_3ddxkQ
-match not found for: VZNKj35pKzs-fR8_CMPrgA
-match not found for: c7AOTmbdbIlHhLb-6A7FbQ
-match not found for: ud9RNk52okJkisfMOAHtyw
-match not found for: k_29K9WijS55n5qlqiNxYQ
-match not found for: p_lux7JiNW6E0ab0Faa5Pg
-match not found for: wJvd9PLqiuNtP-DIkxieJw
-match not found for: JlCzPAtL7rA5GdCmyUEPow
-match not found for: CxOApc8E_VnFvwYDbaIoSw
-match not found for: 8nGWw2SSiVuhh18NLVqDuw
-match not found for: alAFDS0G_JOZ-6UR70G_9A
-match not found for: rRnTrn2lHoSX7tSnylX6jg
-match not found for: uv7n9Af48hRVlpLNojvi7g
-match not found for: LEMfVFXQhYhnU1NVyleZuw
-match not found for: _-OlEjtCfhW7W0L56kyiRA
-match not found for: 6z325jAQeDbHMWNYWblslg
-match not found for: 9RXOJZdog3RXGx0L5y1S6A
-match not found for: lncA9vgtds17wx47oyATQA
-match not found for: oidBvZouxEal1NWe5ARrVw
-match not found for: BRgMPd46utKLTAnPznnKhA
-match not found for: hKxb9hKV6yb8K12Y7ccGMw
-match not found for: A6Wlh_2LFsUMQHBhfTebMw
-match not found for: 06orPCQGTtLQJjzSSoTR9g
-match not found for: G6eVUNDvfCiFy8ICavGScQ
-match not found for: wTWJIWQO5bLNAOjxu8AnBg
-match not found for: ZxDrqC_OeZMISQ9ZwiA8UQ
-match not found for: 0ZIaDoyJNEMQHyjOoI1OYQ
-match not found for: dpqv-Gy6RLXXGnNrGZjOYw
-match not found for: cP_d7423sPyMqr4rklOPAw
-match not found for: Vguu5RgT7gWlB37FUFAwPw
-match not found for: s-yxcrw9CJI91N-bADESSQ
-match not found for: jPYVgvGez5IXk8bK6e5VXg
-match not found for: eg3rtotV5ebUono0dvWMHQ
-match not found for: duQg3owiKQCfXt9vlZ9dBQ
-match not found for: sOuMlJGi9MLOHmTiTCFoAg
-match not found for: 33nfauIJqAZb-Cy01BWwrw
-match not found for: _hmURvTcQ9qEjB_BjOR5mA
-match not found for: Q_XaVU8MgXajaY5vAFkwNA
-match not found for: BfGlv6S_Is6OkIoOngAnLQ
-match not found for: bC3uxZuUamtFJOgFw_s4_w
-match not found for: QggxXcppHbsFRTHOManGJA
-match not found for: 6gaN0UkjVMJQJg8cykmh8Q
-match not found for: I6QCXaOPrQa-i5zOHhRFBw
-match not found for: Ojv_1Nf6Z1MWddehYpoAXg
-match not found for: OXBbqI6LiXEJZHCREsxxnA
-match not found for: 9GCuUQec-Ugxh_dXSMPbfQ
-match not found for: bqTe-ypYzCT3b2LhKX9xQw
-match not found for: kwJTjT5uFuHi0pPTN-AsDA
-match not found for: ejHduGcJr28ehsdSXaiZXw
-match not found for: fTmcFgYB77wZdQrv-nP0Pg
-match not found for: 3Ep-cHtiVbE6KpN6-mmMKA
-match not found for: XBuj07BYkcLa3W2kHilKtg
-match not found for: x_AUsCP73LBeTXnec1tqkg
-match not found for: 0XEKxIjUAOCB_MSZSx_ong
-match not found for: 4boEA9gl4DVaelq2JInArQ
-match not found for: GeRh5XnPU8WukQHfE2URwg
-match not found for: YhV_UvOd0iHvmU4tefFLFQ
-match not found for: 072w6e7ou7h9Rj6Np3fzmQ
-match not found for: ETPYh5nPNP4cFG36E-QBkw
-match not found for: 0fTKldZB0hWZCYZy2jVafA
-match not found for: ZBLz6267y24V77OLww_AUA
-match not found for: t_RlVJvkXLIjyepVYdwWIg
-match not found for: Hg7gud3GDxj4wchPr8n15w
-match not found for: YAE5dlDiDWuJfxruZBn8bQ
-match not found for: jhGpCnNJZo1R2DsIIfzlIw
-match not found for: 6NOyaXyLDJ2uqJc-wcL8bw
-match not found for: rFEkPPc0w2Y3Z9sLXWoxdQ
-match not found for: OTCq0VyvYpy51DkuCSe3vA
-match not found for: yF8TrnDbnj_6nUZ0Intt3Q
-match not found for: J6MITPR20MrZjxQKHuIHIA
-{}
-running update yelp
-match not found for: P1aQqll76KRvZHdZ8jaQvQ
-match not found for: ntH3yiPIjLyMxYDCfY-UUQ
-match not found for: h0nPGPVrqZHCrrauTrywrA
-match not found for: FJsh0TOIQJWj3aQP4Yg0_A
-match not found for: BdpaiSFcwCJKQHV7nhez7g
-match not found for: 7LQgO9CBIOzzkWs4ydJ9JQ
-match not found for: 3XDW8Ot7jSVH_rsm5WBwQA
-match not found for: bf-6Bh9gM6gEJHr4tdd7iA
-match not found for: o7vyvdS7CytNq8kGZ5sU7g
-match not found for: ufYKds6AjKs_NwOb1mDhwA
-match not found for: uOxHLnePU2wyTqPJ_p7ryw
-match not found for: 4o6C5dFjyjBvF1g9st78NA
-match not found for: kH_1temJhPpwIKs8tjapVA
-match not found for: BdMKj3rHVnHxZvxe_NCDHA
-match not found for: v1zbzBEnZ7odA9oeu25e4A
-match not found for: _qGDRfTvIwUqFtI1mGI8Rg
-match not found for: 09QMJJNUCcadmk0brs4LSg
-match not found for: rFNQJo_dV4UC5VCvLMyUbw
-match not found for: U51HmRCmyf62KTj_rVtdcg
-match not found for: oEP8EQRxILT8svJmALwh6w
-match not found for: dOSIUeoARyeKvD3qZfFN9g
-match not found for: 0ouRW6X9JIzOdE-c5NEpsg
-match not found for: fSFb98pIz-FQochhvsKioA
-match not found for: GFMUL8Z44l1wD7KXop18sA
-match not found for: XuMZd7Css7GFPySbs-3DWw
-match not found for: o7Dq7X8vQs7KiJhSBbKMVQ
-match not found for: KVPsaD2vY64UIvnNfKDHbA
-match not found for: hn8KBBBUMSulh1A89MpCiw
-match not found for: EXVAqpfbxv85Lso3iAn_Xw
-match not found for: AeWKgDveIWXCDP5O9HzO3Q
-match not found for: AfZM9TvgkhKe3uadqy-nYA
-match not found for: T-n8QFMx2zceV5M_ZKtgIA
-match not found for: k9UObyytIt6xmo-vzdpPdg
-match not found for: sPJjKbM7YtrIeL_rtr0V2Q
-match not found for: ABWOm4DjyOntv0Ekwq4M9g
-match not found for: QSGSWUCRzhoQa-v5dGoD6g
-match not found for: DnQwknnYIw7yCTrw_BeLaw
-match not found for: kgFgNQiDLX85tQO2hyxQUg
-match not found for: ptAp0HWJar6Bk18HX--UuQ
-match not found for: VipfYExJjVsD31KnUZqHJg
-match not found for: 5HZ4FHPawNxmpH8g-mk5qw
-match not found for: XJfCTnV3W9SUkTh_3ddxkQ
-match not found for: VZNKj35pKzs-fR8_CMPrgA
-match not found for: c7AOTmbdbIlHhLb-6A7FbQ
-match not found for: ud9RNk52okJkisfMOAHtyw
-match not found for: k_29K9WijS55n5qlqiNxYQ
-match not found for: p_lux7JiNW6E0ab0Faa5Pg
-match not found for: wJvd9PLqiuNtP-DIkxieJw
-match not found for: JlCzPAtL7rA5GdCmyUEPow
-match not found for: CxOApc8E_VnFvwYDbaIoSw
-match not found for: 8nGWw2SSiVuhh18NLVqDuw
-match not found for: alAFDS0G_JOZ-6UR70G_9A
-match not found for: rRnTrn2lHoSX7tSnylX6jg
-match not found for: uv7n9Af48hRVlpLNojvi7g
-match not found for: LEMfVFXQhYhnU1NVyleZuw
-match not found for: _-OlEjtCfhW7W0L56kyiRA
-match not found for: 6z325jAQeDbHMWNYWblslg
-match not found for: 9RXOJZdog3RXGx0L5y1S6A
-match not found for: lncA9vgtds17wx47oyATQA
-match not found for: oidBvZouxEal1NWe5ARrVw
-match not found for: BRgMPd46utKLTAnPznnKhA
-match not found for: hKxb9hKV6yb8K12Y7ccGMw
-match not found for: A6Wlh_2LFsUMQHBhfTebMw
-match not found for: 06orPCQGTtLQJjzSSoTR9g
-match not found for: G6eVUNDvfCiFy8ICavGScQ
-match not found for: wTWJIWQO5bLNAOjxu8AnBg
-match not found for: ZxDrqC_OeZMISQ9ZwiA8UQ
-match not found for: 0ZIaDoyJNEMQHyjOoI1OYQ
-match not found for: dpqv-Gy6RLXXGnNrGZjOYw
-match not found for: cP_d7423sPyMqr4rklOPAw
-match not found for: Vguu5RgT7gWlB37FUFAwPw
-match not found for: s-yxcrw9CJI91N-bADESSQ
-match not found for: jPYVgvGez5IXk8bK6e5VXg
-match not found for: eg3rtotV5ebUono0dvWMHQ
-match not found for: duQg3owiKQCfXt9vlZ9dBQ
-match not found for: sOuMlJGi9MLOHmTiTCFoAg
-match not found for: 33nfauIJqAZb-Cy01BWwrw
-match not found for: _hmURvTcQ9qEjB_BjOR5mA
-match not found for: Q_XaVU8MgXajaY5vAFkwNA
-match not found for: BfGlv6S_Is6OkIoOngAnLQ
-match not found for: bC3uxZuUamtFJOgFw_s4_w
-match not found for: QggxXcppHbsFRTHOManGJA
-match not found for: 6gaN0UkjVMJQJg8cykmh8Q
-match not found for: I6QCXaOPrQa-i5zOHhRFBw
-match not found for: Ojv_1Nf6Z1MWddehYpoAXg
-match not found for: OXBbqI6LiXEJZHCREsxxnA
-match not found for: 9GCuUQec-Ugxh_dXSMPbfQ
-match not found for: bqTe-ypYzCT3b2LhKX9xQw
-match not found for: kwJTjT5uFuHi0pPTN-AsDA
-match not found for: ejHduGcJr28ehsdSXaiZXw
-match not found for: fTmcFgYB77wZdQrv-nP0Pg
-match not found for: 3Ep-cHtiVbE6KpN6-mmMKA
-match not found for: XBuj07BYkcLa3W2kHilKtg
-match not found for: x_AUsCP73LBeTXnec1tqkg
-match not found for: 0XEKxIjUAOCB_MSZSx_ong
-match not found for: 4boEA9gl4DVaelq2JInArQ
-match not found for: GeRh5XnPU8WukQHfE2URwg
-match not found for: YhV_UvOd0iHvmU4tefFLFQ
-match not found for: 072w6e7ou7h9Rj6Np3fzmQ
-match not found for: ETPYh5nPNP4cFG36E-QBkw
-match not found for: 0fTKldZB0hWZCYZy2jVafA
-match not found for: ZBLz6267y24V77OLww_AUA
-match not found for: t_RlVJvkXLIjyepVYdwWIg
-match not found for: Hg7gud3GDxj4wchPr8n15w
-match not found for: YAE5dlDiDWuJfxruZBn8bQ
-match not found for: jhGpCnNJZo1R2DsIIfzlIw
-match not found for: 6NOyaXyLDJ2uqJc-wcL8bw
-match not found for: rFEkPPc0w2Y3Z9sLXWoxdQ
-match not found for: OTCq0VyvYpy51DkuCSe3vA
-match not found for: yF8TrnDbnj_6nUZ0Intt3Q
-match not found for: J6MITPR20MrZjxQKHuIHIA
-{}
-running update yelp
-{}
-running update yelp
-{}
+Updating at:2019-04-28 15:38:14.182155
+New Reviews found:{}
+Updating at:2019-04-28 15:40:13.371269
+New Reviews found:{}
+Updating at: 2019-04-28 15:42:13.890543
+New Reviews found: {}
+Updating at: 2019-04-28 15:44:13.794180
+New Reviews found: {}
+Updating at: 2019-04-28 15:46:14.567569
+New Reviews found: {}
+Updating at: 2019-04-28 15:48:13.493572
+New Reviews found: {}
+Updating at: 2019-04-28 15:50:12.984409
+New Reviews found: {}
+Updating at: 2019-04-28 15:52:14.961713
+New Reviews found: {}
+Updating at: 2019-04-28 15:54:12.477329
+New Reviews found: {}
+Updating at: 2019-04-28 15:56:12.736524
+New Reviews found: {}
+Updating at: 2019-04-28 15:58:13.903638
+New Reviews found: {}
+Updating at: 2019-04-28 16:00:13.414607
+New Reviews found: {}
+Updating at: 2019-04-28 16:02:13.160917
+New Reviews found: {}
+Updating at: 2019-04-28 16:04:14.419302
+New Reviews found: {}
+Updating at: 2019-04-28 16:06:13.432934
+New Reviews found: {}
+Updating at: 2019-04-28 16:08:12.809266
+New Reviews found: {}
+Updating at: 2019-04-28 16:10:14.107869
+New Reviews found: {}
+Updating at: 2019-04-28 16:12:14.435774
+New Reviews found: {}
+Updating at: 2019-04-28 16:14:13.224166
+New Reviews found: {}
+Updating at: 2019-04-28 16:16:15.111446
+New Reviews found: {}
+Updating at: 2019-04-28 16:18:13.120886
+New Reviews found: {}
+Updating at: 2019-04-28 16:20:13.592922
+New Reviews found: {}
+Updating at: 2019-04-28 16:22:13.855647
+New Reviews found: {}
+Updating at: 2019-04-28 16:24:13.443827
+New Reviews found: {}
+Updating at: 2019-04-28 16:26:13.832969
+New Reviews found: {}
+Updating at: 2019-04-28 16:28:13.564896
+New Reviews found: {}
+Updating at: 2019-04-28 16:30:14.364771
+New Reviews found: {}
+Updating at: 2019-04-28 16:32:13.090336
+New Reviews found: {}
+Updating at: 2019-04-28 16:34:14.588462
+New Reviews found: {}
+Updating at: 2019-04-28 16:36:13.975246
+New Reviews found: {}
+Updating at: 2019-04-28 16:38:12.548334
+New Reviews found: {}
+Updating at: 2019-04-28 16:40:14.981496
+New Reviews found: {}
+Updating at: 2019-04-28 16:42:13.425809
+New Reviews found: {}
+Updating at: 2019-04-28 16:44:14.817679
+New Reviews found: {}
+Updating at: 2019-04-28 16:46:16.402492
+New Reviews found: {}
+Updating at: 2019-04-28 16:48:14.065739
+New Reviews found: {}
+Updating at: 2019-04-28 16:50:13.782735
+New Reviews found: {}
+Updating at: 2019-04-28 16:52:13.925402
+New Reviews found: {}
+Updating at: 2019-04-28 16:54:15.219754
+New Reviews found: {}
+Updating at: 2019-04-28 16:56:13.593198
+New Reviews found: {}
+Updating at: 2019-04-28 16:58:13.717187
+New Reviews found: {}
+Updating at: 2019-04-28 17:00:14.177271
+New Reviews found: {}
+Updating at: 2019-04-28 17:02:14.198436
+New Reviews found: {}
+Updating at: 2019-04-28 17:04:14.375274
+New Reviews found: {}
+Updating at: 2019-04-28 17:06:14.255173
+New Reviews found: {}
+Updating at: 2019-04-28 17:08:13.670936
+New Reviews found: {}
+Updating at: 2019-04-28 17:10:14.887073
+New Reviews found: {}
+Updating at: 2019-04-28 17:12:15.244084
+New Reviews found: {}
+Updating at: 2019-04-28 17:14:13.571040
+New Reviews found: {}
+Updating at: 2019-04-28 17:16:14.066069
+New Reviews found: {}
+Updating at: 2019-04-28 17:18:13.935928
+New Reviews found: {}
+Updating at: 2019-04-28 17:20:15.268684
+New Reviews found: {}
+Updating at: 2019-04-28 17:22:13.632572
+New Reviews found: {}
+Updating at: 2019-04-28 17:24:14.412256
+New Reviews found: {}
+Updating at: 2019-04-28 17:26:14.515759
+New Reviews found: {}
+Updating at: 2019-04-28 17:28:15.166404
+New Reviews found: {}
+Updating at: 2019-04-28 17:30:16.540455
+New Reviews found: {}
+Updating at: 2019-04-28 17:32:15.054389
+New Reviews found: {}
+Updating at: 2019-04-28 17:34:15.268632
+New Reviews found: {}
+Updating at: 2019-04-28 17:36:13.238511
+New Reviews found: {}
+Updating at: 2019-04-28 17:38:13.980243
+New Reviews found: {}
+Updating at: 2019-04-28 17:40:13.868847
+New Reviews found: {}
+Updating at: 2019-04-28 17:42:14.676398
+New Reviews found: {}
+Updating at: 2019-04-28 17:44:14.422331
+New Reviews found: {}
+Updating at: 2019-04-28 17:46:14.902762
+New Reviews found: {}
+Updating at: 2019-04-28 17:48:15.089317
+New Reviews found: {}
+Updating at: 2019-04-28 17:50:14.709051
+New Reviews found: {}
+Updating at: 2019-04-28 17:52:14.979591
+New Reviews found: {}
+Updating at: 2019-04-28 17:54:13.769488
+New Reviews found: {}
+Updating at: 2019-04-28 17:56:18.457638
+New Reviews found: {}
+Updating at: 2019-04-28 17:58:14.793125
+New Reviews found: {}
+Updating at: 2019-04-28 18:00:15.637288
+New Reviews found: {}
+Updating at: 2019-04-28 18:02:14.324882
+New Reviews found: {}
+Updating at: 2019-04-28 18:04:14.275462
+New Reviews found: {}
+Updating at: 2019-04-28 18:06:14.884473
+New Reviews found: {}
+Updating at: 2019-04-28 18:08:14.975146
+New Reviews found: {}
+Updating at: 2019-04-28 18:10:14.542436
+New Reviews found: {}
+Updating at: 2019-04-28 18:12:14.669874
+New Reviews found: {}
+Updating at: 2019-04-28 18:14:12.772678
+New Reviews found: {}
+Updating at: 2019-04-28 18:16:15.055289
+New Reviews found: {}
+Updating at: 2019-04-28 18:18:13.919432
+New Reviews found: {}
+Updating at: 2019-04-28 18:20:14.127336
+New Reviews found: {}
+Updating at: 2019-04-28 18:22:14.335116
+New Reviews found: {}
+Updating at: 2019-04-28 18:24:03.044445
+New Reviews found: {}
+Updating at: 2019-04-28 18:26:03.263513
+New Reviews found: {}
+Updating at: 2019-04-28 18:28:03.421401
+New Reviews found: {}
+Updating at: 2019-04-28 18:30:03.849607
+New Reviews found: {}
+Updating at: 2019-04-28 18:32:03.045383
+New Reviews found: {}
+Updating at: 2019-04-28 18:34:03.226178
+New Reviews found: {}
+Updating at: 2019-04-28 18:36:03.458175
+New Reviews found: {}
+Updating at: 2019-04-28 18:38:03.688815
+New Reviews found: {}
+Updating at: 2019-04-28 18:40:02.886992
+New Reviews found: {}
+Updating at: 2019-04-28 18:42:03.201650
+New Reviews found: {}
+Updating at: 2019-04-28 18:44:03.366647
+New Reviews found: {}
+Updating at: 2019-04-28 18:46:03.605624
+New Reviews found: {}
+Updating at: 2019-04-28 18:48:02.757799
+New Reviews found: {}
+Updating at: 2019-04-28 18:50:03.104015
+New Reviews found: {}
+Updating at: 2019-04-28 18:52:03.347929
+New Reviews found: {}
+Updating at: 2019-04-28 18:54:03.670120
+New Reviews found: {}
+Updating at: 2019-04-28 18:56:02.890525
+New Reviews found: {}
+Updating at: 2019-04-28 18:58:03.102049
+New Reviews found: {}
+Updating at: 2019-04-28 19:00:03.324109
+New Reviews found: {}
+Updating at: 2019-04-28 19:02:03.530719
+New Reviews found: {}
+Updating at: 2019-04-28 19:04:02.721920
+New Reviews found: {}
+Updating at: 2019-04-28 19:06:02.907265
+New Reviews found: {}
+Updating at: 2019-04-28 19:08:03.155486
+New Reviews found: {}
+Updating at: 2019-04-28 19:10:03.486967
+New Reviews found: {}
+Updating at: 2019-04-28 19:12:02.732022
+New Reviews found: {}
+Updating at: 2019-04-28 19:14:03.038263
+New Reviews found: {}
+Updating at: 2019-04-28 19:16:03.392478
+New Reviews found: {}
+Updating at: 2019-04-28 19:18:03.574680
+New Reviews found: {}
+Updating at: 2019-04-28 19:20:02.859145
+New Reviews found: {}
+Updating at: 2019-04-28 19:22:03.057563
+New Reviews found: {}
+Updating at: 2019-04-28 19:24:03.295516
+New Reviews found: {}
+Updating at: 2019-04-28 19:26:03.508709
+New Reviews found: {}
+Updating at: 2019-04-28 19:28:02.816588
+New Reviews found: {}
+Updating at: 2019-04-28 19:30:03.127680
+New Reviews found: {}
+Updating at: 2019-04-28 19:32:03.407672
+New Reviews found: {}
+Updating at: 2019-04-28 19:34:03.702656
+New Reviews found: {}
+Updating at: 2019-04-28 19:36:02.993544
+New Reviews found: {}
+Updating at: 2019-04-28 19:38:03.179658
+New Reviews found: {}
+Updating at: 2019-04-28 19:40:03.475788
+New Reviews found: {}
+Updating at: 2019-04-28 19:42:03.690420
+New Reviews found: {}
+Updating at: 2019-04-28 19:44:02.907277
+New Reviews found: {}
+Updating at: 2019-04-28 19:46:03.206978
+New Reviews found: {}
+Updating at: 2019-04-28 19:48:03.449581
+New Reviews found: {}
+Updating at: 2019-04-28 19:50:03.644020
+New Reviews found: {}
+Updating at: 2019-04-28 19:52:02.865222
+New Reviews found: {}
+Updating at: 2019-04-28 19:54:03.112186
+New Reviews found: {}
+Updating at: 2019-04-28 19:56:03.303440
+New Reviews found: {}
+Updating at: 2019-04-28 19:58:03.488482
+New Reviews found: {}
+Updating at: 2019-04-28 20:00:12.585717
+New Reviews found: {'1u6v3Jmyd7wqKHZzUFT60A': ['Yelp', 'CoreLife Eatery', '4/26/2019', 'The food I ordered from here was INEDBILE.I also ordered a "stake plate" and almost threw up at the gamey smell that hit my nose after opening the cover, also the "salad" was just a couple pieces of undressed lettuce. Highly recommend not getting food from here.', 1, 0, '594kvUIZoNGj3TuG1afb4w']}
+Updating at: 2019-04-28 20:02:12.410370
+New Reviews found: {}
+Updating at: 2019-04-28 20:04:12.297821
+New Reviews found: {}
+Updating at: 2019-04-28 20:06:13.210134
+New Reviews found: {}
+Updating at: 2019-04-28 20:08:13.094904
+New Reviews found: {}
+Updating at: 2019-04-28 20:10:12.947794
+New Reviews found: {}
+Updating at: 2019-04-28 20:12:13.011707
+New Reviews found: {}
+Updating at: 2019-04-28 20:14:12.586837
+New Reviews found: {}
+Updating at: 2019-04-28 20:16:13.626834
+New Reviews found: {}
+Updating at: 2019-04-28 20:18:12.404851
+New Reviews found: {}
+Updating at: 2019-04-28 20:20:13.250686
+New Reviews found: {}
+Updating at: 2019-04-28 20:22:14.124943
+New Reviews found: {}
+Updating at: 2019-04-28 20:24:12.458405
+New Reviews found: {}
+Updating at: 2019-04-28 20:26:12.492260
+New Reviews found: {}
+Updating at: 2019-04-28 20:28:12.916105
+New Reviews found: {}
+Updating at: 2019-04-28 20:30:13.348649
+New Reviews found: {}
+Updating at: 2019-04-28 20:32:12.878525
+New Reviews found: {}
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 33, in initialize_yelp
+    return pd.read_hdf('yelp.hdf','yelp_df')
+  File "/usr/local/lib/python3.6/dist-packages/pandas/io/pytables.py", line 366, in read_hdf
+    'File {path} does not exist'.format(path=path_or_buf))
+FileNotFoundError: File yelp.hdf does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 4, in <module>
+    df = dbms.initialize_yelp()
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 35, in initialize_yelp
+    big_list = read_data('YelpData.txt')
+  File "/home/hduser1/Restuarant_Review/dbms.py", line 21, in read_data
+    with open(path,'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'YelpData.txt'
