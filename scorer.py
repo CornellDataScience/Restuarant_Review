@@ -5,109 +5,112 @@ from math import sqrt
 import requests
 import dbms
 from bs4 import BeautifulSoup
+from dbms import initialize_yelp, rating_counts, yelp_id_restaurant_dict
+from dbms import get_review_text_date_api, get_restaurant_counts, get_vote_counts, get_review_text, get_num_votes, get_rating
+import json
 today = date.today()
 m = today.month
 y = today.year
 d = today.day
 analyser = SentimentIntensityAnalyzer()
 ##List of all Restaurants
-resArray = ['Sushi Osaka',
-' Pokelava',
-'Ling Ling Restaurant',
-'DiBella’s Subs',
-'Plantation Bar and Grill',
-'Taco Bell',
-'Temple of Zeus',
-'Italian Carry Out',
-'Domino’s Pizza',
-'Sicilian Delight',
-'Texas Roadhouse - Ithaca',
-'Monks On The Commons',
-'Kelly’s Dockside Cafe',
-'Scale House Brew Pub',
-'Northeast Pizza & Beer',
-'Buffalo Wild Wings',
-'Spring Buffet & Grill',
-'Panera Bread',
-' Denny’s',
-'Firehouse Subs',
-'Crossroads Bar & Grille',
-'Sal’s Pizzeria',
-'Louie’s Lunch',
-'Coal Yard Cafe',
-'Napoli Pizzeria',
-'Inn at Taughannock Restaurant',
-'Ithaca Bakery',
-'Souvlaki House',
-'Oishii Bowl',
-'Asian Noodle House',
-'Cafe Pacific',
-'CoreLife Eatery',
-'Chipotle Mexican Grill',
-'Covered Bridge Mkt',
-'Sahara Mediterranean Restaurant',
-' Arby’s',
-'Joe’s Restaurant',
-'Mia Restaurant',
-'Kilpatrick’s Publick House',
-'Aladdin’s Natural Eatery',
-'Lincoln Street Diner',
-' McDonald’s',
-' Mitsuba',
-'Uncle Joe’s',
-'The Rhine House',
-'Ling Ling Garden',
-'Ten Forward Cafe',
-'Casablanca Pizzeria',
-'Applebee’s Grill + Bar',
-'Press Cafe',
-'Moe’s Southwest Grill',
-' Subway',
-'Rogan’s Corner',
-'Little Thai House',
-'Miyake Japanese Restaurant',
-'Friends & Pho',
-'Salsa Fiesta',
-'Mattin’s Café',
-'Taverna Banfi',
-'Ctb Appetizers',
-'Circus Truck',
-'Luna Inspired Street Food',
-' Goldie’s',
-'Dolce Delight',
-'Sunset Grill',
-'Plum Tree Restaurant',
-'The Sub Shop',
-'Danby Gathery',
-' Okenshields',
-'Amit Bhatia Libe Café',
-'Universal Deli Grocery',
-'Apollo Restaurant',
-'D P Dough',
-'Bibim Bap Korean Restaurant',
-'Big Al’s Hilltop Quikstop',
-'Taste of Thai',
-'Easy Wok',
-'Atrium Cafe',
-'Little Caesars Pizza',
-'Franny’s Food Truck',
-'Tibetan Momo Bar',
-'Waffle Frolic',
-'Razorback BBQ',
-'Purity Ice Cream',
-'Royal Court Restaurant',
-'The Ivy Room',
-'Old Mexico',
-'2nd Landing Cafe',
-'Jason’s Grocery & Deli',
-'Cup O’ Jo Café',
-'Sinfully Delicious Baking Co.',
-'Red & White Cafe',
-' Trillium',
-'Café Jennie',
-'Pudgie’s Pizza & Sub Shops',
-'Mama Teresa Pizzeria',
-'Taste of Thai Express']
+# resArray = ['Sushi Osaka',
+# ' Pokelava',
+# 'Ling Ling Restaurant',
+# 'DiBella’s Subs',
+# 'Plantation Bar and Grill',
+# 'Taco Bell',
+# 'Temple of Zeus',
+# 'Italian Carry Out',
+# 'Domino’s Pizza',
+# 'Sicilian Delight',
+# 'Texas Roadhouse - Ithaca',
+# 'Monks On The Commons',
+# 'Kelly’s Dockside Cafe',
+# 'Scale House Brew Pub',
+# 'Northeast Pizza & Beer',
+# 'Buffalo Wild Wings',
+# 'Spring Buffet & Grill',
+# 'Panera Bread',
+# ' Denny’s',
+# 'Firehouse Subs',
+# 'Crossroads Bar & Grille',
+# 'Sal’s Pizzeria',
+# 'Louie’s Lunch',
+# 'Coal Yard Cafe',
+# 'Napoli Pizzeria',
+# 'Inn at Taughannock Restaurant',
+# 'Ithaca Bakery',
+# 'Souvlaki House',
+# 'Oishii Bowl',
+# 'Asian Noodle House',
+# 'Cafe Pacific',
+# 'CoreLife Eatery',
+# 'Chipotle Mexican Grill',
+# 'Covered Bridge Mkt',
+# 'Sahara Mediterranean Restaurant',
+# ' Arby’s',
+# 'Joe’s Restaurant',
+# 'Mia Restaurant',
+# 'Kilpatrick’s Publick House',
+# 'Aladdin’s Natural Eatery',
+# 'Lincoln Street Diner',
+# ' McDonald’s',
+# ' Mitsuba',
+# 'Uncle Joe’s',
+# 'The Rhine House',
+# 'Ling Ling Garden',
+# 'Ten Forward Cafe',
+# 'Casablanca Pizzeria',
+# 'Applebee’s Grill + Bar',
+# 'Press Cafe',
+# 'Moe’s Southwest Grill',
+# ' Subway',
+# 'Rogan’s Corner',
+# 'Little Thai House',
+# 'Miyake Japanese Restaurant',
+# 'Friends & Pho',
+# 'Salsa Fiesta',
+# 'Mattin’s Café',
+# 'Taverna Banfi',
+# 'Ctb Appetizers',
+# 'Circus Truck',
+# 'Luna Inspired Street Food',
+# ' Goldie’s',
+# 'Dolce Delight',
+# 'Sunset Grill',
+# 'Plum Tree Restaurant',
+# 'The Sub Shop',
+# 'Danby Gathery',
+# ' Okenshields',
+# 'Amit Bhatia Libe Café',
+# 'Universal Deli Grocery',
+# 'Apollo Restaurant',
+# 'D P Dough',
+# 'Bibim Bap Korean Restaurant',
+# 'Big Al’s Hilltop Quikstop',
+# 'Taste of Thai',
+# 'Easy Wok',
+# 'Atrium Cafe',
+# 'Little Caesars Pizza',
+# 'Franny’s Food Truck',
+# 'Tibetan Momo Bar',
+# 'Waffle Frolic',
+# 'Razorback BBQ',
+# 'Purity Ice Cream',
+# 'Royal Court Restaurant',
+# 'The Ivy Room',
+# 'Old Mexico',
+# '2nd Landing Cafe',
+# 'Jason’s Grocery & Deli',
+# 'Cup O’ Jo Café',
+# 'Sinfully Delicious Baking Co.',
+# 'Red & White Cafe',
+# ' Trillium',
+# 'Café Jennie',
+# 'Pudgie’s Pizza & Sub Shops',
+# 'Mama Teresa Pizzeria',
+# 'Taste of Thai Express']
 
 def format_date(date):
     temp = date.split("/")
@@ -118,34 +121,39 @@ def format_date(date):
 
 # spark_df.write.saveAsTable("yelp")
 spark_df = dbms.initialize_yelp()
-def rating_counts(df):
-    df = df.select(["restaurant", "rating"])
-    for i in range(1,6):
-        df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-    return df.groupBy("restaurant").sum()
 
-def get_review_text_date_api(df_yelp, df_zomato, rest_name):
-    yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
-    zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
-    return yelp.union(zomato)
 
-def get_restaurant_counts(df):
-    return df.groupBy("restaurant").count()
+resArray = yelp_id_restaurant_dict(spark_df)
 
-def get_vote_counts(df):
-    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
 
-def get_review_text(df, r):
-    section = df.where(df.restaurant == r).select(['review']).collect()
-    return [cell.review for cell in section]
+# def rating_counts(df):
+#     df = df.select(["restaurant", "rating"])
+#     for i in range(1,6):
+#         df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
+#     return df.groupBy("restaurant").sum()
 
-def get_num_votes(df, r):
-    section = df.where(df.restaurant == r).select(["num_votes"]).collect()
-    return [cell.num_votes for cell in section]
+# def get_review_text_date_api(df_yelp, df_zomato, rest_name):
+#     yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
+#     zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
+#     return yelp.union(zomato)
 
-def get_rating(df, r):
-    section = df.where(df.restaurant == r).select(["rating"]).collect()
-    return [cell.rating for cell in section]
+# def get_restaurant_counts(df):
+#     return df.groupBy("restaurant").count()
+
+# def get_vote_counts(df):
+#     return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
+
+# def get_review_text(df, r):
+#     section = df.where(df.restaurant == r).select(['review']).collect()
+#     return [cell.review for cell in section]
+
+# def get_num_votes(df, r):
+#     section = df.where(df.restaurant == r).select(["num_votes"]).collect()
+#     return [cell.num_votes for cell in section]
+
+# def get_rating(df, r):
+#     section = df.where(df.restaurant == r).select(["rating"]).collect()
+#     return [cell.rating for cell in section]
 
 """Returns synonyms of 'term' in list order"""
 def synonyms(term):
@@ -248,6 +256,8 @@ def totalSpecificScore(aspect):
     scoreDict = {}
     for rest in resArray:
         scoreDict[rest] = specificScorer(rest, aspect)
+        print(scoreDict[rest])
+
     return scoreDict
 
 def all_score_over_time(m):
@@ -275,3 +285,6 @@ def all_score_over_time(m):
             arr = []
             if (dates[index] <= start and dates[index] > dat):
                 arr.append(review[index])
+
+# print(totalScores())
+
