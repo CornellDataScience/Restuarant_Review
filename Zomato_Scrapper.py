@@ -88,13 +88,15 @@ def scrape_latest_reviews(numReviews, restaurantID):
     for i in range(numReviews):
         if i == len(user_reviews):
             print("CANNOT GET THE LATEST REVIEWS. NOT ENOUGH LATEST REVIEWS.")
-        review = user_reviews[i]
-        Review_Results[review["review"]["id"]] = ["Zomato", restaurant_name,
-                                                  review["review"]["review_time_friendly"],
-                                                  review["review"]["review_text"],
-                                                  review["review"]["rating"],
-                                                  review["review"]["likes"],
-                                                  (review["review"]["user"]["foodie_level_num"] > 5)]
+        else :
+
+            review = user_reviews[i]
+            Review_Results[review["review"]["id"]] = ["Zomato", restaurant_name,
+                                                      review["review"]["review_time_friendly"],
+                                                      review["review"]["review_text"],
+                                                      review["review"]["rating"],
+                                                      review["review"]["likes"],
+                                                      (review["review"]["user"]["foodie_level_num"] > 5)]
     return Review_Results
 
 #Iterates through all restaurant IDs and scrapes
