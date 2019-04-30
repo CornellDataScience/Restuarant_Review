@@ -44,6 +44,7 @@ def data():
 	zomato = data["zomato"]
 	yelp_df = pd.read_json(yelp, orient='split')
 	zomato_df = pd.read_json(zomato,orient='split')
+	print(yelp_df)
 	return Response("Success")
 
 @app.route("/img_data", methods=['GET'])
@@ -52,11 +53,9 @@ def get_img_data():
 	d = img_data(rest_id)
 	return jsonify(img_data(rest_id))
 
-
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)
-    WSGIServer(('0.0.0.0', 5000), app, log=app.logger).serve_forever()
-
+    WSGIServer(('', 5000), app, log=app.logger).serve_forever()
 
 def img_data(rest_id):
 	rating_dict = get_res_avg_rating(yelp_df)
@@ -134,6 +133,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
 
     r = requests.get(url=endpoint, headers=head)
     data = r.json()
+    print(data)
     categories_json = data['categories']
     categories = ''
     for c in categories_json:
@@ -194,4 +194,5 @@ def visualize_review_score():
 	values = list(scoreDict.values())
 	plt.title("bar graph for NLP review scores of restaurants")
 	plt.bar(range(len(scoreDict)), values, tick_label=names)
+
 

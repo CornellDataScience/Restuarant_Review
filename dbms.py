@@ -107,7 +107,10 @@ def add_rows(pd_df, data_dict):
         new_row.insert(0,key)
         row_df = pd.DataFrame([new_row],columns=pd_df.columns)
         row_df.fillna(value=pd.np.nan, inplace=True)
-        row_df.date = pd.to_datetime(row_df.date.map(lambda x: x.split()[0]))
+        try:
+            row_df.date = pd.to_datetime(row_df.date.map(lambda x: x.split()[0]))
+        except:
+            pass
         pd_df = pd_df.append(row_df, ignore_index=True)
     return pd_df
 

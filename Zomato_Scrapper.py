@@ -87,7 +87,7 @@ def scrape_latest_reviews(numReviews, restaurantID):
     user_reviews = json.loads(response_json.text)["user_reviews"]
     for i in range(numReviews):
         if i == len(user_reviews):
-            print("CANNOT GET THE LATEST REVIEWS. NOT ENOUGH LATEST REVIEWS.")
+            pass
         else :
             review= user_reviews[i]
             Review_Results[review["review"]["id"]] = ["Zomato", restaurant_name,
