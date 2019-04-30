@@ -1,10 +1,14 @@
 import pandas as pd
-from pyspark.sql import SparkSession, functions
 from datetime import date
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from math import sqrt
 import requests
+from pyspark.sql import SparkSession, functions
 from bs4 import BeautifulSoup
+today = date.today()
+m = today.month
+y = today.year
+d = today.day
 analyser = SentimentIntensityAnalyzer()
 ##List of all Restaurants
 resArray = ['Sushi Osaka',
@@ -111,6 +115,7 @@ def format_date(date):
     temp = list(map(int,temp[:3]))
     return temp
 
+
 big_list = []
 with open('YelpData.txt', 'rb') as f:
     data = f.readlines()
@@ -125,7 +130,6 @@ new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
 spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
 spark_df = spark.createDataFrame(new_df)
 # spark_df.write.saveAsTable("yelp")
-
 def rating_counts(df):
     df = df.select(["restaurant", "rating"])
     for i in range(1,6):
@@ -240,7 +244,7 @@ def specificScorer(restaurantString, aspect):
                 else:
                     counter = 0
         if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
-            return round(pos/neg, 3)
+            return round(sqrt(pos/neg), 3)
         else:
             return pos
 
@@ -256,4 +260,66 @@ def totalSpecificScore(aspect):
     scoreDict = {}
     for rest in resArray:
         scoreDict[rest] = specificScorer(rest, aspect)
+    return scoreDict
+
+def score_over_time(rest_name):
+    today = date.today()
+    m = today.month
+    y = today.year
+    a = True
+    datesList = [today]
+    for x in range(0,10):
+        if a:
+            datesList.append(date(y-1, m + 6, 1))
+            y = y - 1
+            a = False
+        else:
+            datesList.append(date(y, m, 1))
+            a = True
+
+    section = spark_df.where(spark_df.restaurant == rest_name).select(['date']).collect()
+    dates = [cell.date for cell in section]
+    reviews = get_review_text(spark_df, rest_name)
+
+    separated = []
+    for dateIndex in range(0, len(datesList) - 1):
+        n = []
+        for revIndex in range(0, len(reviews)):
+            if (datesList[dateIndex] > dates[revIndex] and datesList[dateIndex + 1] <= dates[revIndex]):
+                n.append(reviews[revIndex])
+        separated.append(n)
+
+    s = []
+    for r in separated:
+        s.append(grade(r))
+
+    return s
+
+def grade(review):
+    counter = 0
+    neg = 0
+    pos = 0
+    for r in review:
+        score = analyser.polarity_scores(r)
+        for sc in score.values():
+            if (counter == 0):
+                neg = neg + sc
+                counter = 1
+            elif (counter == 1):
+                counter = 2
+            elif (counter == 2):
+                pos = pos + sc
+                counter = 3
+            else:
+                counter = 0
+
+    if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
+        return round(sqrt(pos/neg), 3)
+    else:
+        return round(pos, 3)
+
+def all_score_over_time(m):
+    scoreDict = {}
+    for rest in resArray:
+        scoreDict[rest] = score_over_time(rest)
     return scoreDict

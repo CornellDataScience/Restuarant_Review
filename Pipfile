@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+<<<<<<< HEAD
+requests = "*"
+flask = "*"
+scipy = "*"
+numpy = "*"
+seaborn = "*"
+kafka = "*"
+pyspark = "*"
+vadersentiment = "*"
+bs4 = "*"
+=======
+>>>>>>> 85f932e18e1142b504cd8200d899ec23c0fed6de
+
+[requires]
+python_version = "3.6"
