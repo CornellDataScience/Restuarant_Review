@@ -115,17 +115,6 @@ def add_rows(pd_df, data_dict):
     return pd_df
 
 '''
-Returns a list of the number of votes corresponding to each review for a given restaurant
-'''
-def get_num_votes(pd_df, r_id):
-    return list(pd_df[pd_df.restaurant_id == r_id].num_votes)
-
-'''
-Returns a list of the rating for each reveiew for a given restaurant
-'''
-def get_rating(pd_df, r_id):
-    return list(pd_df[pd_df.restaurant_id == r_id].rating)
-'''
 Returns a list of lists corresponding to given restaurant id, each inner list corresponds to a review where the
 0th element is the date of the review and the 1st element is the review rating
 '''
@@ -166,12 +155,10 @@ Returns dictionary where the keys are the yelp restaurant ids and the correspond
 '''
 def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
-    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
 def yelp_rest_name_to_id_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
-    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant").to_json())["restaurant_id"]
 
 '''

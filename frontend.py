@@ -56,6 +56,10 @@ def get_img_data():
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)
     WSGIServer(('', 5000), app, log=app.logger).serve_forever()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2292d02c8976be54041bc6bee16e13c4330eb268
 
 def img_data(rest_id):
 	rating_dict = get_res_avg_rating(yelp_df)

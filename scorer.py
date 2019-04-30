@@ -3,114 +3,111 @@ from datetime import date
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from math import sqrt
 import requests
-import dbms
+from pyspark.sql import SparkSession, functions
 from bs4 import BeautifulSoup
-from dbms import initialize_yelp, rating_counts, yelp_id_restaurant_dict
-from dbms import get_review_text_date_api, get_restaurant_counts, get_vote_counts, get_review_text, get_num_votes, get_rating
-import json
 today = date.today()
 m = today.month
 y = today.year
 d = today.day
 analyser = SentimentIntensityAnalyzer()
 ##List of all Restaurants
-# resArray = ['Sushi Osaka',
-# ' Pokelava',
-# 'Ling Ling Restaurant',
-# 'DiBella’s Subs',
-# 'Plantation Bar and Grill',
-# 'Taco Bell',
-# 'Temple of Zeus',
-# 'Italian Carry Out',
-# 'Domino’s Pizza',
-# 'Sicilian Delight',
-# 'Texas Roadhouse - Ithaca',
-# 'Monks On The Commons',
-# 'Kelly’s Dockside Cafe',
-# 'Scale House Brew Pub',
-# 'Northeast Pizza & Beer',
-# 'Buffalo Wild Wings',
-# 'Spring Buffet & Grill',
-# 'Panera Bread',
-# ' Denny’s',
-# 'Firehouse Subs',
-# 'Crossroads Bar & Grille',
-# 'Sal’s Pizzeria',
-# 'Louie’s Lunch',
-# 'Coal Yard Cafe',
-# 'Napoli Pizzeria',
-# 'Inn at Taughannock Restaurant',
-# 'Ithaca Bakery',
-# 'Souvlaki House',
-# 'Oishii Bowl',
-# 'Asian Noodle House',
-# 'Cafe Pacific',
-# 'CoreLife Eatery',
-# 'Chipotle Mexican Grill',
-# 'Covered Bridge Mkt',
-# 'Sahara Mediterranean Restaurant',
-# ' Arby’s',
-# 'Joe’s Restaurant',
-# 'Mia Restaurant',
-# 'Kilpatrick’s Publick House',
-# 'Aladdin’s Natural Eatery',
-# 'Lincoln Street Diner',
-# ' McDonald’s',
-# ' Mitsuba',
-# 'Uncle Joe’s',
-# 'The Rhine House',
-# 'Ling Ling Garden',
-# 'Ten Forward Cafe',
-# 'Casablanca Pizzeria',
-# 'Applebee’s Grill + Bar',
-# 'Press Cafe',
-# 'Moe’s Southwest Grill',
-# ' Subway',
-# 'Rogan’s Corner',
-# 'Little Thai House',
-# 'Miyake Japanese Restaurant',
-# 'Friends & Pho',
-# 'Salsa Fiesta',
-# 'Mattin’s Café',
-# 'Taverna Banfi',
-# 'Ctb Appetizers',
-# 'Circus Truck',
-# 'Luna Inspired Street Food',
-# ' Goldie’s',
-# 'Dolce Delight',
-# 'Sunset Grill',
-# 'Plum Tree Restaurant',
-# 'The Sub Shop',
-# 'Danby Gathery',
-# ' Okenshields',
-# 'Amit Bhatia Libe Café',
-# 'Universal Deli Grocery',
-# 'Apollo Restaurant',
-# 'D P Dough',
-# 'Bibim Bap Korean Restaurant',
-# 'Big Al’s Hilltop Quikstop',
-# 'Taste of Thai',
-# 'Easy Wok',
-# 'Atrium Cafe',
-# 'Little Caesars Pizza',
-# 'Franny’s Food Truck',
-# 'Tibetan Momo Bar',
-# 'Waffle Frolic',
-# 'Razorback BBQ',
-# 'Purity Ice Cream',
-# 'Royal Court Restaurant',
-# 'The Ivy Room',
-# 'Old Mexico',
-# '2nd Landing Cafe',
-# 'Jason’s Grocery & Deli',
-# 'Cup O’ Jo Café',
-# 'Sinfully Delicious Baking Co.',
-# 'Red & White Cafe',
-# ' Trillium',
-# 'Café Jennie',
-# 'Pudgie’s Pizza & Sub Shops',
-# 'Mama Teresa Pizzeria',
-# 'Taste of Thai Express']
+resArray = ['Sushi Osaka',
+' Pokelava',
+'Ling Ling Restaurant',
+'DiBella’s Subs',
+'Plantation Bar and Grill',
+'Taco Bell',
+'Temple of Zeus',
+'Italian Carry Out',
+'Domino’s Pizza',
+'Sicilian Delight',
+'Texas Roadhouse - Ithaca',
+'Monks On The Commons',
+'Kelly’s Dockside Cafe',
+'Scale House Brew Pub',
+'Northeast Pizza & Beer',
+'Buffalo Wild Wings',
+'Spring Buffet & Grill',
+'Panera Bread',
+' Denny’s',
+'Firehouse Subs',
+'Crossroads Bar & Grille',
+'Sal’s Pizzeria',
+'Louie’s Lunch',
+'Coal Yard Cafe',
+'Napoli Pizzeria',
+'Inn at Taughannock Restaurant',
+'Ithaca Bakery',
+'Souvlaki House',
+'Oishii Bowl',
+'Asian Noodle House',
+'Cafe Pacific',
+'CoreLife Eatery',
+'Chipotle Mexican Grill',
+'Covered Bridge Mkt',
+'Sahara Mediterranean Restaurant',
+' Arby’s',
+'Joe’s Restaurant',
+'Mia Restaurant',
+'Kilpatrick’s Publick House',
+'Aladdin’s Natural Eatery',
+'Lincoln Street Diner',
+' McDonald’s',
+' Mitsuba',
+'Uncle Joe’s',
+'The Rhine House',
+'Ling Ling Garden',
+'Ten Forward Cafe',
+'Casablanca Pizzeria',
+'Applebee’s Grill + Bar',
+'Press Cafe',
+'Moe’s Southwest Grill',
+' Subway',
+'Rogan’s Corner',
+'Little Thai House',
+'Miyake Japanese Restaurant',
+'Friends & Pho',
+'Salsa Fiesta',
+'Mattin’s Café',
+'Taverna Banfi',
+'Ctb Appetizers',
+'Circus Truck',
+'Luna Inspired Street Food',
+' Goldie’s',
+'Dolce Delight',
+'Sunset Grill',
+'Plum Tree Restaurant',
+'The Sub Shop',
+'Danby Gathery',
+' Okenshields',
+'Amit Bhatia Libe Café',
+'Universal Deli Grocery',
+'Apollo Restaurant',
+'D P Dough',
+'Bibim Bap Korean Restaurant',
+'Big Al’s Hilltop Quikstop',
+'Taste of Thai',
+'Easy Wok',
+'Atrium Cafe',
+'Little Caesars Pizza',
+'Franny’s Food Truck',
+'Tibetan Momo Bar',
+'Waffle Frolic',
+'Razorback BBQ',
+'Purity Ice Cream',
+'Royal Court Restaurant',
+'The Ivy Room',
+'Old Mexico',
+'2nd Landing Cafe',
+'Jason’s Grocery & Deli',
+'Cup O’ Jo Café',
+'Sinfully Delicious Baking Co.',
+'Red & White Cafe',
+' Trillium',
+'Café Jennie',
+'Pudgie’s Pizza & Sub Shops',
+'Mama Teresa Pizzeria',
+'Taste of Thai Express']
 
 def format_date(date):
     temp = date.split("/")
@@ -119,41 +116,48 @@ def format_date(date):
     return temp
 
 
+big_list = []
+with open('YelpData.txt', 'rb') as f:
+    data = f.readlines()
+for partial_data in data:
+    df = pd.read_json(partial_data)
+    for column in df.columns:
+        temp = list(df[column])
+        temp.insert(0,column)
+        big_list.append(temp)
+new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
+new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
+spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
+spark_df = spark.createDataFrame(new_df)
 # spark_df.write.saveAsTable("yelp")
-spark_df = dbms.initialize_yelp()
+def rating_counts(df):
+    df = df.select(["restaurant", "rating"])
+    for i in range(1,6):
+        df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
+    return df.groupBy("restaurant").sum()
 
+def get_review_text_date_api(df_yelp, df_zomato, rest_name):
+    yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
+    zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
+    return yelp.union(zomato)
 
-resArray = yelp_id_restaurant_dict(spark_df)
+def get_restaurant_counts(df):
+    return df.groupBy("restaurant").count()
 
+def get_vote_counts(df):
+    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
 
-# def rating_counts(df):
-#     df = df.select(["restaurant", "rating"])
-#     for i in range(1,6):
-#         df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-#     return df.groupBy("restaurant").sum()
+def get_review_text(df, r):
+    section = df.where(df.restaurant == r).select(['review']).collect()
+    return [cell.review for cell in section]
 
-# def get_review_text_date_api(df_yelp, df_zomato, rest_name):
-#     yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
-#     zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
-#     return yelp.union(zomato)
+def get_num_votes(df, r):
+    section = df.where(df.restaurant == r).select(["num_votes"]).collect()
+    return [cell.num_votes for cell in section]
 
-# def get_restaurant_counts(df):
-#     return df.groupBy("restaurant").count()
-
-# def get_vote_counts(df):
-#     return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
-
-# def get_review_text(df, r):
-#     section = df.where(df.restaurant == r).select(['review']).collect()
-#     return [cell.review for cell in section]
-
-# def get_num_votes(df, r):
-#     section = df.where(df.restaurant == r).select(["num_votes"]).collect()
-#     return [cell.num_votes for cell in section]
-
-# def get_rating(df, r):
-#     section = df.where(df.restaurant == r).select(["rating"]).collect()
-#     return [cell.rating for cell in section]
+def get_rating(df, r):
+    section = df.where(df.restaurant == r).select(["rating"]).collect()
+    return [cell.rating for cell in section]
 
 """Returns synonyms of 'term' in list order"""
 def synonyms(term):
@@ -240,7 +244,7 @@ def specificScorer(restaurantString, aspect):
                 else:
                     counter = 0
         if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
-            return round(pos/neg, 3)
+            return round(sqrt(pos/neg), 3)
         else:
             return pos
 
@@ -256,14 +260,9 @@ def totalSpecificScore(aspect):
     scoreDict = {}
     for rest in resArray:
         scoreDict[rest] = specificScorer(rest, aspect)
-        print(scoreDict[rest])
-
     return scoreDict
 
-def all_score_over_time(m):
-    section = spark_df.where(spark_df.restaurant == 'Sushi Osaka').select(['date']).collect()
-    dates = [cell.date for cell in section]
-    reviews = get_review_text(spark_df, 'Sushi Osaka')
+def score_over_time(rest_name):
     today = date.today()
     m = today.month
     y = today.year
@@ -278,13 +277,49 @@ def all_score_over_time(m):
             datesList.append(date(y, m, 1))
             a = True
 
+    section = spark_df.where(spark_df.restaurant == rest_name).select(['date']).collect()
+    dates = [cell.date for cell in section]
+    reviews = get_review_text(spark_df, rest_name)
+
     separated = []
-    for index in range(len(dates)):
-        start = today
-        for dat in datesList[1:]:
-            arr = []
-            if (dates[index] <= start and dates[index] > dat):
-                arr.append(review[index])
+    for dateIndex in range(0, len(datesList) - 1):
+        n = []
+        for revIndex in range(0, len(reviews)):
+            if (datesList[dateIndex] > dates[revIndex] and datesList[dateIndex + 1] <= dates[revIndex]):
+                n.append(reviews[revIndex])
+        separated.append(n)
 
-# print(totalScores())
+    s = []
+    for r in separated:
+        s.append(grade(r))
 
+    return s
+
+def grade(review):
+    counter = 0
+    neg = 0
+    pos = 0
+    for r in review:
+        score = analyser.polarity_scores(r)
+        for sc in score.values():
+            if (counter == 0):
+                neg = neg + sc
+                counter = 1
+            elif (counter == 1):
+                counter = 2
+            elif (counter == 2):
+                pos = pos + sc
+                counter = 3
+            else:
+                counter = 0
+
+    if neg!=0 or neg!=0.0 or neg!=0.00 or neg!=0.000:
+        return round(sqrt(pos/neg), 3)
+    else:
+        return round(pos, 3)
+
+def all_score_over_time(m):
+    scoreDict = {}
+    for rest in resArray:
+        scoreDict[rest] = score_over_time(rest)
+    return scoreDict
