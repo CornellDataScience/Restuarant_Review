@@ -184,8 +184,8 @@ def visualize_yelp_competitor_score(res_id):
 
 
 # visualize the NLP review scores of restaurants
-def visualize_review_score(res_id):
-    scoreDict = totalScores(res_id)
+def visualize_review_score(yelp_res_id,zomato_res_id):
+    scoreDict = totalScores(yelp_res_id,zomato_res_id)
     names = scoreDict.keys()
     values = list(scoreDict.values())
     plt.title("bar graph for NLP category scores of restaurant")
@@ -199,9 +199,9 @@ def all_score_over_time(a):
 
 
 # visualize the NLP review trends of restaurants
-def visualize_NLP_review_trends():
+def visualize_NLP_review_trends(res_id,category):
 
-    res_review_trends = all_score_over_time('M')
+    res_review_trends = competitor_score_over_time(res_id,category)
 
     max_time_length = 0
 

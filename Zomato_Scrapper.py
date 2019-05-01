@@ -96,7 +96,7 @@ def scrape_latest_reviews(numReviews, restaurantID):
                                                       review["review"]["review_text"],
                                                       review["review"]["rating"],
                                                       review["review"]["likes"],
-                                                      (review["review"]["user"]["foodie_level_num"] > 5)]
+                                                      restaurantID]
     return Review_Results
 
 #Iterates through all restaurant IDs and scrapes

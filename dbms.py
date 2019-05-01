@@ -20,6 +20,7 @@ def read_data(path):
     with open(path,'rb') as f:
         data = f.readlines()
     for partial_data in data:
+        
         df = pd.read_json(partial_data)
         for column in df.columns:
             temp = list(df[column])
@@ -38,7 +39,7 @@ def initialize_yelp():
 
 def initialize_zomato():
     try:
-        pd.read_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df')
+        return pd.read_hdf('/home/hnuser1/Restuarant_Review/zomato.hdf','zomato_df')
     except:
         big_list = read_data('/home/hduser1/Restuarant_Review/ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])

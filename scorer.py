@@ -117,6 +117,7 @@ def format_date(date):
 
 
 spark_df = dbms.initialize_yelp()
+zomato_df = dbms.initialize_zomato()
 def get_num_votes(df, r):    
     sublist = df.loc[df['restaurant_id'] == r]
     return sublist[['num_votes']]
@@ -212,12 +213,15 @@ def specificScorer(restaurantString, aspect):
             return pos
 
 """Returns sentiment analysis scores of all restaurants in Ithaca in dictionary form"""
-def totalScores(rest_id):
+def totalScores(yelp_rest_id,zomato_rest_id):
     scoreDict = {}
 
-    textList = dbms.get_review_text(spark_df,rest_id)
+    textList = dbms.get_review_text(spark_df,yelp_rest_id)
+    textList2 = (dbms.get_review_text(zomato_df,zomato_rest_id))
     fullText = ''
     for text in textList:
+        fullText = fullText + text
+    for text in textList2:
         fullText = fullText + text
     categories = ['food','service','staff','price']
     for category in categories:
