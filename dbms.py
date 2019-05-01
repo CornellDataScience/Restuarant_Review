@@ -12,7 +12,6 @@ from kafka import KafkaConsumer
 import time
 
 
-
 def initialize_dbms():
     return initialize_yelp(), initialize_zomato()
 
@@ -127,8 +126,6 @@ def get_review_rating_date(yelp_pandas, zomato_pandas, yelp_id, zomato_id):
         yelp_slice = yelp_pandas[(yelp_pandas.rating.notnull()) & (yelp_pandas.restaurant_id == yelp_id)]
         yelp_info = yelp_slice[["date","rating"]].values.tolist()
 
-    print(zomato_info)
-    print(yelp_info)
     if zomato_id != None and yelp_id != None:
         total = zomato_info + yelp_info
 
@@ -153,42 +150,20 @@ def avg_rating_binned(pd_df, rest_id, interval):
 '''
 Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
 '''
+'''
+Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
+'''
 def yelp_id_restaurant_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant_id").to_json())["restaurant"]
 
 def yelp_rest_name_to_id_dict(yelp_pandas):
     yelp_slice = yelp_pandas[["restaurant","restaurant_id"]].drop_duplicates()
+    yelp_slice = yelp_slice[yelp_slice.restaurant != "couldnt find"]
     return json.loads(yelp_slice.set_index("restaurant").to_json())["restaurant_id"]
-
 '''
 Returns a dictionary of restaurant id to its average rating
 '''
 def get_res_avg_rating(pd_df):
     return pd_df.groupby("restaurant_id").mean()[["rating"]].to_dict()["rating"]
-
-# zomato_df = initialize_zomato()
-# print('dbms has been initialized')
-# save_zomato(zomato_df)
-#zomato_df = initialize_zomato()
-
-#print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
-
-# yelp_df = initialize_yelp()
-#zomato_df = initialize_zomato()
-
-# print(avg_rating_binned(yelp_df, "ZzA6l46CKDrHp7tQwV30GA", 'Q'))
-# print(len(get_review_rating_date(yelp_df, zomato_df, "ZzA6l46CKDrHp7tQwV30GA", "17419914")))
-
-# yelp_df = initialize_yelp() # pandas DataFrame
-
-# consumer = KafkaConsumer(
-#     'numtest',
-#      bootstrap_servers=['localhost:9092'],
-#      auto_offset_reset='earliest',
-#      enable_auto_commit=True,
-#      group_id='my-group',
-#      value_deserializer=lambda x: loads(x.decode('utf-8')))
-#
-# for message in consumer:
-#     message = message.value

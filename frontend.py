@@ -1,5 +1,6 @@
 # Run following line in terminal:
-# FLASK_APP=frontend.py FLASK_DEBUG=1 python -m flask run
+# pipenv shell
+# FLASK_APP=frontend.py python -m flask run --host=0.0.0.0
 
 from flask import Flask, Response, request, render_template, jsonify
 import pandas as pd
@@ -56,10 +57,7 @@ def get_img_data():
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)
     WSGIServer(('', 5000), app, log=app.logger).serve_forever()
-<<<<<<< HEAD
-=======
 
->>>>>>> 2292d02c8976be54041bc6bee16e13c4330eb268
 
 def img_data(rest_id):
 	rating_dict = get_res_avg_rating(yelp_df)
@@ -131,7 +129,7 @@ def visualize_res_review_trends_graph(res_review_trends):
 
 def visualize_yelp_competitor_score(res_id, yelp_df):
     # get the category of the res_id
-    key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
+    key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'
     endpoint = 'https://api.yelp.com/v3/businesses/' + res_id
     head = {'Authorization': 'bearer %s' % key}
 

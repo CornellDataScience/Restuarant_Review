@@ -3,8 +3,8 @@ from datetime import date
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from math import sqrt
 import requests
-from pyspark.sql import SparkSession, functions
 from bs4 import BeautifulSoup
+import dbms
 today = date.today()
 m = today.month
 y = today.year
@@ -116,48 +116,14 @@ def format_date(date):
     return temp
 
 
-big_list = []
-with open('YelpData.txt', 'rb') as f:
-    data = f.readlines()
-for partial_data in data:
-    df = pd.read_json(partial_data)
-    for column in df.columns:
-        temp = list(df[column])
-        temp.insert(0,column)
-        big_list.append(temp)
-new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
-new_df.date = new_df.date.map(lambda x: date(*format_date(x)))
-spark = SparkSession.builder.appName('restaurant_reviews').getOrCreate()
-spark_df = spark.createDataFrame(new_df)
-# spark_df.write.saveAsTable("yelp")
-def rating_counts(df):
-    df = df.select(["restaurant", "rating"])
-    for i in range(1,6):
-        df = df.withColumn("rating_" + str(i), functions.when(functions.col("rating") == i,1).otherwise(0))
-    return df.groupBy("restaurant").sum()
-
-def get_review_text_date_api(df_yelp, df_zomato, rest_name):
-    yelp = df_yelp.where(df_yelp.restaurant == rest_name).select(["review", "date", "api"])
-    zomato = df_zomato.where(df_zomato.restaurant == rest_name).select(["review", "date", "api"])
-    return yelp.union(zomato)
-
-def get_restaurant_counts(df):
-    return df.groupBy("restaurant").count()
-
-def get_vote_counts(df):
-    return df.select(["restaurant", "num_votes"]).groupBy("restaurant").count().withColumnRenamed("count", "num_votes")
-
-def get_review_text(df, r):
-    section = df.where(df.restaurant == r).select(['review']).collect()
-    return [cell.review for cell in section]
-
-def get_num_votes(df, r):
-    section = df.where(df.restaurant == r).select(["num_votes"]).collect()
-    return [cell.num_votes for cell in section]
+spark_df = dbms.initialize_yelp()
+def get_num_votes(df, r):    
+    sublist = df.loc[df['restaurant_id'] == r]
+    return sublist[['num_votes']]
 
 def get_rating(df, r):
-    section = df.where(df.restaurant == r).select(["rating"]).collect()
-    return [cell.rating for cell in section]
+    sublist = df.loc[df['restaurant_id'] == r]
+    return sublist[['rating']]
 
 """Returns synonyms of 'term' in list order"""
 def synonyms(term):
@@ -177,11 +143,12 @@ def scorer(restaurantString):
     counter = 0
     votes = 0
     rating = 0
-    for y in get_num_votes(spark_df, restaurantString):
+      
+    for y in get_num_votes(spark_df, restaurantString)['num_votes']:
         votes = votes + y
-        if votes == 0:
-            votes = 1
-    for x, y, a in zip(get_review_text(spark_df, restaurantString), get_num_votes(spark_df, restaurantString), get_rating(spark_df, restaurantString)):
+    if votes == 0:
+        votes = 1
+    for x, y, a in zip(dbms.get_review_text(spark_df, restaurantString), get_num_votes(spark_df, restaurantString)['num_votes'], get_rating(spark_df, restaurantString)['rating']):
         sum = sum + 1
         rating = rating + a
         score = analyser.polarity_scores(x)
@@ -209,26 +176,22 @@ aspect to analyze "aspect"
 """
 def specificScorer(restaurantString, aspect):
     synonym = synonyms(aspect)
-    reviews = get_review_text(spark_df, restaurantString)
     sentencesList = []
     b=[]
-
-    for r in reviews:
-        sentencesList.append(r.split('. '))
-    for z in sentencesList:
-        for sentence in z:
-            for word in synonym:
-                if word in sentence:
-                    b.append(sentence)
-                    z.remove(sentence)
-                    break
-
+    
+        
+    sentencesList = restaurantString.split('.')
+    for sentence in sentencesList:
+        for word in synonym:
+            if word in sentence:
+                b.append(sentence)
+                break
     counter = 0
     neg = 0
     pos = 0
     length = len(b)
     if (length == 0):
-        return "There are no reviews corresponding to the " + aspect + " of " + restaurantString
+        return None
     else:
         for x in b:
             score = analyser.polarity_scores(x)
@@ -249,12 +212,17 @@ def specificScorer(restaurantString, aspect):
             return pos
 
 """Returns sentiment analysis scores of all restaurants in Ithaca in dictionary form"""
-def totalScores():
+def totalScores(rest_id):
     scoreDict = {}
-    for rest in resArray:
-        scoreDict[rest] = scorer(rest)
-    return scoreDict
 
+    textList = dbms.get_review_text(spark_df,rest_id)
+    fullText = ''
+    for text in textList:
+        fullText = fullText + text
+    categories = ['food','service','staff','price']
+    for category in categories:
+        scoreDict[category] = specificScorer(fullText,category)
+    return scoreDict
 """Returns sentiment analysis scores of a specific aspect of all restaurants in Ithaca in dictionary form"""
 def totalSpecificScore(aspect):
     scoreDict = {}
@@ -276,19 +244,20 @@ def score_over_time(rest_name):
         else:
             datesList.append(date(y, m, 1))
             a = True
-
-    section = spark_df.where(spark_df.restaurant == rest_name).select(['date']).collect()
-    dates = [cell.date for cell in section]
-    reviews = get_review_text(spark_df, rest_name)
-
+    df = spark_df.loc[spark_df['restaurant_id'] == rest_name]
+    dates = df[['date']]
+    
+    reviews = dbms.get_review_text(spark_df, rest_name)
+    print(datesList)
+    
     separated = []
     for dateIndex in range(0, len(datesList) - 1):
         n = []
         for revIndex in range(0, len(reviews)):
-            if (datesList[dateIndex] > dates[revIndex] and datesList[dateIndex + 1] <= dates[revIndex]):
+            if (datesList[dateIndex] > dates['date'][revIndex] and datesList[dateIndex + 1] <= dates['date'][revIndex]):
                 n.append(reviews[revIndex])
         separated.append(n)
-
+    print(separated)
     s = []
     for r in separated:
         s.append(grade(r))
@@ -318,8 +287,63 @@ def grade(review):
     else:
         return round(pos, 3)
 
-def all_score_over_time(m):
+def all_score_over_time(res_id,aspect):
     scoreDict = {}
     for rest in resArray:
         scoreDict[rest] = score_over_time(rest)
     return scoreDict
+def competitor_score_over_time(res_id,category):
+    finalDict = {}
+    new_df = spark_df.loc[spark_df['restaurant_id'] == res_id]
+    new_df.sort_values(by='date')
+    finalDict[res_id] = []
+    for review in new_df['review']:
+        score = specificScorer(review,category)
+        if(score != None):
+            finalDict[res_id].append(score)
+    print(finalDict)
+    
+    
+    key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'
+    endpoint = 'https://api.yelp.com/v3/businesses/' + res_id
+    head = {'Authorization': 'bearer %s' % key}
+    
+    r = requests.get(url=endpoint, headers=head)
+    data = r.json()
+    categories_json = data['categories']
+    categories = ''
+    for c in categories_json:
+        categories += c['alias'] + ', '
+    location = data['location']['address1'] \
+               + ', ' + data['location']['city'] \
+               + ', ' + data['location']['state'] + ' ' \
+               + data['location']['zip_code']
+    # fetch competitors
+    endpoint = 'https://api.yelp.com/v3/businesses/search'
+    parameters = {'term': 'restaurants',
+                  'limit': 50,
+                  'radius': 40000,
+                  'location': location,
+                  'categories': categories
+                  }
+    competitors = {}
+    competitors[res_id] = data['name']
+    r = requests.get(url=endpoint, params=parameters, headers=head)
+    data = r.json()
+    # get the competitors
+    for business in data['businesses']:
+        if business['id'] != res_id:
+            competitors[business['id']] = business['name']
+    for competitor in competitors:
+        new_df = spark_df.loc[spark_df['restaurant_id'] == competitor]
+        new_df.sort_values(by='date')
+        scoreList = []
+        for review in new_df['review']:
+            score = specificScorer(review,category)
+            if(score != None):
+               scoreList.append(score)
+        if(len(scoreList) > 5):
+            finalDict[competitor] = scoreList
+            if(len(finalDict) >= 6):
+                return finalDict
+    return finalDict
