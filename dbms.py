@@ -29,18 +29,18 @@ def read_data(path):
 
 def initialize_yelp():
     try:
-        return pd.read_hdf('yelp.hdf','yelp_df')
+        return pd.read_hdf('/home/hduser1/Restuarant_Review/yelp.hdf','yelp_df')
     except:
-        big_list = read_data('YelpData.txt')
+        big_list = read_data('/home/hduser1/Restuarant_Review/YelpData.txt')
         new_df = pd.DataFrame(big_list, columns=["key", "api", "restaurant", "date", "review", "rating", "num_votes","restaurant_id"])
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))
         return new_df
 
 def initialize_zomato():
     try:
-        pd.read_hdf('zomato.hdf','zomato_df')
+        pd.read_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df')
     except:
-        big_list = read_data('ZomatoData2.txt')
+        big_list = read_data('/home/hduser1/Restuarant_Review/ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
 
         new_df.date = pd.to_datetime(new_df.date.map(lambda x: x.split()[0]))

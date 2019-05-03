@@ -23,7 +23,7 @@ select.onchange = function() {
 	    	return;
 	    }
 	};
-	req1.open('GET', 'http://localhost:5000/img_data?' + 'id=' + rest_name_to_id[value], true);
+	req1.open('GET', 'http://128.84.48.178:5000/img_data?' + 'id=' + rest_name_to_id[value], true);
 	req1.send();
 
 }
@@ -44,7 +44,7 @@ categories.onchange = function() {
 	    	return;
 	    }
 	}
-	req.open('GET', 'http://localhost:5000/img_data_slow?' + 'id=' + rest_name_to_id[value] + "?category=" + category, true);
+	req.open('GET', 'http://128.84.48.178:5000/img_data_slow?' + 'id=' + rest_name_to_id[value] + "?category=" + category, true);
 }
 
 var xhr = new XMLHttpRequest();
@@ -63,7 +63,7 @@ xhr.onreadystatechange = function() {
     	return;
     }
 };
-xhr.open('GET', 'http://localhost:5000/get_data', true);
+xhr.open('GET', 'http://128.84.48.178:5000/get_data', true);
 xhr.send();
 
 
