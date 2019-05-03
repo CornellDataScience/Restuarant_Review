@@ -3,26 +3,44 @@ var select = document.getElementById("dropdown");
 var rest_name_to_id = {}
 select.onchange = function() {
 	var value = select.options[select.selectedIndex].value;
-	var req = new XMLHttpRequest();
+	var req1 = new XMLHttpRequest();
 
-	req.onreadystatechange = function() {
+	req1.onreadystatechange = function() {
 	    if (this.readyState!==4) return;
 	    if (this.status===200) { // HTTP 200 OK
 	    	var text = this.responseText;
 	    	var dict = JSON.parse(this.responseText);
-	    	console.log(dict);
+	    	console.log("hi");
 	    	document.getElementById("avg_rev").src = "data:image/png;base64, " + dict["avg_rev"];
 	    	document.getElementById("res_rev").src = "data:image/png;base64, " + dict["res_rev"];
 	    	document.getElementById("comp_score").src = "data:image/png;base64, " + dict["comp_score"];
-
-
 
 	    } else {
 	    	return;
 	    }
 	};
-	req.open('GET', 'http://128.84.48.178:5000/img_data?' + 'id=' + rest_name_to_id[value], true);
-	req.send();
+	req1.open('GET', 'http://localhost:5000/img_data?' + 'id=' + rest_name_to_id[value], true);
+	req1.send();
+
+	var req2 = new XMLHttpRequest();
+	req2.onreadystatechange = function() {
+	    if (this.readyState!==4) return;
+	    if (this.status===200) { // HTTP 200 OK
+	    	var text = this.responseText;
+	    	var dict = JSON.parse(this.responseText);
+	    	console.log(dict);
+
+	    	document.getElementById("review").src = "data:image/png;base64, " + dict["review"];
+	    } else {
+	    	return;
+	    }
+	};
+	console.log("called")
+    req2.open('GET', 'http://localhost:5000/img_data_slow?' + 'id=' + rest_name_to_id[value], true);
+    req2.send();
+
+
+
 
 }
 
@@ -42,7 +60,7 @@ xhr.onreadystatechange = function() {
     	return;
     }
 };
-xhr.open('GET', 'http://128.84.48.178:5000/get_data', true);
+xhr.open('GET', 'http://localhost:5000/get_data', true);
 xhr.send();
 
 
