@@ -58,9 +58,9 @@ def get_img_data():
 
 @app.route("/img_data_slow", methods=['GET'])
 def get_img_data_slow():
-	print("function call")
 	rest_id = request.args.get('id')
-	d = img_data_slow(rest_id)
+	category = request.args.get('category')
+	d = img_data_slow(rest_id, category)
 	return jsonify(d)
 
 if __name__ == "__main__":
@@ -108,10 +108,10 @@ def img_data(rest_id):
 	return {"avg_rev":plot_url, "res_rev": plot_url1, "comp_score": plot_url2}
 
 
-def img_data_slow(rest_id):
+def img_data_slow(rest_id, category):
 	print("hihihihih")
 	id_restaurant = yelp_id_restaurant_dict(yelp_df)
-	visualize_NLP_review_trends('3QCY93kLbH29Cctus8IyKQ', "food")
+	visualize_NLP_review_trends(rest_id, category)
 	img3 = io.BytesIO()
 	plt.savefig(img3, format='png')
 	img3.seek(0)
