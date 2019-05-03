@@ -2,7 +2,7 @@ import json
 import requests
 import numpy as np
 from kafka import KafkaProducer
-
+currentKey = 'dac83766cf90fa7872e012cc6c130a00'
 # registered API key is 4dded5ab75a73b4c37bf996ffd3e1a5b
 
 # ithaca information on Zomato
@@ -24,7 +24,7 @@ def main():
 
 
     #  &start=20
-    response_json = requests.get(url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    response_json = requests.get(url, headers={'user-key': currentKey})
 
     restaurants_num = json.loads(response_json.text)["results_found"]
 
@@ -33,7 +33,7 @@ def main():
     # fetch all the restaurants up to 100
     for i in range(20, 100, 20):
         new_url = url + "&start=" + str(i)
-        response_json = requests.get(new_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+        response_json = requests.get(new_url, headers={'user-key': currentKey})
         restaurants = json.loads(response_json.text)["restaurants"]
         restaurants_list.extend(restaurants)
     review_list = {}
@@ -43,7 +43,7 @@ def main():
     # format: {ReviewID: [ReviewSiteName, RestaurantName, ReviewDate, ReviewText, ReviewRating, ReviewVotes, isElite]}
     for restaurant in restaurants_list:
         new_url = "https://developers.zomato.com/api/v2.1/reviews?res_id=" + str(restaurant["restaurant"]["R"]["res_id"])
-        response_json = requests.get(new_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+        response_json = requests.get(new_url, headers={'user-key': currentKey})
         user_reviews = json.loads(response_json.text)["user_reviews"]
         for review in user_reviews:
             review_list[review["review"]["id"]] = ["Zomato", restaurant["restaurant"]["name"], review["review"]["review_time_friendly"], review["review"]["review_text"], review["review"]["rating"], review["review"]["likes"], (review["review"]["user"]["foodie_level_num"] > 5)]
@@ -62,7 +62,7 @@ def scrape_reviews_from_restaurant_id(restaurantID):
 
 
     reviews_url = url + "reviews?res_id=" + str(restaurantID)
-    response_json = requests.get(reviews_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    response_json = requests.get(reviews_url, headers={'user-key': currentKey})
     user_reviews = json.loads(response_json.text)["user_reviews"]
     restaurant_ID_list = []
     for review in user_reviews:
@@ -79,11 +79,11 @@ def scrape_latest_reviews(numReviews, restaurantID):
 
     # get the restaurant name
     restaurant_url = url + "restaurant?res_id=" + str(restaurantID)
-    response_json = requests.get(restaurant_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    response_json = requests.get(restaurant_url, headers={'user-key': currentKey})
     restaurant_name = json.loads(response_json.text)["name"]
 
     reviews_url = url + "reviews?res_id=" + str(restaurantID)
-    response_json = requests.get(reviews_url, headers={'user-key': '4dded5ab75a73b4c37bf996ffd3e1a5b'})
+    response_json = requests.get(reviews_url, headers={'user-key': currentKey})
     user_reviews = json.loads(response_json.text)["user_reviews"]
     for i in range(numReviews):
         if i == len(user_reviews):
