@@ -9,5 +9,5 @@ yelp_json = yelp_df.to_json(orient='split')
 zomato_json = zomato_df.to_json(orient='split')
 
 data = json.dumps({"yelp":yelp_json, "zomato": zomato_json})
-r = requests.post("http://128.84.48.178/data",data=data)
+r = requests.post("http://localhost:5000/data",data=data)
 print(r.text)

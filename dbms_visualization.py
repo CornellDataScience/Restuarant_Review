@@ -5,7 +5,7 @@ import collections
 from scipy.interpolate import spline
 import requests
 from matplotlib.lines import Line2D
-from scorer import totalScores
+from scorer import totalScores, competitor_score_over_time
 
 
 # get rating trends for all restaurants in id_restaurant_dict
@@ -43,7 +43,7 @@ def visualize_avg_review_bar_graph(dict, id_restaurant):
     plt.title("bar graph for average review for restaurants")
     plt.bar(range(len(dict)), values, tick_label=names)
     plt.savefig('avg_review_bar_graph.png')
-    plt.show()
+    # plt.show()
 
 
 # shows graph for review trends for restaurants
@@ -69,7 +69,7 @@ def visualize_res_review_trends_graph(res_review_trends):
     plt.xlabel('Time')
     plt.ylabel('Average Rating')
     plt.title('Review Trends for Restaurants')
-    plt.show()
+    # plt.show()
 
 
 def visualize():
@@ -117,9 +117,9 @@ def visualize_selected():
 
 
 # visualize the competitor's score and score of the restaurant with res_id in a bar graph
-def visualize_yelp_competitor_score(res_id):
+def visualize_yelp_competitor_score(res_id, yelp_df):
     # get the category of the res_id
-    key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
+    key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'
     endpoint = 'https://api.yelp.com/v3/businesses/' + res_id
     head = {'Authorization': 'bearer %s' % key}
 
@@ -151,7 +151,7 @@ def visualize_yelp_competitor_score(res_id):
             competitors[business['id']] = business['name']
 
     # visualize the data
-    yelp_df = initialize_yelp()
+    # yelp_df = initialize_yelp()
     avg_rating_dict = get_res_avg_rating(yelp_df)
     competitors_rating_dict = {}
     # get the competitor rating
@@ -180,7 +180,7 @@ def visualize_yelp_competitor_score(res_id):
         i += 1
 
     plt.legend(custom_lines, competitor_names, fontsize='small', loc='upper center', bbox_to_anchor=(0.5, -0.03), ncol=3)
-    plt.show()
+    # plt.show()
 
 
 # visualize the NLP review scores of restaurants
@@ -191,7 +191,7 @@ def visualize_review_score(res_id):
     plt.title("bar graph for NLP category scores of restaurant")
     plt.bar(range(len(scoreDict)), values, tick_label=names)
     plt.savefig('avg_NLP_review_score_bar_graph.png')
-    plt.show()
+    # plt.show()
 
 # mock up function of all_score_over_time
 def all_score_over_time(a):
@@ -199,10 +199,9 @@ def all_score_over_time(a):
 
 
 # visualize the NLP review trends of restaurants
-def visualize_NLP_review_trends():
-
-    res_review_trends = all_score_over_time('M')
-
+def visualize_NLP_review_trends(res_id,category):
+    res_review_trends = competitor_score_over_time(res_id,category)
+    print("got to here")
     max_time_length = 0
 
     for trend in res_review_trends.values():
@@ -221,9 +220,10 @@ def visualize_NLP_review_trends():
     plt.xlabel('Time')
     plt.ylabel('Average NLP Review Rating')
     plt.title('NLP Review Trends for Restaurants')
-    plt.show()
+    # plt.show()
 
-#visualize_review_score('3QCY93kLbH29Cctus8IyKQ')
+# visualize_NLP_review_trends('3QCY93kLbH29Cctus8IyKQ', "food")
+# visualize_review_score('3QCY93kLbH29Cctus8IyKQ')
 # visualize()
 # visualize_selected()
 # visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
