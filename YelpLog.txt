@@ -3609,3 +3609,13 @@ Updating at: 2019-05-03 01:00:11.512142
 New Reviews found: {}
 Updating at: 2019-05-03 01:15:11.833238
 New Reviews found: {}
+Updating at: 2019-05-03 11:00:14.393588
+New Reviews found: {'uWxTsuiMK7tiDRsRRyEaHQ': ['Yelp', 'Friends & Pho', '4/3/2019', "Been here before and disliked the pho, but the lunch buffet and Chinese food is pretty decent, but make sure to check your bill. Went for the lunch buffet on Monday and was charged $9. Went to the same buffet on Wednesday, they charged the person in front of me $9 but then charged me $10. I looked at the ticket and it said buffet, no drink. I asked about it and they couldn't provide and explanation for the change in price and conspicuously avoided eye contact.I just paid it and left, a dollar isn't work squabbling about. That said: shady.", 2, 0, '8iogyg7am-idwzRYEmQvAQ']}
+Updating at: 2019-05-03 11:15:14.465094
+New Reviews found: {}
+Updating at: 2019-05-03 11:30:14.917368
+New Reviews found: {}
+Updating at: 2019-05-03 11:45:13.171899
+New Reviews found: {}
+Updating at: 2019-05-03 12:00:15.480184
+New Reviews found: {}
