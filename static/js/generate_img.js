@@ -44,7 +44,8 @@ categories.onchange = function() {
 	    	return;
 	    }
 	}
-	req.open('GET', 'http://128.84.48.178:5000/img_data_slow?' + 'id=' + rest_name_to_id[value] + "?category=" + category, true);
+	req.open('GET', 'http://128.84.48.178:5000/img_data_slow?' + 'id=' + rest_name_to_id[rest] + "?category=" + category, true);
+	req.send();
 }
 
 var xhr = new XMLHttpRequest();

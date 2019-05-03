@@ -58,10 +58,11 @@ def get_img_data():
 
 @app.route("/img_data_slow", methods=['GET'])
 def get_img_data_slow():
-	rest_id = request.args.get('id')
-	category = request.args.get('category')
-	d = img_data_slow(rest_id, category)
-	return jsonify(d)
+    print("here slow heere")
+    rest_id = request.args.get('id')
+    category = request.args.get('category')
+    d = img_data_slow(rest_id, category)
+    return jsonify(d)
 
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)
