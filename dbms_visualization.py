@@ -72,16 +72,7 @@ def visualize_res_review_trends_graph(res_review_trends):
     # plt.show()
 
 
-def visualize():
-    yelp_df = initialize_yelp()
-
-    # generate a id to restaurant list
-    yelp_id_restaurant = yelp_id_restaurant_dict(yelp_df)
-
-    # yelp_df is a dataFrame containing all data in yelp
-    avg_rating_dict = get_res_avg_rating(yelp_df)
-
-    res_review_trends = get_all_res_review_trends(yelp_df, yelp_id_restaurant, 'M')
+# 
 
     # visualize the average review bar graph
     # visualize_avg_review_bar_graph(avg_rating_dict, yelp_id_restaurant)
@@ -89,31 +80,31 @@ def visualize():
     # visualize the restaurant review trends graph
     # visualize_res_review_trends_graph(res_review_trends)
 
-def visualize_selected():
-    yelp_df = initialize_yelp()
+# def visualize_selected():
+#     yelp_df = initialize_yelp()
 
-    # generate a id to restaurant list
-    yelp_id_restaurant = yelp_id_restaurant_dict(yelp_df)
+#     # generate a id to restaurant list
+#     yelp_id_restaurant = yelp_id_restaurant_dict(yelp_df)
 
-    # yelp_df is a dataFrame containing all data in yelp
-    avg_rating_dict = get_res_avg_rating(yelp_df)
+#     # yelp_df is a dataFrame containing all data in yelp
+#     avg_rating_dict = get_res_avg_rating(yelp_df)
 
-    # selecting first 10 restaurants in yelp_df (can choose others)
-    l_dict = collections.Counter(yelp_id_restaurant).most_common(3)
-    list_res = []
-    for i in range(len(l_dict)):
-        list_res.append(l_dict[i][0])
+#     # selecting first 10 restaurants in yelp_df (can choose others)
+#     l_dict = collections.Counter(yelp_id_restaurant).most_common(3)
+#     list_res = []
+#     for i in range(len(l_dict)):
+#         list_res.append(l_dict[i][0])
 
-    # checks if the chosen restaurant ids are in the database
-    list_rest_ids = choose_res_ids(list_res, yelp_id_restaurant)
+#     # checks if the chosen restaurant ids are in the database
+#     list_rest_ids = choose_res_ids(list_res, yelp_id_restaurant)
 
-    # creates the trends for the selected restaurant ids
-    res_review_trends = []
-    for i in range(len(list_rest_ids)):
-        res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], yelp_id_restaurant, 'M'))
+#     # creates the trends for the selected restaurant ids
+#     res_review_trends = []
+#     for i in range(len(list_rest_ids)):
+#         res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], yelp_id_restaurant, 'M'))
 
-    # visualizes the trends
-    visualize_res_review_trends_graph(res_review_trends)
+#     # visualizes the trends
+#     visualize_res_review_trends_graph(res_review_trends)
 
 
 # visualize the competitor's score and score of the restaurant with res_id in a bar graph

@@ -1,5 +1,9 @@
 
 var select = document.getElementById("dropdown");
+select.seletedIndex = -1;
+var categories = document.getElementById("categories");
+categories.selectedIndex = -1;
+
 var rest_name_to_id = {}
 select.onchange = function() {
 	var value = select.options[select.selectedIndex].value;
@@ -22,26 +26,25 @@ select.onchange = function() {
 	req1.open('GET', 'http://localhost:5000/img_data?' + 'id=' + rest_name_to_id[value], true);
 	req1.send();
 
-	var req2 = new XMLHttpRequest();
-	req2.onreadystatechange = function() {
-	    if (this.readyState!==4) return;
+}
+
+categories.onchange = function() {
+	var rest = select.options[select.selectedIndex].value;
+	var category = categories.options[categories.selectedIndex].value;
+
+	var req = new XMLHttpRequest();
+	req.onreadystatechange = function() {
+		if (this.readyState!==4) return;
 	    if (this.status===200) { // HTTP 200 OK
 	    	var text = this.responseText;
 	    	var dict = JSON.parse(this.responseText);
-	    	console.log(dict);
 
 	    	document.getElementById("review").src = "data:image/png;base64, " + dict["review"];
 	    } else {
 	    	return;
 	    }
-	};
-	console.log("called")
-    req2.open('GET', 'http://localhost:5000/img_data_slow?' + 'id=' + rest_name_to_id[value], true);
-    req2.send();
-
-
-
-
+	}
+	req.open('GET', 'http://localhost:5000/img_data_slow?' + 'id=' + rest_name_to_id[value] + "?category=" + category, true);
 }
 
 var xhr = new XMLHttpRequest();
