@@ -24,7 +24,8 @@ zomato_df = None
 
 
 '''
-First send DataFrame in json format via POST to /data 
+First send DataFrame 
+in json format via POST to /data 
 '''
 
 @app.route("/")

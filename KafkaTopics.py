@@ -19,7 +19,7 @@ def update_yelp(df):
             if(diff > 0):
                 scraping_list[review] = [diff,newReviewCount[review][1]]
         except:
-            print('match not found for: ' + str(review))
+            pass
     review_dict = scrapeYelp(scraping_list)
     print('New Reviews found: '+ str(review_dict))
     df = dbms.add_rows(df,review_dict)
@@ -46,7 +46,7 @@ def update_zomato(df):
                     break
                 countToScrape += 1
             try:
-                ReviewDict.update(Zomato_Scrapper.scrape_latest_reviews(2,rest))
+                ReviewDict.update(Zomato_Scrapper.scrape_latest_reviews(countToScrape,rest))
             except:
                 print('didnt scrape reviews for:')
                 print(rest)

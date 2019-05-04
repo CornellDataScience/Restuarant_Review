@@ -432,129 +432,291 @@ Updating at: 2019-05-01 00:34:03.405697
 New Reviews found: {}
 Updating at: 2019-05-01 00:36:03.606546
 New Reviews found: {}
-                         key   api  ... num_votes           restaurant_id
-0     54SMNqAMLKdCPUL6qulFhQ  Yelp  ...         0  ZzA6l46CKDrHp7tQwV30GA
-1     JTOgrWhG_VJ-FRikr6Tcow  Yelp  ...         0  ZzA6l46CKDrHp7tQwV30GA
-2     1nNArxJdbKsBTDiylYigIg  Yelp  ...         1  ZzA6l46CKDrHp7tQwV30GA
-3     7rfumZn_RU5VjaJvCr5IoQ  Yelp  ...         1  ZzA6l46CKDrHp7tQwV30GA
-4     6dn6Z2ZxuN4EvwPOoOtn0g  Yelp  ...         1  ZzA6l46CKDrHp7tQwV30GA
-5     l7oULh_4repEGZ_lCoTUSg  Yelp  ...         2  ZzA6l46CKDrHp7tQwV30GA
-6     WCIxWyhNgzhaUszTr8a0ZA  Yelp  ...         1  ZzA6l46CKDrHp7tQwV30GA
-7     D15UsRq7j1ttFKbcXC6CoA  Yelp  ...        19  ZzA6l46CKDrHp7tQwV30GA
-8     fGGmLCP2Fz_V5FPRKU_Q5Q  Yelp  ...        16  ZzA6l46CKDrHp7tQwV30GA
-9     W6nEFj0l6D1T86Vwm9eo8w  Yelp  ...         5  ZzA6l46CKDrHp7tQwV30GA
-10    HFR1zIJr5ES_3e5nWM7Epg  Yelp  ...        19  ZzA6l46CKDrHp7tQwV30GA
-11    KWmHpCm9XJYF8RaRGS8xQg  Yelp  ...         5  RiMF2ekc_bU2v9q852FC6w
-12    -1A4URlHObXoj049lEzcYg  Yelp  ...         0  RiMF2ekc_bU2v9q852FC6w
-13    KjreINC0jNxHXvSBQKXIEw  Yelp  ...         3  RiMF2ekc_bU2v9q852FC6w
-14    H6IQlAzvq5ti_-4cmuoQdQ  Yelp  ...         2  RiMF2ekc_bU2v9q852FC6w
-15    ceMTAeAZyL3JT833j5P5KQ  Yelp  ...        16  RiMF2ekc_bU2v9q852FC6w
-16    BdLwRQ1kMJxFRSfvPQyyeg  Yelp  ...         5  RiMF2ekc_bU2v9q852FC6w
-17    0bH8Zs2-_6fdEc8iQ8UhfA  Yelp  ...         4  RiMF2ekc_bU2v9q852FC6w
-18    Bss72okPnSu-espGm5eO0g  Yelp  ...         0  RiMF2ekc_bU2v9q852FC6w
-19    99r_a0D7XmC3exPtFP0zdg  Yelp  ...         0  RiMF2ekc_bU2v9q852FC6w
-20    qlwEUArK94jv62bxxei6HQ  Yelp  ...         1  RiMF2ekc_bU2v9q852FC6w
-21    9p54eIRs1pEFNvAeiOfE0A  Yelp  ...         2  RiMF2ekc_bU2v9q852FC6w
-22    HIBK-itht3ZsZ8Bz7tHxcA  Yelp  ...         2  RiMF2ekc_bU2v9q852FC6w
-23    um0Dj9KpnLlSX5UBBrOJ0A  Yelp  ...         0  RiMF2ekc_bU2v9q852FC6w
-24    moYzf2hoM_6UwX4aan9-SA  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-25    _C32pGflUkV-wrK4Qr_B3g  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-26    fVwyI-gsGSf0EAJHpoCjDQ  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-27    zR8mCSb4YRAQSVZt8PGhEA  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-28    anDPZUsKWi-ksMRZVGA3hg  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-29    mcPXDz_L5AsQ9DQdqGcK6A  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-...                      ...   ...  ...       ...                     ...
-3703  _sepvJH7PH5Zp8D-1di8Ig  Yelp  ...         0  c2rs0ig1YXFS3D9cQWshoA
-3704  ILTZxorS91CpLAjdLJ2Mqw  Yelp  ...         0  5Q_MqV2gVoyWF_heXkVRUQ
-3705  9dOSYAY6GmDz0c1IkogL7A  Yelp  ...         0  5Q_MqV2gVoyWF_heXkVRUQ
-3706  bayXmIj2iSkXN5h6N9RD9Q  Yelp  ...         0  5Q_MqV2gVoyWF_heXkVRUQ
-3707  m5Ccp1hzgq80pzfKlALZvw  Yelp  ...         0  8Zoh-M0oIQZ-uI3cpQ8bBg
-3708  j_JyPsNbQMuZOjNvdRUHdQ  Yelp  ...         0  8Zoh-M0oIQZ-uI3cpQ8bBg
-3709  n2-fIbIx7ta8TAD6VpKnNA  Yelp  ...         0  -4dfm4rBG5xv8sPSSmE5qA
-3710  lXnHf-hjy8U-8dJzGC0KVQ  Yelp  ...         3  vWXMwnNy1TUAc4-IuFoE1g
-3711  otFdfh1lSHjYRaK3MfIAqw  Yelp  ...         0  vWXMwnNy1TUAc4-IuFoE1g
-3712  efHNPeEXAJm0i7sxlk3Ztg  Yelp  ...         0  9F2zRgWyn1srb9y4ZIg6Dg
-3713  gbQP6l68oQ6onLkBeX1Jzg  Yelp  ...         0  5MUes8izXroJxQZuV94e7A
-3714  nCRTmL5-jlURRi7Md7te4g  Yelp  ...         0  5MUes8izXroJxQZuV94e7A
-3715  moYzf2hoM_6UwX4aan9-SA  Yelp  ...         0  81Z-hyEQ3m5s3iNjozHFxw
-3716  Tf6y0_CEupMlJTAGnVSX1g  Yelp  ...         0  fkxuzBc1Ock3jwqlaCi8NQ
-3717  OJtDaKSDnvAc4wrzLWs-vQ  Yelp  ...         0  ybewokFnvF5TSnBsVXyUTA
-3718  oBaZgEilj00mlOsni4bhbQ  Yelp  ...         0  ybewokFnvF5TSnBsVXyUTA
-3719  kYzKD2z8pgR-9h-zQFLM-A  Yelp  ...         0  ybewokFnvF5TSnBsVXyUTA
-3720  iOCDKls-F_ygZosgrV1PLg  Yelp  ...         0  ybewokFnvF5TSnBsVXyUTA
-3721  iXP28KNK3bLCFppPWP_kHA  Yelp  ...         0  xIeieT_QNMUChRdi8sNohQ
-3722  7d6DULr-a-gVXKV0nOvQTw  Yelp  ...         0  xIeieT_QNMUChRdi8sNohQ
-3723  7-O30z4iEJ16LsNaLJft5Q  Yelp  ...         1  xIeieT_QNMUChRdi8sNohQ
-3724  Wc8Suiea3OnmO0T5So2N7Q  Yelp  ...         1  xIeieT_QNMUChRdi8sNohQ
-3725  QJ6CXC07WJWi76zW-n5kJQ  Yelp  ...         0  v4ACmVJr7ZXGP9uEbHfosw
-3726  A2qqkbY3kWPZKF7zDB9Ccw  Yelp  ...         0  qDaEZVlcsvbqCc9ANRnl4g
-3727  1AQz0SfAabeMAcbwbqljKA  Yelp  ...         0  Ror-3i2eib1r1dEwCfLMtA
-3728  1u6v3Jmyd7wqKHZzUFT60A  Yelp  ...         0  594kvUIZoNGj3TuG1afb4w
-3729  pecR0QH74QLHrFWMiX7SYA  Yelp  ...         0  dhh34rRlTtGuFRDj1zgZWQ
-3730  fu4YgLi2XOobFNwq_YDuxg  Yelp  ...         0  ZmSPwl8y35H2hSC8IZruvQ
-3731  Fsxe_vPbvykTc1mUoYmnHw  Yelp  ...         0  dl6eJ6sowYvlVaHPv1zvWQ
-3732  ckJiTjIN2yQov0qnWaeiiw  Yelp  ...         0  a_A8RcUn4-aNJJwN1-TXIw
-
-[3733 rows x 8 columns]
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 141, in _new_conn
-    (self.host, self.port), self.timeout, **extra_kw)
-  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 83, in create_connection
-    raise err
-  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
-    sock.connect(sa)
-ConnectionRefusedError: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 601, in urlopen
-    chunked=chunked)
-  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 357, in _make_request
-    conn.request(method, url, **httplib_request_kw)
-  File "/usr/lib/python3.6/http/client.py", line 1239, in request
-    self._send_request(method, url, body, headers, encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1285, in _send_request
-    self.endheaders(body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1234, in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-  File "/usr/lib/python3.6/http/client.py", line 1026, in _send_output
-    self.send(msg)
-  File "/usr/lib/python3.6/http/client.py", line 964, in send
-    self.connect()
-  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 166, in connect
-    conn = self._new_conn()
-  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 150, in _new_conn
-    self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f5d3523d208>: Failed to establish a new connection: [Errno 111] Connection refused
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 440, in send
-    timeout=timeout
-  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 639, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 388, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5d3523d208>: Failed to establish a new connection: [Errno 111] Connection refused',))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/hduser1/Restuarant_Review/UpdateYelp.py", line 3, in <module>
-    from post_to_frontend import send_data
-  File "/home/hduser1/Restuarant_Review/post_to_frontend.py", line 12, in <module>
-    r = requests.post("http://localhost:5000/data",data=data)
-  File "/usr/lib/python3/dist-packages/requests/api.py", line 112, in post
-    return request('post', url, data=data, json=json, **kwargs)
-  File "/usr/lib/python3/dist-packages/requests/api.py", line 58, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 508, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 618, in send
-    r = adapter.send(request, **kwargs)
-  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 508, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=5000): Max retries exceeded with url: /data (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5d3523d208>: Failed to establish a new connection: [Errno 111] Connection refused',))
+Updating at: 2019-05-03 13:15:13.946603
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 13:30:14.099987
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 13:45:13.492416
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 14:00:12.610641
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 14:15:13.900148
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 14:30:13.447415
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 14:45:13.587171
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 15:00:12.632378
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 15:15:13.878463
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 15:30:13.733064
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 15:45:13.597056
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 16:00:13.883379
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 16:15:13.428322
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 16:30:13.551707
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 16:45:13.281722
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 17:00:17.578009
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 17:15:13.860032
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 17:30:15.276693
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 17:45:16.041706
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 18:00:15.198521
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 18:15:15.580624
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 18:30:14.887741
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 18:45:12.268219
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 19:00:15.113868
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 19:15:13.331139
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 19:30:13.702833
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 19:45:13.576892
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 20:00:13.722399
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 20:15:13.725153
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 20:30:12.832062
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 20:45:11.894317
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 21:00:13.259167
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 21:15:13.134687
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 21:30:13.321231
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 21:45:12.570512
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 22:00:12.223666
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 22:15:11.619950
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 22:30:12.016457
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 22:45:11.736215
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 23:00:12.736238
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 23:15:11.839916
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 23:30:11.531878
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-03 23:45:12.795470
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 00:00:11.695236
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 00:15:12.046863
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 00:30:12.087857
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 00:45:11.259026
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 01:00:11.822672
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 01:15:12.392217
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 01:30:11.973815
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 01:45:11.082024
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 02:00:12.435367
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 02:15:12.170348
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 02:30:11.397146
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 02:45:11.681779
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 03:00:12.674531
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 03:15:12.582857
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 03:30:11.769094
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 03:45:11.639748
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 04:00:11.636685
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 04:15:12.162194
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 04:30:12.055908
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 04:45:11.944663
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 05:00:11.993672
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 05:15:12.460848
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 05:30:11.904334
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 05:45:12.068824
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 06:00:12.221817
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 06:15:11.860512
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 06:30:12.197354
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 06:45:12.379613
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 07:00:12.469717
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 07:15:12.144298
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 07:30:12.817623
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 07:45:12.716554
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 08:00:12.972179
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 08:15:13.517571
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 08:30:12.343728
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 08:45:14.809628
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 09:00:12.825446
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 09:15:14.242232
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 09:30:14.147064
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 09:45:14.713336
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 10:00:13.118363
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 10:15:13.675824
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 10:30:14.017339
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 10:45:14.603445
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 11:00:14.228124
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 11:15:16.366278
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 11:30:14.654652
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 11:45:15.319525
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 12:00:15.429443
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 12:15:15.129789
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 12:30:14.964061
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 12:45:15.761957
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:00:13.509648
+New Reviews found: {}
 Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
