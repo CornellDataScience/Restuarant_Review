@@ -142,7 +142,7 @@ Returns a dataframe corresponding to restaurant_id; index contains the time-inve
 def avg_rating_binned(pd_df, rest_id, interval):
     pd_df = pd_df[pd_df.restaurant_id == rest_id]
     pd_df.date = pd.to_datetime(pd_df.date).dt.to_period(interval)
-    return (pd_df.groupby(pd_df.date).mean()[["rating"]], pd_df.date.min())
+    return [pd_df.groupby(pd_df.date).mean()[["rating"]], pd_df.date.min(), pd_df.date.max()]
 
 '''
 Returns dictionary where the keys are the yelp restaurant ids and the corresponding value is the restaurant name
