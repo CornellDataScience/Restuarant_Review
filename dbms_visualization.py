@@ -47,15 +47,22 @@ def visualize_avg_review_bar_graph(dict, id_restaurant):
 
 
 # shows graph for review trends for restaurants
+def visualize_res_competitor_review_trend(res_id):
+    
+
 def visualize_res_review_trends_graph(res_review_trends):
     # find the max length for time
     max_time_length = 0
     max_time_indices = []
+    colors = []
+    for res in res_review_trends:
+        colors.append('blue')
+    colors[0] = 'cyan'
     for i in range(len(res_review_trends)):
         if max_time_length < len(res_review_trends[i][0].index.values):
             max_time_indices = res_review_trends[i][0].index.values.astype(str)
             max_time_length = len(res_review_trends[i][0].index.values)
-
+    
     # plot the graph
     temp = np.arange(len(max_time_indices))
     max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
@@ -64,7 +71,7 @@ def visualize_res_review_trends_graph(res_review_trends):
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
-        plt.plot(max_time_indices_new, trend_smoothed, color=list(np.random.choice(range(256), size=3) / 255))
+        plt.plot(max_time_indices_new, trend_smoothed, color=colors)
 
     plt.xlabel('Time')
     plt.ylabel('Average Rating')
@@ -127,7 +134,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
     # fetch competitors
     endpoint = 'https://api.yelp.com/v3/businesses/search'
     parameters = {'term': 'restaurants',
-                  'limit': 6,
+                  'limit': 8,
                   'radius': 40000,
                   'location': location,
                   'categories': categories
@@ -152,7 +159,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
     # draw the graph with rest_id high lighted in bar graph
     names = []
     for key in competitors_rating_dict:
-        names.append('food')
+        names.append(key)
     values = list(competitors_rating_dict.values())
     colors = ['cyan'] * len(competitors_rating_dict.keys())
     colors[0] = 'blue'

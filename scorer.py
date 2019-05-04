@@ -342,8 +342,8 @@ def competitor_score_over_time(res_id,category):
             score = specificScorer(review,category)
             if(score != None):
                scoreList.append(score)
-        if(len(scoreList) > 5):
+        if(len(scoreList) > 7):
             finalDict[competitor] = scoreList
-            if(len(finalDict) >= 6):
+            if(len(finalDict) >= 8):
                 return finalDict
     return finalDict
