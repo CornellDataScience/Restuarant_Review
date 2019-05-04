@@ -127,7 +127,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
     # fetch competitors
     endpoint = 'https://api.yelp.com/v3/businesses/search'
     parameters = {'term': 'restaurants',
-                  'limit': 10,
+                  'limit': 6,
                   'radius': 40000,
                   'location': location,
                   'categories': categories
@@ -152,7 +152,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
     # draw the graph with rest_id high lighted in bar graph
     names = []
     for key in competitors_rating_dict:
-        names.append(competitors[key])
+        names.append('food')
     values = list(competitors_rating_dict.values())
     colors = ['cyan'] * len(competitors_rating_dict.keys())
     colors[0] = 'blue'
@@ -196,11 +196,14 @@ def visualize_NLP_review_trends(res_id,category):
     res_review_trends = competitor_score_over_time(res_id,category)
     print("got to here")
     max_time_length = 0
-
+    
+    for cat in rest_id:
+        colors.append('cyan')
+    colors[0] = 'blue'
     for trend in res_review_trends.values():
         if max_time_length < len(trend):
             max_time_length = len(trend)
-
+    
     # plot the graph
     temp = np.arange(max_time_length)
     max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
@@ -208,7 +211,7 @@ def visualize_NLP_review_trends(res_id,category):
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
-        plt.plot(max_time_indices_new, trend_smoothed, color=list(np.random.choice(range(256), size=3) / 255))
+        plt.plot(max_time_indices_new, trend_smoothed, color=colors)
 
     plt.xlabel('Time')
     plt.ylabel('Average NLP Review Rating')
