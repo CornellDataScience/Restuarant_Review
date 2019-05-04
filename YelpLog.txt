@@ -720,3 +720,15 @@ Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
 Updating at: 2019-05-04 13:00:13.509648
 New Reviews found: {}
 Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:15:13.629159
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:30:14.445321
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:45:14.393806
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 14:00:13.673489
+New Reviews found: {}
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done

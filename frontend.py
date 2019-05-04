@@ -111,7 +111,7 @@ def img_data(rest_id):
 
 
 def img_data_slow(rest_id, category):
-	print("hihihihih")
+
 	id_restaurant = yelp_id_restaurant_dict(yelp_df)
 	visualize_NLP_review_trends(rest_id, category)
 	img3 = io.BytesIO()

@@ -1,7 +1,7 @@
 import requests
 from json import dumps
 from kafka import KafkaProducer
-key = 'LbvSyP2tUSgED1yADTNYFjUd3GoagjPdCmjxx-bnx_wFMXsRxCpZ1MwYlCCYV3n8XeXhU1JFxYsOvKau9XQzMGba1UEW3FZlv2LCYLKJ5CYIu-8qEab1P243KsloXHYx'
+key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'
 endpoint = 'https://api.yelp.com/v3/businesses/search'
 head = {'Authorization': 'bearer %s' % key}
 producer = KafkaProducer(bootstrap_servers=['localhost:9092'],

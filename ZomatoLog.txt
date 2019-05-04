@@ -70,3 +70,651 @@ Traceback (most recent call last):
     user_reviews = json.loads(response_json.text)["user_reviews"]
 KeyError: 'user_reviews'
 Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:06:15.111599
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:07:15.595366
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:08:14.847074
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:09:16.332001
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:10:15.501073
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:11:14.086353
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:12:15.028037
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:13:14.578954
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:14:14.527254
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:15:14.593039
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:16:14.601399
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:17:14.743098
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:18:14.775485
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:19:15.644960
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:20:13.600992
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:21:14.098905
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:22:15.213683
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:23:15.937600
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:24:14.436358
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:25:14.933235
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:26:14.023771
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:27:14.806283
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:28:15.363698
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:29:14.439793
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:30:09.549756
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:31:14.913667
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:32:14.432220
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:33:15.406506
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:34:15.158006
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:35:14.748883
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:36:13.875071
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:37:14.196170
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:38:15.098341
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:39:14.423825
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:40:16.823599
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:41:14.105950
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:42:14.621806
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:43:14.046438
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:44:14.242647
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:45:14.827437
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:46:15.472510
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:47:14.514891
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:48:13.579470
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:49:14.496471
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:50:13.770449
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:51:13.956141
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:52:14.650955
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:53:14.204812
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:54:14.448740
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:55:14.355346
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:56:15.058418
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:57:14.483759
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:58:14.047724
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done
+Updating at: 2019-05-04 13:59:14.694834
+Traceback (most recent call last):
+  File "/home/hduser1/Restuarant_Review/UpdateZomato.py", line 7, in <module>
+    update_zomato(zomato_df)
+  File "/home/hduser1/Restuarant_Review/KafkaTopics.py", line 30, in update_zomato
+    Zomato_Scrapper.scrape_all_review_ID()
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 116, in scrape_all_review_ID
+    recent_reviews[rest] = scrape_reviews_from_restaurant_id(rest)
+  File "/home/hduser1/Restuarant_Review/Zomato_Scrapper.py", line 66, in scrape_reviews_from_restaurant_id
+    user_reviews = json.loads(response_json.text)["user_reviews"]
+KeyError: 'user_reviews'
+Closing remaining open files:/home/hduser1/Restuarant_Review/zomato.hdf...done

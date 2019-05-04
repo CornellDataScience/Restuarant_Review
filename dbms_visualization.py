@@ -151,7 +151,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
             competitors_rating_dict[business_id] = avg_rating_dict[business_id]
     # draw the graph with rest_id high lighted in bar graph
     names = []
-    for key in competitors_rating_dict.keys():
+    for key in competitors_rating_dict:
         names.append(competitors[key])
     values = list(competitors_rating_dict.values())
     colors = ['cyan'] * len(competitors_rating_dict.keys())
@@ -177,7 +177,9 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
 # visualize the NLP review scores of restaurants
 def visualize_review_score(res_id):
     scoreDict = totalScores(res_id)
-    names = scoreDict.keys()
+    names = []
+    for elem in scoreDict:
+        names.append(elem)
     values = list(scoreDict.values())
     plt.title("bar graph for NLP category scores of restaurant")
     plt.bar(range(len(scoreDict)), values, tick_label=names)
