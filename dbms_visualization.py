@@ -55,8 +55,8 @@ def visualize_res_review_trends_graph(res_review_trends):
 
     max_time_length = 0
     max_time_indices = []
-    colors = ['b'] * (len(res_review_trends)-1)
-    colors.append('c')
+    colors = ['c'] * (len(res_review_trends)-1)
+    colors.append('b')
     for i in range(len(res_review_trends)):
         if max_time_length < len(res_review_trends[i][0].index.values):
             max_time_indices = res_review_trends[i][0].index.values.astype(str)
@@ -219,11 +219,17 @@ def visualize_NLP_review_trends(res_id,category):
     # plot the graph
     temp = np.arange(max_time_length)
     max_time_indices_new = np.linspace(temp.min(), temp.max(), 300)
+    count = 0
     for trend in res_review_trends.values():
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
-        plt.plot(max_time_indices_new, trend_smoothed)
+        if count == 0:
+            plt.plot(max_time_indices_new, trend_smoothed, c='b')
+        else:
+            plt.plot(max_time_indices_new, trend_smoothed, c='c')
+        count += 1
+
 
     plt.xlabel('Time')
     plt.ylabel('Average NLP Review Rating')
