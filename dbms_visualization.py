@@ -48,7 +48,7 @@ def visualize_avg_review_bar_graph(dict, id_restaurant):
 
 # shows graph for review trends for restaurants
 def visualize_res_competitor_review_trend(res_id):
-    
+    pass
 
 def visualize_res_review_trends_graph(res_review_trends):
     # find the max length for time
@@ -184,6 +184,7 @@ def visualize_yelp_competitor_score(res_id, yelp_df):
 # visualize the NLP review scores of restaurants
 def visualize_review_score(res_id):
     scoreDict = totalScores(res_id)
+    print("scoredict" + str(scoreDict))
     names = []
     for elem in scoreDict:
         names.append(elem)
@@ -203,8 +204,8 @@ def visualize_NLP_review_trends(res_id,category):
     res_review_trends = competitor_score_over_time(res_id,category)
     print("got to here")
     max_time_length = 0
-    
-    for cat in rest_id:
+    colors = []
+    for cat in res_review_trends:
         colors.append('cyan')
     colors[0] = 'blue'
     for trend in res_review_trends.values():
@@ -223,11 +224,4 @@ def visualize_NLP_review_trends(res_id,category):
     plt.xlabel('Time')
     plt.ylabel('Average NLP Review Rating')
     plt.title('NLP Review Trends for Restaurants')
-    # plt.show()
 
-# visualize_NLP_review_trends('3QCY93kLbH29Cctus8IyKQ', "food")
-# visualize_review_score('3QCY93kLbH29Cctus8IyKQ')
-# visualize()
-# visualize_selected()
-# visualize_yelp_competitor_score('HwuCZHFqHDrSGcug3p9KXg')
-# visualize_NLP_review_trvisualize_review_scoreends()
