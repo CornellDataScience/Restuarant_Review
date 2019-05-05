@@ -52,12 +52,11 @@ def visualize_res_competitor_review_trend(res_id):
 
 def visualize_res_review_trends_graph(res_review_trends):
     # find the max length for time
+
     max_time_length = 0
     max_time_indices = []
-    colors = []
-    for res in res_review_trends:
-        colors.append('blue')
-    colors[0] = 'cyan'
+    colors = ['b'] * (len(res_review_trends)-1)
+    colors.append('c')
     for i in range(len(res_review_trends)):
         if max_time_length < len(res_review_trends[i][0].index.values):
             max_time_indices = res_review_trends[i][0].index.values.astype(str)
@@ -71,7 +70,12 @@ def visualize_res_review_trends_graph(res_review_trends):
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
-        plt.plot(max_time_indices_new, trend_smoothed, color=colors)
+        if i == len(res_review_trends)-1:
+            plt.plot(max_time_indices_new, trend_smoothed, color='c')
+        else:
+            plt.plot(max_time_indices_new, trend_smoothed, color='b')
+
+
 
     plt.xlabel('Time')
     plt.ylabel('Average Rating')
@@ -191,7 +195,7 @@ def visualize_review_score(res_id):
     values = list(scoreDict.values())
     plt.title("bar graph for NLP category scores of restaurant")
     plt.bar(range(len(scoreDict)), values, tick_label=names)
-    plt.savefig('avg_NLP_review_score_bar_graph.png')
+    # plt.savefig('avg_NLP_review_score_bar_graph.png')
     # plt.show()
 
 # mock up function of all_score_over_time
@@ -219,9 +223,31 @@ def visualize_NLP_review_trends(res_id,category):
         buffer = np.zeros(max_time_length - len(trend))
         trend = np.append(buffer, trend)
         trend_smoothed = spline(temp, trend, max_time_indices_new)
-        plt.plot(max_time_indices_new, trend_smoothed, color=colors)
+        plt.plot(max_time_indices_new, trend_smoothed)
 
     plt.xlabel('Time')
     plt.ylabel('Average NLP Review Rating')
     plt.title('NLP Review Trends for Restaurants')
+    # plt.show()
+# visualize_review_score('3QCY93kLbH29Cctus8IyKQ')
+# visualize_NLP_review_trends('3QCY93kLbH29Cctus8IyKQ', "food")
+
+# yelp_df = initialize_yelp()
+# id_restaurant = yelp_id_restaurant_dict(yelp_df)
+# res_review_trends = []
+# l_dict = collections.Counter(id_restaurant).most_common(10)
+# list_res = []
+# for i in range(len(l_dict)):
+#     list_res.append(l_dict[i][0])
+# list_rest_ids = choose_res_ids(list_res, id_restaurant)
+# for i in range(len(list_rest_ids)):
+#     res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], id_restaurant, 'M'))
+# visualize_res_review_trends_graph(res_review_trends)
+
+
+
+
+
+
+
 

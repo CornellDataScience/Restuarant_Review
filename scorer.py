@@ -248,7 +248,7 @@ def score_over_time(rest_name):
     dates = df[['date']]
     
     reviews = dbms.get_review_text(spark_df, rest_name)
-    print(datesList)
+    # print(datesList)
     
     separated = []
     for dateIndex in range(0, len(datesList) - 1):
@@ -301,7 +301,7 @@ def competitor_score_over_time(res_id,category):
         score = specificScorer(review,category)
         if(score != None):
             finalDict[res_id].append(score)
-    print(finalDict)
+    # print(finalDict)
     
     
     key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'

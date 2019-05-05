@@ -47,7 +47,6 @@ def data():
 	zomato = data["zomato"]
 	yelp_df = pd.read_json(yelp, orient='split')
 	zomato_df = pd.read_json(zomato,orient='split')
-	print(yelp_df)
 	return Response("Success")
 
 @app.route("/img_data", methods=['GET'])
@@ -92,6 +91,41 @@ def img_data(rest_id):
 	for i in range(len(l_dict)):
 		list_res.append(l_dict[i][0])
 	list_rest_ids = choose_res_ids(list_res, id_restaurant)
+
+
+	key = '1c215mO_Get9D6APQHikMmIiiwv2uHBBBuX8z5OAjPR0e_sa67ZHtdQdWHEx4KCnS03wmUqVTyqBdA_bWZifd0YuFf8Ft8mXLSILHY8tvfl5gE9qj5VeHayJzRrJXHYx'
+	endpoint = 'https://api.yelp.com/v3/businesses/' + rest_id
+	head = {'Authorization': 'bearer %s' % key}
+
+	r = requests.get(url=endpoint, headers=head)
+	data = r.json()
+	categories_json = data['categories']
+	categories = ''
+	for c in categories_json:
+	    categories += c['alias'] + ', '
+	location = data['location']['address1'] \
+	           + ', ' + data['location']['city'] \
+	           + ', ' + data['location']['state'] + ' ' \
+	           + data['location']['zip_code']
+	# fetch competitors
+	endpoint = 'https://api.yelp.com/v3/businesses/search'
+	parameters = {'term': 'restaurants',
+	              'limit': 8,
+	              'radius': 40000,
+	              'location': location,
+	              'categories': categories
+	              }
+	competitors = {}
+	competitors[rest_id] = data['name']
+	r = requests.get(url=endpoint, params=parameters, headers=head)
+	data = r.json()
+	# get the competitors
+	for business in data['businesses']:
+	    if business['id'] != rest_id:
+	        competitors[business['id']] = business['name']
+	list_rest_ids = [business_id for business_id in competitors if business_id in id_restaurant]
+	list_rest_ids.append(rest_id)
+
 	for i in range(len(list_rest_ids)):
 		res_review_trends.append(get_one_res_review_trend(yelp_df, list_rest_ids[i], id_restaurant, 'M'))
 	visualize_res_review_trends_graph(res_review_trends)
@@ -108,6 +142,8 @@ def img_data(rest_id):
 	plot_url2= base64.b64encode(img2.getvalue()).decode()
 	plt.close()
 	return {"avg_rev":plot_url, "res_rev": plot_url1, "comp_score": plot_url2}
+	return {"avg_rev":plot_url, "res_rev": plot_url1, "comp_score": "Sdads"}
+
 
 
 def img_data_slow(rest_id, category):
@@ -118,7 +154,7 @@ def img_data_slow(rest_id, category):
 	plt.savefig(img3, format='png')
 	img3.seek(0)
 	plot_url3 = base64.b64encode(img3.getvalue()).decode()
-	print(plot_url3)
+	# print(plot_url3)
 	plt.close()
 	return {"review":plot_url3}
 

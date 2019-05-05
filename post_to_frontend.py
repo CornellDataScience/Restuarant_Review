@@ -7,3 +7,5 @@ def send_data(yelp_df, zomato_df):
 	zomato_json = zomato_df.to_json(orient='split')
 	data = json.dumps({"yelp":yelp_json, "zomato": zomato_json})
 	r = requests.post("http://128.84.48.178:5000/data",data=data)
+
+send_data(initialize_yelp(), initialize_zomato())

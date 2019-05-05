@@ -38,7 +38,7 @@ def initialize_yelp():
 
 def initialize_zomato():
     try:
-        pd.read_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df')
+        return pd.read_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df')
     except:
         big_list = read_data('/home/hduser1/Restuarant_Review/ZomatoData2.txt')
         new_df = pd.DataFrame(big_list,columns=["key", "api", "restaurant","date", "review", "rating", "num_votes", "restaurant_id"])
@@ -48,10 +48,10 @@ def initialize_zomato():
         return new_df
 
 def save_yelp(pd_yelp):
-    pd_yelp.to_hdf('/home/hduser1/Restuarant_Review/yelp.hdf','yelp_df',mode= 'w')
+    pd_yelp.to_hdf('yelp.hdf','yelp_df',mode= 'w')
 
 def save_zomato(pd_zomato):
-    pd_zomato.to_hdf('/home/hduser1/Restuarant_Review/zomato.hdf','zomato_df', mode='w')
+    pd_zomato.to_hdf('zomato.hdf','zomato_df', mode='w')
 
 '''
 Returns pandas DataFrame with columns corresponding to counts of number of 1-star, 2-star...5-start reviews
